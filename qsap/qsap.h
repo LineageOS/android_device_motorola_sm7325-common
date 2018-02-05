@@ -48,6 +48,7 @@ s32 wifi_qsap_start_wigig_softap(void);
 s32 wifi_qsap_stop_wigig_softap(void);
 s32 wifi_qsap_reload_softap(void);
 s32 wifi_qsap_unload_wifi_sta_driver(void);
+s32 wifi_qsap_set_tx_power(s32 tx_power);
 
 #ifdef QCOM_WLAN_CONCURRENCY
 s32 wifi_qsap_start_softap_in_concurrency(void);
