@@ -61,6 +61,17 @@ ifdef WIFI_DRIVER_DEF_CONF_FILE
 LOCAL_CFLAGS += -DWIFI_DRIVER_DEF_CONF_FILE=\"$(WIFI_DRIVER_DEF_CONF_FILE)\"
 endif
 
+LOCAL_CFLAGS += \
+    -Wall \
+    -Werror \
+    -Wno-unused-variable \
+    -Wno-unused-value \
+    -Wno-format \
+    -Wno-sometimes-uninitialized \
+    -Wno-enum-conversion \
+    -Wno-unused-parameter \
+    -Wno-implicit-function-declaration
+
 LOCAL_SRC_FILES := qsap_api.c \
                    qsap.c
 
