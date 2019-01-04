@@ -3464,7 +3464,7 @@ void check_for_configuration_files(void)
 
 void qsap_set_ini_filename(void)
 {
-    if (property_get("wlan.driver.config", ini_file, NULL)) {
+    if (property_get("vendor.wlan.driver.config", ini_file, NULL)) {
         fIni = ini_file;
         ALOGE("INI FILE PROP PRESENT %s\n", fIni);
     } else
