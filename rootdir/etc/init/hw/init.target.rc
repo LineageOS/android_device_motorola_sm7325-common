@@ -108,12 +108,6 @@ on boot
     # Load all wlan drivers
     exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ qca_cld3_qca6390 qca_cld3_qca6490
 
-on property:vendor.display.lcd_density=560
-   setprop dalvik.vm.heapgrowthlimit 256m
-
-on property:vendor.display.lcd_density=640
-   setprop dalvik.vm.heapgrowthlimit 512m
-
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
 
@@ -161,19 +155,6 @@ on property:init.svc.vendor.per_mgr=running
 
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
-
-on property:vendor.vold.post_fs_data_done=1 && property:ro.debuggable=1
-   start vendor.wlan_logging
-
-on property:vendor.vold.post_fs_data_done=1 && property:persist.wlan.debug_log=1
-   start vendor.wlan_logging
-
-service vendor.wlan_logging /system/vendor/bin/cnss_diag -q -f -b 128 -t HELIUM
-   class main
-   user system
-   group system wifi inet sdcard_rw media_rw diag
-   oneshot
-   disabled
 
 service dcvs-sh /vendor/bin/init.qti.dcvs.sh
     class late_start

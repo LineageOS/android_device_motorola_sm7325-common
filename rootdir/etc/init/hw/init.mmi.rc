@@ -6,28 +6,6 @@ import /vendor/etc/init/hw/init.mmi.overlay.rc
 
 # Moto USB configuration
 import /vendor/etc/init/hw/init.mmi.usb.rc
-# Moto debugging
-import /vendor/etc/init/hw/init.mmi.debug.rc
-
-# Moto diag_mdlog configuration
-import /vendor/etc/init/hw/init.mmi.diag_mdlog.rc
-
-import /vendor/etc/init/hw/init.oem.rc
-import /vendor/etc/init/hw/init.mmi.common.rc
-import /vendor/etc/init/hw/init.mmi.nonab.rc
-
-#Moto wlan configuration
-import /vendor/etc/init/hw/init.mmi.wlan.rc
-
-# Moto verified boot extension
-import /vendor/etc/init/hw/init.mmi.hab.rc
-
-# Test commands
-import /vendor/etc/init/hw/init.mmi.tcmd.rc
-
-# Carrier specific script
-import /vendor/etc/init/carrier/init.${ro.boot.carrier}.rc
-import /vendor/etc/init/carrier/init.default.rc
 
 on early-boot
     write /sys/module/subsystem_restart/parameters/disable_restart_work 0x0
@@ -41,12 +19,6 @@ on init
     chmod 0640 /sys/fs/pstore/dmesg-ramoops-0
     chown system log /proc/driver/mmi_annotate
     chmod 0640 /proc/driver/mmi_annotate
-
-on early-init && property:ro.bootmode=mot-factory
-    setprop ro.vendor.mot.factory true
-
-on early-init && property:ro.vendor.build.motfactory=1
-    setprop ro.vendor.mot.factory true
 
 on early-init
     # Need to wait for platform path for UTAGs driver to succeed
@@ -170,8 +142,6 @@ on post-fs
     chmod 0660 /sys/class/capsense/calibrate
 
 on post-fs-data
-    setprop ro.vendor.build.fingerprint ${ro.product.vendor.brand}/${ro.product.vendor.name}/${ro.product.vendor.device}:${ro.vendor.build.version.release}/${ro.vendor.build.id}/${ro.vendor.build.version.incremental}:${ro.vendor.build.type}/${ro.vendor.build.tags}
-
     # Setup folders for security
     mkdir /mnt/vendor/persist/security 02770 drmrpc drmrpc
     mkdir /data/vendor/dbvc 0750 vendor_tcmd shell
@@ -347,29 +317,6 @@ on boot
    chown system system /sys/class/capsense/reset
    chown system system /sys/class/capsense/int_state
 
-service vendor.mmi-block-perm /vendor/bin/init.mmi.block_perm.sh
-    class main
-    user root
-    oneshot
-
-service vendor.pstore_annotate /vendor/bin/pstore_annotate.sh build
-    class main
-    user system
-    group log
-    oneshot
-
-service vendor.apanic_copy /vendor/bin/apanic_copy.sh
-    class late_start
-    group log
-    oneshot
-    disabled
-
-service vendor.bl_logs_copy /vendor/bin/apanic_copy.sh -i
-    class late_start
-    group log
-    oneshot
-    disabled
-
 on charger
     trigger early-fs
     trigger fs
@@ -380,123 +327,21 @@ on charger
     class_stop main
     class_stop late_start
 
-service vendor.apanic_annotate /vendor/bin/apanic_save.sh build
-    class late_start
-    group log
-    oneshot
-    disabled
-
-service vendor.batt_health /vendor/bin/batt_health
-    class late_start
-    user vendor_pwric
-    group vendor_pwric cache net_admin log
-    disabled
-
-on property:sys.boot_completed=1
-    start vendor.batt_health
-
 on property:sys.boot_completed=1 && property:ro.vendor.zram.product_swapon=""
     write /proc/sys/vm/page-cluster 0
     swapon_all /vendor/etc/fstab.qcom
     write /proc/sys/vm/swappiness 100
     setprop sys.sysctl.swappiness 100
 
-on property:sys.boot_completed=1 && property:ro.vendor.bootreason=coldboot
-    start vendor.apanic_copy
-
-on property:ro.vendor.bootreason=watchdog
-    stop surfaceflinger
-    stop zygote
-    stop zygote_secondary
-    stop sensors
-    start vendor.apanic_annotate
-
-on property:ro.vendor.bootreason=pmic_watchdog
-    stop surfaceflinger
-    stop zygote
-    stop zygote_secondary
-    stop sensors
-    start vendor.apanic_annotate
-
-on property:ro.vendor.bootreason=kernel_panic
-    stop surfaceflinger
-    stop zygote
-    stop zygote_secondary
-    stop sensors
-    start vendor.apanic_annotate
-
-on property:ro.vendor.bootreason=hw_warmreset
-    stop surfaceflinger
-    stop zygote
-    stop zygote_secondary
-    stop sensors
-    start vendor.apanic_annotate
-
-on property:persist.vendor.log.aplogd.enable=1
-    start vendor.aplogd
-
-on property:persist.vendor.log.aplogd.enable=0
-    stop vendor.aplogd
-
-service vendor.aplogd /vendor/bin/aplogd
-    class late_start
-    #user log
-    #group log system sdcard_rw sdcard_r media_rw mount
-    # The user and group definitions above are intentionally disabled and left
-    # only as documentation. It actually starts as root and immediately drops
-    # to log plus those groups after preserving CAP_SYS_ADMIN, which is required
-    # for kernel logging.
-    disabled
-
-# from P onwards aplogd cannot read vold.post_fs_data_done so a new property
-# shall be used to allow aplogd checking if FBE has finished /data decryption
-on property:vold.post_fs_data_done=*
-     setprop vendor.vold.post_fs_data_done ${vold.post_fs_data_done}
-
-service vendor.mmi-boot-sh /vendor/bin/init.mmi.boot.sh
-    class core
-    user root
-    oneshot
-
-service vendor.mmi-shutdown-sh /vendor/bin/init.mmi.shutdown.sh
-    class core
-    user root
-    oneshot
-    disabled
-
-# translate to qcom property name in order to keep the consistent with
-# our legacy property
-on property:persist.vendor.qc.sub.rdump.on=*
-    setprop persist.vendor.ssr.enable_ramdumps ${persist.vendor.qc.sub.rdump.on}
-
 # translate MMI property in order to keep the consistent with QCOM
 on property:ro.vendor.hw.dualsim=true
    setprop persist.radio.multisim.config dsds
-
-on property:persist.vendor.qc.sub.rdump.on=*
-   setprop persist.vendor.ssr.enable_ramdumps ${persist.vendor.qc.sub.rdump.on}
 
 on property:ro.vendor.hw.dualsim=false
    setprop persist.radio.multisim.config ""
 
 on property:sys.sysctl.swappiness=*
     write /proc/sys/vm/swappiness ${sys.sysctl.swappiness}
-
-service vendor.mbm_spy /vendor/bin/mbm_spy
-    class late_start
-    user system
-    group system
-    oneshot
-    disabled
-
-on property:sys.boot_completed=1
-    start vendor.mbm_spy
-
-service vendor.hw_revs /vendor/bin/hardware_revisions.sh
-    class late_start
-    user system
-    group system
-    oneshot
 
 service vendor.mmi-touch-sh /vendor/bin/init.mmi.touch.sh
     class core
@@ -518,13 +363,6 @@ service vendor.oem-hw-sh /vendor/bin/init.oem.hw.sh
 service vendor.oem-super-image-detector-sh /vendor/bin/init.oem.hw.sh -M
     class core
     user root
-    oneshot
-    disabled
-
-service vendor.ident-fps-sh /vendor/bin/init.oem.fingerprint.sh
-    class core
-    user root
-    group drmrpc system
     oneshot
     disabled
 
@@ -627,9 +465,6 @@ on property:vendor.wifi.station=true
 on property:vendor.wifi.station=false
     write /sys/module/wlan/parameters/sar_sta disabled
 
-on shutdown
-    exec_start vendor.mmi-shutdown-sh
-
 on property:persist.sys.locale=*
     mkdir /mnt/vendor/persist/chargeonly 0770 system system
     write /mnt/vendor/persist/chargeonly/locale ${persist.sys.locale}
@@ -645,3 +480,4 @@ on property:ro.sys.force_max_chrg_temp=*
 
 on property:ro.sys.force_demo_mode=*
     write /sys/class/power_supply/battery/device/force_demo_mode ${ro.sys.force_demo_mode}
+
