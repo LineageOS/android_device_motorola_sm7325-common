@@ -1,5 +1,17 @@
-cc_library {
-    name: "libboot_control_qti",
+filegroup {
+    name: "libboot_control_qti_src",
+    srcs: ["libboot_control_qti.cpp"],
+}
+
+cc_library_headers {
+    name: "libboot_control_qti_headers",
+    vendor: true,
+    recovery_available: true,
+    export_include_dirs: ["."],
+}
+
+cc_defaults {
+    name: "libboot_control_qti_defaults",
     vendor: true,
     recovery_available: true,
     shared_libs: [
@@ -20,7 +32,7 @@ cc_library {
         "-Werror",
     ],
     srcs: [
-        "libboot_control_qti.cpp",
+        ":libboot_control_qti_src",
     ],
-    export_include_dirs: ["."],
+    header_libs: ["libboot_control_qti_headers"],
 }
