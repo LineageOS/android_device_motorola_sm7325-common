@@ -4,3 +4,4 @@ allow vendor_qti_init_shell configfs:lnk_file create_file_perms;
 allow vendor_qti_init_shell proc_page_cluster:file w_file_perms;
 
 allow vendor_qti_init_shell vendor_file:file execute_no_trans;
+set_prop(vendor_qti_init_shell, ctl_start_prop)
