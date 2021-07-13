@@ -48,3 +48,6 @@ const char* get_suffix(unsigned slot);
 // IBootControl 1.1 methods
 bool set_snapshot_merge_status(MergeStatus status);
 MergeStatus get_snapshot_merge_status();
+
+// IBootControl 1.2 methods
+int get_active_boot_slot();

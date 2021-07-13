@@ -1,0 +1,26 @@
+//
+// SPDX-FileCopyrightText: 2016-2024 The Linux Foundation
+// SPDX-License-Identifier: BSD-3-Clause
+//
+
+cc_library_shared {
+    name: "android.hardware.boot@1.2-impl-qti",
+    stem: "android.hardware.boot@1.0-impl-1.2-qti",
+    defaults: [
+        "hidl_defaults",
+    ],
+    relative_install_path: "hw",
+    vendor: true,
+    recovery_available: true,
+    srcs: ["BootControl.cpp"],
+    shared_libs: [
+        "liblog",
+        "libhidlbase",
+        "libhardware",
+        "libutils",
+        "android.hardware.boot@1.0",
+        "android.hardware.boot@1.1",
+        "android.hardware.boot@1.2",
+        "libboot_control_qti",
+    ],
+}

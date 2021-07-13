@@ -752,3 +752,27 @@ MergeStatus get_snapshot_merge_status()
 	ALOGI("%s: Returning MergeStatus = %d\n", __func__, status);
 	return status;
 }
+
+int get_active_boot_slot()
+{
+	int slot = 0;
+	char bootPartition[MAX_GPT_NAME_SIZE + 1] = {0};
+
+	for (int i = 0; slot_suffix_arr[i] != NULL; i++) {
+		snprintf(bootPartition, sizeof(bootPartition) - 1,
+			"boot%s", slot_suffix_arr[i]);
+
+			if (get_partition_attribute(bootPartition,
+				ATTR_SLOT_ACTIVE) == 1) {
+				slot = i;
+				break;
+			}
+	}
+
+	if (boot_control_check_slot_sanity(slot) != 0) {
+		ALOGE("%s: Failed to validate active slot configuration", __func__);
+		return -1;
+	} else {
+		return slot;
+	}
+}
