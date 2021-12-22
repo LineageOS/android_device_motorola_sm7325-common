@@ -816,7 +816,6 @@ framework/moto-ims-ext.jar
 framework/moto-settings.jar
 framework/moto-telephony.jar
 system_ext/framework/qcom-moto-ims-ext.jar
-system_ext/framework/qti-telephony-common.jar
 
 # RIL - IMS
 -system_ext/priv-app/ims/ims.apk
