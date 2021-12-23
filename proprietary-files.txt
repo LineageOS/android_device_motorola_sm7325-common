@@ -808,14 +808,9 @@ vendor/radio/qcril_database/upgrade/7_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/8_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/9_version_qcrildb.sql
 
-# Telephony - qti-telephony-common
-etc/permissions/moto-ims-ext.xml
-etc/permissions/moto-settings.xml
-etc/permissions/moto-telephony.xml
-framework/moto-ims-ext.jar
-framework/moto-settings.jar
-framework/moto-telephony.jar
-system_ext/framework/qcom-moto-ims-ext.jar
+# Telephony - Moto
+etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
+framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
 
 # RIL - IMS
 -system_ext/priv-app/ims/ims.apk
