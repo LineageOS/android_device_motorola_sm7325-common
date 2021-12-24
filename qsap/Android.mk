@@ -10,9 +10,7 @@ LOCAL_MODULE:= libqsap_sdk
 
 LOCAL_MODULE_TAGS := optional
 
-ifeq ($(PRODUCT_VENDOR_MOVE_ENABLED), true)
 LOCAL_VENDOR_MODULE := true
-endif
 
 LOCAL_CFLAGS += -DSDK_VERSION=\"0.0.1.0\"
 
