@@ -1,17 +1,10 @@
-# Wait for the USB init shell script to finish, to prevent enumeration issues
-on property:init.svc.vendor.mmi-usb-sh=stopped && property:ro.boot.mode=charger
-    setprop sys.usb.configfs 1
-    setprop sys.usb.config charging
-
-on moto-charger
+on charger
     stop vendor.sensors
     chown radio wakelock /sys/power/wake_lock
     chmod 0660 /sys/power/wake_lock
     chown radio wakelock /sys/power/wake_unlock
     chmod 0660 /sys/power/wake_unlock
-    trigger firmware_mounts_complete
-    start vendor.charge_only_mode
-    start vendor.batt_health
+
     start vendor.thermal-com
     start system_suspend
 
@@ -29,3 +22,13 @@ on moto-charger
     # Allow system to sleep when in COM
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
     write /proc/sys/kernel/sched_boost 0
+
+service vendor.thermal-com /vendor/bin/thermal-engine --minimode
+    class charger
+    user root
+    group root system oem_2907
+    socket thermal-send-client stream 0666 system oem_2907
+    socket thermal-recv-client stream 0660 system oem_2907
+    socket thermal-recv-passive-client stream 0666 system oem_2907
+    socket thermal-send-rule stream 0660 system oem_2907
+    disabled

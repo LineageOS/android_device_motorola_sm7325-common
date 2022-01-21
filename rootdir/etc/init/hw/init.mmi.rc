@@ -227,9 +227,6 @@ on post-fs-data
     # Setup folder for aplogd
     mkdir /data/vendor/aplogd 0750 log log
 
-    # Create directory used by chargeonlymode
-    mkdir /data/vendor/chargeonly 0750 root log
-
     # Subsystem RAM-dumps
     mkdir /data/vendor/ss-ram-dumps 0750 system log
     mkdir /data/vendor/ss-ram-dumps/bp-dumps 0750 system log
@@ -303,12 +300,6 @@ on boot
    # Quiet binder logs
    write /sys/module/binder/parameters/debug_mask 0x5
 
-   # Clear cooldown state
-   mkdir /mnt/vendor/persist/chargeonly 0770 system system
-   write /mnt/vendor/persist/chargeonly/cooldown n
-   chown system system /mnt/vendor/persist/chargeonly/cooldown
-   chmod 0660 /mnt/vendor/persist/chargeonly/cooldown
-
    # Change owner ship of l5 laser calibration
    chown camera vendor_tcmd /mnt/vendor/persist/camera/focus/offset_cal
    chmod 0660 /mnt/vendor/persist/camera/focus/offset_cal
@@ -316,16 +307,6 @@ on boot
    # change ownership of capsensor related sysfs node
    chown system system /sys/class/capsense/reset
    chown system system /sys/class/capsense/int_state
-
-on charger
-    trigger early-fs
-    trigger fs
-    trigger post-fs
-    trigger late-fs
-    trigger post-fs-data
-    trigger moto-charger
-    class_stop main
-    class_stop late_start
 
 on property:sys.boot_completed=1 && property:ro.vendor.zram.product_swapon=""
     write /proc/sys/vm/page-cluster 0
@@ -410,21 +391,6 @@ on property:vendor.hw.touch.status="dead"
 on property:vendor.hw.touch.status="ready"
     start vendor.touch-ready-sh
 
-service vendor.charge_only_mode /vendor/bin/charge_only_mode
-    user root
-    group graphics system input
-    disabled
-
-service vendor.thermal-com /vendor/bin/thermal-engine --minimode
-    class main
-    user root
-    group root system oem_2907
-    socket thermal-send-client stream 0666 system oem_2907
-    socket thermal-recv-client stream 0660 system oem_2907
-    socket thermal-recv-passive-client stream 0666 system oem_2907
-    socket thermal-send-rule stream 0660 system oem_2907
-    disabled
-
 # bugreport is triggered by holding down volume down, volume up and power
 service bugreport /system/bin/dumpstate -d -p -B -z \
         -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
@@ -464,12 +430,6 @@ on property:vendor.wifi.station=true
 
 on property:vendor.wifi.station=false
     write /sys/module/wlan/parameters/sar_sta disabled
-
-on property:persist.sys.locale=*
-    mkdir /mnt/vendor/persist/chargeonly 0770 system system
-    write /mnt/vendor/persist/chargeonly/locale ${persist.sys.locale}
-    chown system system /mnt/vendor/persist/chargeonly/locale
-    chmod 0660 /mnt/vendor/persist/chargeonly/locale
 
 # IKSWQ-149109: Force shutter tone on Japan softbank carrier
 on property:ro.carrier=softbank
