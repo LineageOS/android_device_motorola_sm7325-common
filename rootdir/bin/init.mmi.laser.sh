@@ -9,7 +9,7 @@ debug()
 notice()
 {
 	echo "$*"
-	echo "$scriptname: $*" > /dev/kmsg
+        log -t "$scriptname" -i "$*"
 }
 
 error_and_leave()

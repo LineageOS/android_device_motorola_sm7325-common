@@ -56,7 +56,7 @@ debug()
 notice()
 {
 	echo "$*"
-	echo "$scriptname: $*" > /dev/kmsg
+        log -t "$scriptname" -i "$*"
 }
 
 sanity_check()
