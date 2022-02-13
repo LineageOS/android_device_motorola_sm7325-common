@@ -32,6 +32,7 @@ persist.vendor.dpm.feature=11
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
+ro.qcom.ims.use_moto_vt_ext=true
 
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
