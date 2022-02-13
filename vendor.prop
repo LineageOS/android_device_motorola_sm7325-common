@@ -121,6 +121,7 @@ persist.vendor.ims.disableIMSLogs=1
 persist.vendor.ims.display_delay=40	
 persist.vendor.ims.playout_delay=50	
 persist.vendor.ims.vt.enableadb=1
+ro.qcom.ims.use_moto_vt_ext=true
 
 # Incremental FS
 ro.incremental.enable=1
