@@ -281,3 +281,9 @@ PRODUCT_PACKAGES_DEBUG += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.2-service-qti
+
+# Vendor service manager
+PRODUCT_PACKAGES += \
+    vndservicemanager
+
+
