@@ -62,6 +62,19 @@ TARGET_KERNEL_CONFIG := vendor/kona-perf_defconfig
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := kona
 
+# A/B
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    product \
+    system \
+    system_ext \
+    vbmeta \
+    vbmeta_system \
+    vendor
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
