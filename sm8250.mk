@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 
+PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # A/B
