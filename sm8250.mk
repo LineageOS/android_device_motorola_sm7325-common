@@ -248,3 +248,7 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0-service.multihal \
+    libsensorndkbridge
