@@ -29,4 +29,16 @@
 
     <!-- Wifi driver supports WPA3 Simultaneous Authentication of Equals (WPA3-SAE) for softap -->
     <bool name="config_wifi_softap_sae_supported">true</bool>
+
+    <!-- Wifi driver supports IEEE80211AX for softap -->
+	<bool name="config_wifiSoftapIeee80211axSupported">true</bool>
+
+	<!-- Wifi driver supports IEEE80211AX single user beamformee for softap -->
+	<bool name="config_wifiSoftapHeSuBeamformeeSupported">true</bool>
+
+	<!-- Wifi driver supports IEEE80211AX single user beamformer for softap -->
+    <bool name="config_wifiSoftapHeSuBeamformerSupported">true</bool>
+
+	<!-- Boolean indicating whether 802.11r Fast BSS Transition is enabled on this platform -->
+	<bool name="config_wifi_fast_bss_transition_enabled">true</bool>
 </resources>
