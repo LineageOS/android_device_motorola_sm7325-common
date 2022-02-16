@@ -1,0 +1,188 @@
+# Audio
+aaudio.mmap_exclusive_policy=2
+aaudio.mmap_policy=2
+persist.vendor.audio.calfile0=/vendor/etc/acdbdata/Bluetooth_cal.acdb
+persist.vendor.audio.calfile1=/vendor/etc/acdbdata/General_cal.acdb
+persist.vendor.audio.calfile2=/vendor/etc/acdbdata/Global_cal.acdb
+persist.vendor.audio.calfile3=/vendor/etc/acdbdata/Handset_cal.acdb
+persist.vendor.audio.calfile4=/vendor/etc/acdbdata/Hdmi_cal.acdb
+persist.vendor.audio.calfile5=/vendor/etc/acdbdata/Headset_cal.acdb
+persist.vendor.audio.calfile6=/vendor/etc/acdbdata/Speaker_cal.acdb
+persist.vendor.audio.dualmic.config=endfire
+persist.vendor.audio.elevoc.voip=true
+persist.vendor.audio.fluence.speaker=false
+persist.vendor.audio.fluence.voicecall=true
+persist.vendor.audio.fluence.voicecomm=true
+persist.vendor.audio.fluence.voicerec=false
+persist.vendor.audio_fx.current=waves
+persist.vendor.audio_fx.waves.maxxsense=true
+persist.vendor.audio_fx.waves.proc_twks=true
+persist.vendor.audio_fx.waves.processing=true
+persist.vendor.audio_fx.waves.systrace=true
+ro.audio.monitorRotation=true
+vendor.audio.feature.afe_proxy.enable=true
+vendor.audio.parser.ip.buffer.size=262144
+vendor.audio.screen_record=true
+vendor.audio.snd_card.open.retries=50
+vendor.audio.use.sw.alac.decoder=false
+vendor.audio.use.sw.ape.decoder=false
+vendor.audio_hal.period_size=240
+
+# Audio steps
+ro.config.media_vol_steps=30
+ro.config.vc_call_vol_steps=8
+
+# Bluetooth
+persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
+persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
+persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false
+persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2
+persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
+persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true
+persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=false
+persist.vendor.qcom.bluetooth.enable.splita2dp=true
+persist.vendor.qcom.bluetooth.scram.enabled=false
+persist.vendor.qcom.bluetooth.soc=hastings
+persist.vendor.qcom.bluetooth.twsp_state.enabled=false
+ro.bluetooth.a2dp_offload.supported=true
+ro.vendor.bluetooth.wipower=false
+vendor.qcom.bluetooth.soc=hastings
+
+# Camera
+camera.disable_zsl_mode=1
+
+# Crypto
+ro.crypto.allow_encrypt_override=true
+ro.crypto.volume.filenames_mode=aes-256-cts
+
+# Dalvik
+dalvik.vm.dex2oat-threads=6
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapmaxfree=32m
+dalvik.vm.heapminfree=8m
+dalvik.vm.heapsize=512m
+dalvik.vm.heapstartsize=16m
+dalvik.vm.heaptargetutilization=0.5
+
+# Display
+vendor.display.comp_mask=0
+vendor.display.disable_excl_rect=0
+vendor.display.disable_excl_rect_partial_fb=1
+vendor.display.disable_hw_recovery_dump=1
+vendor.display.disable_idle_time_hdr=1
+vendor.display.disable_idle_time_video=1
+vendor.display.disable_offline_rotator=1
+vendor.display.disable_scaler=0
+vendor.display.enable_async_powermode=1
+vendor.display.enable_optimize_refresh=1
+vendor.display.enable_posted_start_dyn=1
+vendor.display.use_smooth_motion=1
+
+# DRM
+drm.service.enabled=true
+
+# Fingerprint
+persist.vendor.qfp=true
+
+# FRP
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
+# Gatekeeper
+vendor.gatekeeper.disable_spu=true
+
+# Graphics
+debug.egl.hw=0
+debug.mdpcomp.logs=0
+debug.sf.enable_advanced_sf_phase_offset=1
+debug.sf.enable_gl_backpressure=1
+debug.sf.high_fps_early_gl_phase_offset_ns=-4000000
+debug.sf.high_fps_early_phase_offset_ns=-4000000
+debug.sf.high_fps_late_app_phase_offset_ns=1000000
+debug.sf.high_fps_late_sf_phase_offset_ns=-4000000
+debug.sf.hw=0
+debug.sf.latch_unsignaled=1
+persist.demo.hdmirotationlock=false
+persist.sys.sf.color_mode=0
+persist.sys.sf.color_saturation=1.0
+persist.sys.sf.native_mode=1
+ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.kona.api30
+ro.hardware.egl=adreno
+ro.hardware.vulkan=adreno
+ro.surface_flinger.set_idle_timer_ms=250	
+ro.surface_flinger.set_touch_timer_ms=1000	
+ro.surface_flinger.use_smart_90_for_video=true
+vendor.gralloc.disable_ubwc=0
+
+# IMS
+persist.vendor.ims.cam_sensor_delay=20	
+persist.vendor.ims.disableDebugDataPathLogs=1	
+persist.vendor.ims.disableDebugLogs=1	
+persist.vendor.ims.disableIMSLogs=1	
+persist.vendor.ims.display_delay=40	
+persist.vendor.ims.playout_delay=50	
+persist.vendor.ims.vt.enableadb=1
+
+# Incremental FS
+ro.incremental.enable=1
+
+# Media
+debug.stagefright.ccodec=1
+debug.stagefright.omx_default_rank=0
+persist.vendor.media.recorder.bt709=true
+
+# PASR
+vendor.power.pasr.enabled=true
+vendor.pasr.activemode.enabled=true
+
+# Qualcomm System Daemon
+persist.vendor.qcomsysd.enabled=1
+
+# Radio
+persist.radio.multisim.config=dsds
+persist.vendor.data.iwlan.enable=true
+persist.vendor.radio.0x9e_not_callname=1
+persist.vendor.radio.add_power_save=1
+persist.vendor.radio.aosp_usr_pref_sel=true
+persist.vendor.radio.apm_sim_not_pwdn=1
+persist.vendor.radio.custom_ecc=1
+persist.vendor.radio.data_con_rprt=1
+persist.vendor.radio.data_ltd_sys_ind=1
+persist.vendor.radio.dfr_mode_set=1
+persist.vendor.radio.enable_temp_dds=true
+persist.vendor.radio.enableadvancedscan=true
+persist.vendor.radio.eri64_as_home=1
+persist.vendor.radio.fi_supported=0
+persist.vendor.radio.flexmap_type=none
+persist.vendor.radio.force_get_pref=1
+persist.vendor.radio.hidl_dev_service=1
+persist.vendor.radio.is_wps_enabled=true
+persist.vendor.radio.jbims=1
+persist.vendor.radio.lte_vrte_ltd=1
+persist.vendor.radio.msgtunnel.start=true
+persist.vendor.radio.mt_sms_ack=30
+persist.vendor.radio.no_wait_for_card=1
+persist.vendor.radio.oem_ind_to_both=0
+persist.vendor.radio.procedure_bytes=SKIP
+persist.vendor.radio.qcril_uim_vcc_feature=1
+persist.vendor.radio.rat_on=combine
+persist.vendor.radio.sar_sensor=1
+persist.vendor.radio.sib16_support=1
+persist.vendor.radio.start_ota_daemon=0
+persist.vendor.radio.sw_mbn_update=0
+
+# Sensors
+persist.vendor.sensors.allow_non_default_discovery=true	
+persist.vendor.sensors.sync_request=true
+
+# Shutdown
+sys.vendor.shutdown.waittime=500
+
+# SSR
+persist.vendor.ssr.restart_level=ALL_ENABLE
+
+# USB
+vendor.usb.diag.func.name=diag
+vendor.usb.use_ffs_mtp=0
+
+# WiFi
+wifi.aware.interface=wifi-aware0
