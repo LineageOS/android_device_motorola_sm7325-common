@@ -1,0 +1,7 @@
+
+service vendor.wlan-getlogs /vendor/bin/init.mmi.wlan-getlogs.sh
+    class late_start
+    user log
+    group log system wifi
+    oneshot
+    disabled
