@@ -484,6 +484,9 @@ vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
+# OEM
+vendor/bin/motobox
+
 # OMX
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
