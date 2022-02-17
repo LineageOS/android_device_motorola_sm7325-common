@@ -1,0 +1,2 @@
+# Radio
+gsm.operator.iso-country       u:object_r:telephony_status_prop:s0 exact string
