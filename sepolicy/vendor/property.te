@@ -2,6 +2,3 @@
 type vendor_mot_fingerprint_prop, property_type;
 type vendor_mot_hw_prop, property_type;
 type vendor_mot_touch_prop, property_type;
-
-# Power
-type power_prop, property_type;
