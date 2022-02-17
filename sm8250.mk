@@ -147,6 +147,15 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-qti \
     android.hardware.health@2.1-service
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.base@1.0_system \
+    libhidltransport \
+    libhidltransport.vendor \
+    libhwbinder \
+    libhwbinder.vendor
+
 # Init
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/first_stage_ramdisk/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
