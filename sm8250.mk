@@ -166,6 +166,10 @@ PRODUCT_PACKAGES += \
     libipanat \
     liboffloadhal
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.motokona
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
