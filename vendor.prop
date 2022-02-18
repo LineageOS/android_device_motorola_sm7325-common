@@ -129,6 +129,7 @@ ro.incremental.enable=1
 debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
 persist.vendor.media.recorder.bt709=true
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
 # PASR
 vendor.power.pasr.enabled=true
