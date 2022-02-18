@@ -111,7 +111,8 @@ AB_OTA_PARTITIONS += \
     system_ext \
     vbmeta \
     vbmeta_system \
-    vendor
+    vendor \
+    vendor_boot
 
 # Audio
 AUDIO_FEATURE_ENABLED_AHAL_EXT := false
