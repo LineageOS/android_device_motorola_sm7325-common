@@ -62,4 +62,7 @@
 
     <!-- integer indicating additional disconnect delay (in ms) after IMS onLost() indication is received -->
     <integer translatable="false" name="config_wifiDelayDisconnectOnImsLostMs">1000</integer>
+
+	<!-- Boolean indicating whether 802.11r Fast BSS Transition is enabled on this platform -->
+	<bool name="config_wifi_fast_bss_transition_enabled">true</bool>
 </resources>
