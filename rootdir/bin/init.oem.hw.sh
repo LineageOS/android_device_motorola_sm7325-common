@@ -181,7 +181,7 @@ debug()
 notice()
 {
 	echo "$*"
-        log -t "$scriptname" -i "$*"
+	log -t "$scriptname" -p i "$*"
 }
 
 add_device_params()

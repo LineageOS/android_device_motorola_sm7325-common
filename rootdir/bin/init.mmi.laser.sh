@@ -9,7 +9,7 @@ debug()
 notice()
 {
 	echo "$*"
-        log -t "$scriptname" -i "$*"
+	log -t "$scriptname" -p i "$*"
 }
 
 error_and_leave()
