@@ -58,6 +58,17 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+	    vendor/lib/libgui_vendor.so)
+            sed -i "s/libui.so/lui30.so/" "${2}"
+            ;;
+        vendor/lib64/libgui_vendor.so)
+            sed -i "s/libui.so/lui30.so/" "${2}"
+            ;;
+    esac
+}
+
 if [ -z "${ONLY_TARGET}" ]; then
     # Initialize the helper for common device
     setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
