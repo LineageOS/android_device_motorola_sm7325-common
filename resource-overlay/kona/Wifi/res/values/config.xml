@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2020 Qualcomm Technologies, Inc.
+     All Rights Reserved.
+-->
+
+<resources>
+
+    <!-- Wifi driver supports IEEE80211AX for softap -->
+    <bool translatable="false" name="config_wifiSoftapIeee80211axSupported">true</bool>
+
+    <!-- Wifi driver supports IEEE80211AX single user beamformer for softap -->
+    <bool translatable="false" name="config_wifiSoftapHeSuBeamformerSupported">true</bool>
+
+    <!-- Wifi driver supports IEEE80211AX single user beamformee for softap -->
+    <bool translatable="false" name="config_wifiSoftapHeSuBeamformeeSupported">true</bool>
+
+</resources>
