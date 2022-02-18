@@ -1,6 +1,3 @@
-soong_namespace {
-}
-
 filegroup {
     name: "bootctrl_hal_src",
     srcs: [
@@ -31,4 +28,17 @@ cc_defaults {
         ":bootctrl_hal_src",
     ],
 
+}
+
+cc_library {
+    name: "bootctrl.kona",
+    defaults: ["bootctrl_hal_defaults"],
+    static_libs: ["libgptutils.moto_kona"],
+}
+
+cc_library_shared {
+    name: "android.hardware.boot@1.1-impl-qti",
+    stem: "android.hardware.boot@1.0-impl-1.1-qti",
+    defaults: ["android.hardware.boot@1.1-impl-qti_defaults"],
+    static_libs: ["libgptutils.moto_kona"],
 }
