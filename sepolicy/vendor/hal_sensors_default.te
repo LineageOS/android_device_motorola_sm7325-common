@@ -1,0 +1,5 @@
+allow hal_sensors_default vendor_sysfs_laser:dir r_dir_perms;
+allow hal_sensors_default vendor_sysfs_laser:file { setattr rw_file_perms };
+
+allow hal_sensors_default vendor_sysfs_input:dir r_dir_perms;
+allow hal_sensors_default vendor_sysfs_input:file rw_file_perms;

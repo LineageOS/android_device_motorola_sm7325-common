@@ -1,0 +1,13 @@
+type vendor_init_fingerprint, domain;
+type vendor_init_fingerprint_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_init_fingerprint)
+
+allow vendor_init_fingerprint self:capability { kill sys_module };
+allow vendor_init_fingerprint vendor_file:system module_load;
+allow vendor_init_fingerprint vendor_toolbox_exec:file rx_file_perms;
+allow vendor_init_fingerprint vendor_persist_fps_file:file create_file_perms;
+allow vendor_init_fingerprint vendor_persist_fps_file:dir rw_dir_perms;
+allow vendor_init_fingerprint mnt_vendor_file:dir search;
+
+set_prop(vendor_init_fingerprint, ctl_start_prop)
+set_prop(vendor_init_fingerprint, vendor_mot_fingerprint_prop)

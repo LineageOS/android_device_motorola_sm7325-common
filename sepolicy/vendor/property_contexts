@@ -1,0 +1,35 @@
+# Camera
+camera.mot.is.coming.cts   u:object_r:vendor_camera_prop:s0
+
+# Radio
+vendor.ril.                u:object_r:vendor_radio_prop:s0
+gsm.operator.iso-country   u:object_r:exported_radio_prop:s0
+
+# USB
+vendor.rmnet_vnd.rps_mask  u:object_r:vendor_usb_prop:s0
+
+# Motorola
+ro.mot.build.customerid    u:object_r:exported_default_prop:s0
+ro.vendor.hw.              u:object_r:vendor_mot_hw_prop:s0
+ro.vendor.mot.gki.         u:object_r:vendor_mot_hw_prop:s0
+ro.vendor.product.device   u:object_r:vendor_mot_hw_prop:s0
+ro.vendor.product.display  u:object_r:vendor_mot_hw_prop:s0
+ro.vendor.product.hardware.sku.variant          u:object_r:vendor_mot_hw_prop:s0
+ro.vendor.product.model    u:object_r:vendor_mot_hw_prop:s0
+ro.vendor.product.name     u:object_r:vendor_mot_hw_prop:s0
+vendor.hw.touch.status     u:object_r:vendor_mot_touch_prop:s0
+
+# Motorola fingerprint
+persist.vendor.hardware.fingerprint            u:object_r:vendor_mot_fingerprint_prop:s0
+vendor.hw.fps.ident                            u:object_r:vendor_mot_fingerprint_prop:s0
+vendor.hw.fingerprint.status                   u:object_r:vendor_mot_fingerprint_prop:s0
+
+# Power
+vendor.powerhal.state      u:object_r:power_prop:s0
+vendor.powerhal.audio      u:object_r:power_prop:s0
+vendor.powerhal.lpm        u:object_r:power_prop:s0
+vendor.powerhal.init       u:object_r:power_prop:s0
+vendor.powerhal.rendering  u:object_r:power_prop:s0
+
+# GFX
+ro.gfx.driver.1            u:object_r:exported_default_prop:s0

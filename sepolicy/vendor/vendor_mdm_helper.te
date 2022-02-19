@@ -1,0 +1,4 @@
+get_prop(vendor_mdm_helper, vendor_radio_prop)
+
+allow vendor_mdm_helper { mnt_vendor_file vendor_persist_rfs_file }:dir search;
+allow vendor_mdm_helper vendor_persist_rfs_file:file rw_file_perms;

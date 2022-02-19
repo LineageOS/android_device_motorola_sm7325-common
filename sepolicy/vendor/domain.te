@@ -1,0 +1,1 @@
+get_prop({domain -coredomain -appdomain}, vendor_mot_hw_prop)

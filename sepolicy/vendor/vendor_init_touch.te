@@ -1,0 +1,8 @@
+type vendor_init_touch, domain;
+type vendor_init_touch_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_init_touch)
+
+allow vendor_init_touch vendor_toolbox_exec:file rx_file_perms;
+
+r_dir_file(vendor_init_touch , vendor_sysfs_touchpanel)
+set_prop(vendor_init_touch, vendor_mot_touch_prop)

@@ -1,0 +1,2 @@
+allow vendor_thermal-engine { proc_stat proc_loadavg }:file r_file_perms;
+allow vendor_thermal-engine vendor_thermal_device:chr_file rw_file_perms;

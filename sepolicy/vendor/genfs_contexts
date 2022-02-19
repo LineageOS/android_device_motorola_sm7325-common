@@ -1,0 +1,57 @@
+# Camera
+genfscon sysfs /devices/platform/cam_sync/video4linux/video1/name               u:object_r:sysfs_graphics:s0
+
+# Fingerprint
+genfscon sysfs /devices/platform/egis_input                                     u:object_r:vendor_sysfs_fingerprint:s0
+
+# Health
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5-mmi/power_supply/battery u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5-mmi/power_supply/mmi_battery u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/qcom_battery u:object_r:vendor_sysfs_battery_supply:s0
+
+# Input Devices
+genfscon sysfs /devices/virtual/input                                           u:object_r:vendor_sysfs_input:s0
+
+# Lights
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-05/c440000.qcom,spmi:qcom,pm8150l@5:qcom,leds@d000/leds/charging u:object_r:sysfs_leds:s0
+
+# Motorola
+genfscon proc /bootinfo                                                         u:object_r:proc_moto_boot:s0
+genfscon proc /config                                                           u:object_r:vendor_proc_hw:s0
+genfscon proc /hw                                                               u:object_r:vendor_proc_hw:s0
+
+# PowerHal
+genfscon proc /sys/kernel/sched_lib_name                                        u:object_r:proc_sched_lib_mask_cpuinfo:s0
+genfscon proc /sys/kernel/sched_lib_mask_force                                  u:object_r:proc_sched_lib_mask_cpuinfo:s0
+
+# RTC
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,pm8150_rtc/rtc/rtc0 u:object_r:sysfs_rtc:s0
+
+# Sensors
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/panelName              u:object_r:vendor_sysfs_data:s0
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/panelRegDA             u:object_r:vendor_sysfs_data:s0
+
+# STM Prox Sensor
+genfscon sysfs /devices/virtual/laser                                           u:object_r:vendor_sysfs_laser:s0
+genfscon sysfs /module/stmvl53l1                                                u:object_r:vendor_sysfs_laser:s0
+
+# Touchscreen
+genfscon sysfs /class/touchscreen                                               u:object_r:vendor_sysfs_touchpanel:s0
+genfscon sysfs /devices/virtual/touchscreen                                     u:object_r:vendor_sysfs_touchpanel:s0
+
+# Vibrator
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-1/1-005a/leds/vibrator      u:object_r:sysfs_vibrator:s0
+
+# Wakeup
+genfscon sysfs /devices/0306_02.01.00/wakeup/wakeup                             u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c00000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/1101_00.01.00/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1e00000.qcom,ipa/wakeup/wakeup             u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-0028/wakeup/wakeup      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5-mmi/power_supply/battery/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5-mmi/power_supply/mmi_battery/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5-mmi/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/qcom_battery/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-04/c440000.qcom,spmi:qcom,pm8150l@4:qcom,power-on@800/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/rx-macro/rx_swr_ctrl/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-npu/wakeup/wakeup           u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/diag/diag/wakeup                                u:object_r:sysfs_wakeup:s0

@@ -1,0 +1,80 @@
+# A/B partitions
+/dev/block/platform/soc/1d84000\.ufshc/by-name/fsg_[ab]         u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/logo_[ab]        u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/mdm1m9kefs3_[ab] u:object_r:vendor_efs_boot_dev:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/prov_[ab]        u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/spss_[ab]        u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/storsec_[ab]     u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/vendor_boot_[ab] u:object_r:boot_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/sd[df]                   u:object_r:vendor_gpt_block_device:s0
+
+# UFS Devices
+/dev/block/platform/soc/1d84000\.ufshc/by-name/hw               u:object_r:vendor_hw_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/prodpersist      u:object_r:vendor_prodpersist_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/utags            u:object_r:vendor_utags_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/utagsBackup      u:object_r:vendor_utags_block_device:s0
+
+# Partition Mountpoints
+/(vendor|system/vendor)/fsg                             u:object_r:fsg_file:s0
+/(vendor|system/vendor)/super_fsg                       u:object_r:fsg_file:s0
+/(vendor|system/vendor)/super_modem                     u:object_r:firmware_file:s0
+
+# Awinic
+/(mnt/vendor/persist|persist)/factory/audio/aw_cali.bin u:object_r:vendor_persist_audio_file:s0
+
+# Camera
+/(mnt/vendor/persist|persist)/camera(/.*)?              u:object_r:vendor_persist_camera_file:s0
+/(vendor|system/vendor)/bin/hw/motorola\.hardware\.camera\.desktop@2\.0-service u:object_r:hal_cameradesktop_default_exec:s0
+/(vendor|system/vendor)/bin/vl53l1_daemon               u:object_r:vl53l1_exec:s0
+/(vendor|system/vendor)/lib64/libipebpsstriping\.so     u:object_r:same_process_hal_file:s0
+/data/vendor/misc/imager                                u:object_r:vendor_camera_data_file:s0
+/sys/devices/platform/soc/soc:qcom,cam-req-mgr/video4linux/video[0-33]/name(/.*)?       u:object_r:vendor_sysfs_jpeg:s0
+/sys/devices/virtual/input/input[0-9]+/calibration_data u:object_r:vendor_sysfs_laser:s0
+/sys/devices/virtual/input/input[0-9]+/do_flush         u:object_r:vendor_sysfs_laser:s0
+/sys/devices/virtual/input/input[0-9]+/enable_ps_sensor u:object_r:vendor_sysfs_laser:s0
+/sys/devices/virtual/input/input[0-9]+/offset           u:object_r:vendor_sysfs_laser:s0
+/sys/devices/virtual/input/input[0-9]+/xtalk            u:object_r:vendor_sysfs_laser:s0
+
+# Fingerprint
+/(mnt/vendor/persist|persist)/fps(/.*)?                 u:object_r:vendor_persist_fps_file:s0
+/(vendor|system/vendor)/bin/fpc_ident                   u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-ets              u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-fpc              u:object_r:hal_fingerprint_default_exec:s0
+/data/vendor/.fps(/.*)?                                 u:object_r:fingerprint_vendor_data_file:s0
+/data/vendor/fpc(/.*)?                                  u:object_r:fingerprint_vendor_data_file:s0
+/dev/esfp0                                              u:object_r:etsd_device:s0
+/sys/devices/soc/0\.et320(/.*)?                         u:object_r:vendor_sysfs_fingerprint:s0
+
+# IFAA
+/(vendor|system/vendor)/bin/hw/vendor\.zui\.hardware\.ifaa@1\.0-service                 u:object_r:hal_ifaa_default_exec:s0
+
+# Lights
+/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.motokona              u:object_r:hal_light_default_exec:s0
+
+# Motobox
+/(vendor|system/vendor)/bin/motobox                     u:object_r:vendor_motobox_exec:s0
+
+#poweropt-service
+/(vendor|system/vendor)/bin/poweropt-service            u:object_r:vendor_poweroptservice_exec:s0
+
+# Radio
+/data/vendor/misc/cutback(/.*)?                         u:object_r:cutback_data_file:s0
+/dev/socket/cutback                                     u:object_r:cutback_socket:s0
+
+# Touch
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.nio			u:object_r:hal_lineage_touch_default_exec:s0
+
+# Thermal
+/dev/mmi_sys_temp                                       u:object_r:vendor_thermal_device:s0
+
+# Vendor init scripts
+/(vendor|system/vendor)/bin/init\.mmi\.laser\.sh                u:object_r:vendor_mmi_laser_exec:s0
+/(vendor|system/vendor)/bin/init\.mmi\.touch\.sh                u:object_r:vendor_init_touch_exec:s0
+/(vendor|system/vendor)/bin/init\.oem\.fingerprint2\.sh         u:object_r:vendor_init_fingerprint_exec:s0
+/(vendor|system/vendor)/bin/init\.oem\.fingerprint\.overlay\.sh u:object_r:vendor_init_fingerprint_exec:s0
+/(vendor|system/vendor)/bin/init\.oem\.hw\.sh                   u:object_r:vendor_init_hw_exec:s0
+
+# Wakeups
+/sys/devices/virtual/input/input[0-9]+/wakeup[0-9]+(/.*)?       u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/[^*]+/wakeup/wakeup[0-9]+(/.*)?       u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/misc/[^*]+/wakeup[0-9]+(/.*)?              u:object_r:sysfs_wakeup:s0

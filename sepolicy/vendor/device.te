@@ -1,0 +1,10 @@
+# Fingerprint
+type etsd_device, dev_type;
+
+# Moto partitions
+type vendor_hw_block_device, dev_type;
+type vendor_prodpersist_block_device, dev_type;
+type vendor_utags_block_device, dev_type;
+
+# Thermal
+type vendor_thermal_device, dev_type;
