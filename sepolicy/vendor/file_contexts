@@ -91,3 +91,6 @@
 /sys/devices/virtual/input/input[0-9]+/wakeup[0-9]+(/.*)?       u:object_r:sysfs_wakeup:s0
 /sys/devices/platform/soc/[^*]+/wakeup/wakeup[0-9]+(/.*)?       u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/[^*]+/wakeup[0-9]+(/.*)?              u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/888000.i2c/i2c-4/4-0065/power_supply/bq25960-standalone/wakeup[0-9]+(/.*)?       u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:mmi_chrg_manager/power_supply/mmi_chrg_manager/wakeup[0-9]+(/.*)?            u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:mmi_chrg_manager_qc3p/power_supply/mmi_chrg_manager_qc3p/wakeup[0-9]+(/.*)?  u:object_r:sysfs_wakeup:s0

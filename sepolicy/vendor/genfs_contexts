@@ -8,8 +8,8 @@ genfscon sysfs /devices/platform/egis_input                                     
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5-mmi/power_supply/battery u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5-mmi/power_supply/mmi_battery u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/qcom_battery u:object_r:vendor_sysfs_battery_supply:s0
-genfscon sysfs /devices/platform/soc/888000.i2c/i2c-4/4-0065/power_supply/bq25960-standalone    u:object_r:vendor_sysfs_battery_supply:s0
-genfscon sysfs /devices/platform/soc/soc:mmi_chrg_manager/power_supply/mmi_chrg_manager u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/888000.i2c/i2c-4/4-0065/power_supply/bq25960-standalone      u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/soc:mmi_chrg_manager/power_supply/mmi_chrg_manager           u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/soc:mmi_chrg_manager_qc3p/power_supply/mmi_chrg_manager_qc3p u:object_r:vendor_sysfs_battery_supply:s0
 
 # Input Devices
@@ -26,7 +26,7 @@ genfscon proc /hw                                                               
 # PowerHal
 genfscon proc /sys/kernel/sched_lib_name                                        u:object_r:proc_sched_lib_mask_cpuinfo:s0
 genfscon proc /sys/kernel/sched_lib_mask_force                                  u:object_r:proc_sched_lib_mask_cpuinfo:s0
-genfscon sysfs /devices/virtual/input/input[0-9]/dt-gesture/enable              u:object_r:vendor_sysfs_dt2w:s0
+genfscon sysfs /devices/virtual/input/input4/dt-gesture                         u:object_r:vendor_sysfs_dt2w:s0
 
 # RTC
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,pm8150_rtc/rtc/rtc0 u:object_r:sysfs_rtc:s0
@@ -58,9 +58,6 @@ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.q
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5-mmi/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/qcom_battery/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-04/c440000.qcom,spmi:qcom,pm8150l@4:qcom,power-on@800/wakeup/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/888000.i2c/i2c-4/4-0065/power_supply/bq25960-standalone/wakeup[0-9]+    u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:mmi_chrg_manager/power_supply/mmi_chrg_manager/wakeup[0-9]+ u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:mmi_chrg_manager_qc3p/power_supply/mmi_chrg_manager_qc3p/wakeup[0-9]+ u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/rx-macro/rx_swr_ctrl/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-npu/wakeup/wakeup           u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/diag/diag/wakeup                                u:object_r:sysfs_wakeup:s0
