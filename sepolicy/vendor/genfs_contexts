@@ -26,6 +26,7 @@ genfscon proc /hw                                                               
 # PowerHal
 genfscon proc /sys/kernel/sched_lib_name                                        u:object_r:proc_sched_lib_mask_cpuinfo:s0
 genfscon proc /sys/kernel/sched_lib_mask_force                                  u:object_r:proc_sched_lib_mask_cpuinfo:s0
+genfscon sysfs /devices/virtual/input/input[0-9]/dt-gesture/enable              u:object_r:vendor_sysfs_dt2w:s0
 
 # RTC
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,pm8150_rtc/rtc/rtc0 u:object_r:sysfs_rtc:s0
