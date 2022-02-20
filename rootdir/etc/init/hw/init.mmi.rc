@@ -11,12 +11,6 @@ on early-boot
     write /sys/module/subsystem_restart/parameters/disable_restart_work 0x0
 
 on init
-    chown system log /sys/fs/pstore/console-ramoops-0
-    chmod 0440 /sys/fs/pstore/console-ramoops-0
-    chown system log /sys/fs/pstore/annotate-ramoops-0
-    chmod 0640 /sys/fs/pstore/annotate-ramoops-0
-    chown system log /sys/fs/pstore/dmesg-ramoops-0
-    chmod 0640 /sys/fs/pstore/dmesg-ramoops-0
     chown system log /proc/driver/mmi_annotate
     chmod 0640 /proc/driver/mmi_annotate
 
@@ -34,7 +28,6 @@ on early-init
     # Map oem properties, this must follow
     # execution of vendor.oem-hw-sh to set
     # required properties.
-    setprop ro.carrier ${ro.boot.carrier}
     setprop ro.sf.lcd_density ${ro.boot.lcd_density}
     setprop ro.vendor.fsg-id ${ro.boot.fsg-id}
     setprop ro.vendor.hw.device ${ro.boot.device}
@@ -353,14 +346,7 @@ service vendor.hal-fps-sh /vendor/bin/init.oem.fingerprint2.sh
     group system
     oneshot
 
-service fpc_ident /vendor/bin/hw/fpc_ident
-    class late_start
-    user system
-    group system
-    oneshot
-    disabled
-
-service egis_ident /vendor/bin/hw/egis_ident
+service fpc_ident /vendor/bin/fpc_ident
     class late_start
     user system
     group system
@@ -407,12 +393,6 @@ service vendor.touchRec /vendor/bin/touchRec
     oneshot
     disabled
 
-on property:vendor.wifi.tethering=false
-    write /sys/module/wlan/parameters/sar_mhs disabled
-
-on property:vendor.wifi.tethering=true
-    write /sys/module/wlan/parameters/sar_mhs enabled
-
 # Override the AOSP sensor HAL service definition
 # from hardware/interfaces/sensors/2.0/multihal
 # to add input and uhid group access
@@ -423,21 +403,3 @@ service vendor.sensors-hal-2-0-multihal /vendor/bin/hw/android.hardware.sensors@
     writepid /dev/cpuset/system-background/tasks
     capabilities BLOCK_SUSPEND
     rlimit rtprio 10 10
-
-#Override fwpath string when wpa_supplicant server was killed
-on property:vendor.wifi.station=true
-    write /sys/module/wlan/parameters/sar_sta enabled
-
-on property:vendor.wifi.station=false
-    write /sys/module/wlan/parameters/sar_sta disabled
-
-# IKSWQ-149109: Force shutter tone on Japan softbank carrier
-on property:ro.carrier=softbank
-    setprop audio.camerasound.force true
-
-on property:ro.sys.force_max_chrg_temp=*
-    write /sys/class/power_supply/battery/device/force_max_chrg_temp ${ro.sys.force_max_chrg_temp}
-
-on property:ro.sys.force_demo_mode=*
-    write /sys/class/power_supply/battery/device/force_demo_mode ${ro.sys.force_demo_mode}
-

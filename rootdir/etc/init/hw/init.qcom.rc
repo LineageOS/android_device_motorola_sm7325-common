@@ -25,11 +25,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import /vendor/etc/init/hw/init.qti.ufs.rc
-import /vendor/etc/init/hw/init.qcom.usb.rc
-import /vendor/etc/init/hw/init.qcom.test.rc
 import /vendor/etc/init/hw/init.target.rc
-import /vendor/etc/init/hw/init.qcom.factory.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -394,88 +390,11 @@ on post-fs-data
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
 
-service nqnfcinfo /system/vendor/bin/nqnfcinfo
-    class late_start
-    group nfc
-    user system
-    oneshot
-
-service iop /system/vendor/bin/iop
-    class main
-    user root
-    group root
-    disabled
-    socket iop seqpacket 0666 root system
-
-#service qcomsysd /system/vendor/bin/qcom-system-daemon
-#    class main
-#    user root
-#    group root diag oem_2901
-#    disabled
-
-#on property:persist.vendor.qcomsysd.enabled=1
-#    enable qcomsysd
-
 on property:ro.vendor.hw.dualsim=true
    setprop persist.vendor.radio.multisim.config dsds
 
 on property:ro.vendor.hw.dualsim=false
    setprop persist.vendor.radio.multisim.config ""
-
-#on property:persist.vendor.qcomsysd.enabled=0
-#    stop qcomsysd
-
-service vendor.ssr_setup /system/vendor/bin/ssr_setup
-    oneshot
-    disabled
-
-service vendor.ss_ramdump /system/vendor/bin/subsystem_ramdump
-    class main
-    user system
-    group log sdcard_rw sdcard_r diag system
-    ioprio rt 4
-    disabled
-
-on property:ro.vendor.iocgrp.config=1
-    mkdir /dev/blkio
-    mount cgroup none /dev/blkio blkio
-    chown system system /dev/blkio
-    chown system system /dev/blkio/tasks
-    chmod 0664 /dev/blkio/tasks
-    mkdir /dev/blkio/bg 0755 system system
-    chown system system /dev/blkio/bg/tasks
-    chmod 0664 /dev/blkio/bg/tasks
-    write /dev/blkio/blkio.weight 1000
-    write /dev/blkio/bg/blkio.weight 100
-
-on property:persist.sys.ssr.enable_debug=*
-    write /sys/module/subsystem_restart/parameters/enable_debug ${persist.sys.ssr.enable_debug}
-
-on property:persist.sys.mba_boot_timeout=*
-    write /sys/module/pil_msa/parameters/pbl_mba_boot_timeout_ms ${persist.sys.mba_boot_timeout}
-
-on property:persist.sys.modem_auth_timeout=*
-    write /sys/module/pil_msa/parameters/modem_auth_timeout_ms ${persist.sys.modem_auth_timeout}
-
-on property:persist.sys.pil_proxy_timeout=*
-    write /sys/module/peripheral_loader/parameters/proxy_timeout_ms ${persist.sys.pil_proxy_timeout}
-
-on property:persist.vendor.ssr.restart_level=*
-    start vendor.ssr_setup
-
-on property:persist.vendor.ssr.enable_ramdumps=1
-    write /sys/module/subsystem_restart/parameters/enable_ramdumps 1
-    mkdir /data/vendor/ramdump_ssr 770 system system
-    start vendor.ss_ramdump
-
-on property:persist.vendor.ssr.enable_ramdumps=0
-    write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
-
-on property:persist.vendor.sys.rawdump_copy=1
-    write /sys/kernel/dload/emmc_dload 1
-
-on property:persist.vendor.sys.rawdump_copy=0
-    write /sys/kernel/dload/emmc_dload 0
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
@@ -537,12 +456,6 @@ service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     user root
     oneshot
 
-service qmiproxy /system/bin/qmiproxy
-    class main
-    user radio
-    group radio diag
-    disabled
-
 service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -O/data/vendor/wifi/wpa/sockets -puse_p2p_group_interface=1 -dd \
     -g@android:vendor_wpa_wlan0
@@ -585,24 +498,6 @@ service vendor.move_wifi_data /system/bin/move_wifi_data.sh
     disabled
     oneshot
 
-service wigignpt /vendor/bin/wigignpt
-    class hal
-    socket wigig/wigignpt stream 660 system wifi
-    user system
-    group wifi
-    capabilities NET_ADMIN
-    disabled
-
-on property:persist.vendor.wigig.npt.enable=1
-    start wigignpt
-
-service vendor.sensingdaemon /vendor/bin/sensingdaemon
-    class hal
-    socket wigig/sensingdaemon stream 660 system wifi
-    user system
-    group wifi
-    disabled
-
 service dhcpcd_wlan0 /system/bin/dhcpcd -ABKLG
     class late_start
     disabled
@@ -643,29 +538,6 @@ service iprenew_wigig0 /system/bin/dhcpcd -n
     disabled
     oneshot
 
-service ptt_socket_app /system/vendor/bin/ptt_socket_app -d
-    class main
-    user wifi
-    group wifi system inet net_admin
-    capabilities NET_ADMIN
-    oneshot
-
-service ptt_ffbm /system/vendor/bin/ptt_socket_app -f -d
-    user root
-    group root
-    disabled
-    oneshot
-
-service wifi_ftmd /system/vendor/bin/wifi_ftmd
-    user system
-    group system inet net_admin
-    socket wififtmd_server dgram 0660 system system
-    disabled
-    oneshot
-
-on property:vendor.wifi.ftmd.load=true
-    insmod /system/lib/modules/pronto/pronto_wlan.ko con_mode=5
-
 service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
     class late_start
     user system
@@ -686,12 +558,6 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
     disabled
     oneshot
 
-#service ssgqmigd /vendor/bin/ssgqmigd
-#    class late_start
-#    user radio
-#    group radio gps system
-#    socket ssgqmig seqpacket 0660 radio inet
-
 service mlid /vendor/bin/mlid
     class late_start
     user gps
@@ -708,11 +574,6 @@ service qcom-sh /vendor/bin/init.qcom.sh
     user root
     group root system radio
     oneshot
-# Remove since is deprecated but throws AVC denial.
-# service crashdata-sh /vendor/bin/init.qcom.crashdata.sh
-#    class late_start
-#    user root
-#    oneshot
 
 service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     class late_start
@@ -720,13 +581,6 @@ service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     group root system wakelock graphics
     disabled
     oneshot
-
-service qti-testscripts /system/bin/sh /product/etc/init.qcom.testscripts.sh
-    class late_start
-    user root
-    disabled
-    oneshot
-    seclabel u:r:qti-testscripts:s0
 
 service wifi-sdio-on /vendor/bin/init.qcom.sdio.sh
     class late_start
@@ -742,15 +596,9 @@ service wifi-crda /vendor/bin/init.crda.sh
 
 on property:sys.boot_completed=1
     start qcom-post-boot
-    start qti-testscripts
 
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
-
-service qvop-daemon /vendor/bin/qvop-daemon
-    class late_start
-    user system
-    group system drmrpc
 
 service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
@@ -790,40 +638,6 @@ service profiler_daemon /system/bin/profiler_daemon
     group root
     disabled
 
-service vendor.ssr_diag /system/vendor/bin/ssr_diag
-    class late_start
-    user system
-    group system
-    disabled
-
-#service diag_mdlog_start /system/vendor/bin/diag_mdlog
-#    class late_start
-#    user shell
-#    group system oem_2901 sdcard_rw sdcard_r media_rw
-#    disabled
-#    oneshot
-
-#service diag_mdlog_stop /system/vendor/bin/diag_mdlog -k
-#    class late_start
-#    user shell
-#    group system oem_2901 sdcard_rw sdcard_r media_rw
-#    disabled
-#    oneshot
-
-service qlogd /system/xbin/qlogd
-    socket qlogd stream 0662 system system
-    class main
-    disabled
-on property:persist.sys.qlogd=1
-    start qlogd
-on property:persist.sys.qlogd=0
-    stop qlogd
-
-service vm_bms /vendor/bin/vm_bms
-    class main
-    user root
-    group system wakelock
-
 service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
     class core
     user root
@@ -841,40 +655,6 @@ service vendor.msm_irqbl_sdm630 /vendor/bin/msm_irqbalance -f /system/vendor/etc
     user root
     group root
     disabled
-
-# service for USERDEBUG
-service vendor.LKCore-dbg /vendor/bin/LKCore
-    class late_start
-    oneshot
-    disabled
-    user root
-    group root system log diag net_raw
-
-# service for USER
-service vendor.LKCore-rel /vendor/bin/LKCore
-    class late_start
-    oneshot
-    disabled
-    user system
-    group system log diag
-
-service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
-    class late_start
-    user system
-    group system
-
-service esepmdaemon /system/vendor/bin/esepmdaemon
-    class core
-    user system
-    group nfc
-
-#add poweroffhandler
-service poweroffhandler /system/vendor/bin/poweroffhandler
-    class core
-    user media
-    group graphics audio
-    disabled
-    oneshot
 
 service time_daemon /vendor/bin/time_daemon
     class main
@@ -894,23 +674,6 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     group system
     disabled
     oneshot
-
-service vendor.hbtp /vendor/bin/hbtp_daemon
-     class main
-     user system
-     group system
-     capabilities SYS_NICE
-     disabled
-
-#service chre /vendor/bin/chre
-#    class late_start
-#    user system
-#    group system
-#    socket chre seqpacket 0660 root system
-#    shutdown critical
-
-on property:vendor.chre.enabled=0
-   stop chre
 
 service bugreport /system/bin/dumpstate -d -p -B -z -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
     class main
