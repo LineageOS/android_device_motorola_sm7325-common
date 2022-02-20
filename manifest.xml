@@ -181,24 +181,6 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" override="true">
-        <name>com.motorola.hardware.display.panel</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>IDisplayPanel</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" override="true">
-        <name>com.motorola.hardware.display.touch</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>IMotTouch</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl">
         <name>com.qualcomm.qti.dpm.api</name>
         <transport>hwbinder</transport>
@@ -239,28 +221,6 @@
             <name>ICameraDesktop</name>
             <instance>default</instance>
         </interface>
-    </hal>
-    <hal format="hidl">
-        <name>motorola.hardware.camera.imgtuner</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IImageTuning</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>motorola.hardware.fdrcontrol</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>IFdrControl</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" override="true">
-        <name>motorola.hardware.wireless.powershare</name>
-        <transport>hwbinder</transport>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.data.factory</name>
