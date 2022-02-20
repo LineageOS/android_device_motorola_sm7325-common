@@ -262,6 +262,10 @@ PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
     libcodec2_hidl@1.0.vendor
 
+# MotoActions
+PRODUCT_PACKAGES += \
+    MotoActions
+
 # Neural Networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
