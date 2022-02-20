@@ -5,6 +5,7 @@ camera.mot.is.coming.cts   u:object_r:vendor_camera_prop:s0
 vendor.ril.                u:object_r:vendor_radio_prop:s0
 
 # Motorola
+persist.vendor.nfc.        u:object_r:vendor_mot_nfc_prop:s0
 ro.mot.build.customerid    u:object_r:exported_default_prop:s0
 ro.vendor.hw.              u:object_r:vendor_mot_hw_prop:s0
 ro.vendor.mot.gki.         u:object_r:vendor_mot_hw_prop:s0
@@ -13,7 +14,8 @@ ro.vendor.product.display  u:object_r:vendor_mot_hw_prop:s0
 ro.vendor.product.hardware.sku.variant          u:object_r:vendor_mot_hw_prop:s0
 ro.vendor.product.model    u:object_r:vendor_mot_hw_prop:s0
 ro.vendor.product.name     u:object_r:vendor_mot_hw_prop:s0
-vendor.hw.touch.status     u:object_r:vendor_mot_touch_prop:s0
+vendor.hw.touch.           u:object_r:vendor_mot_touch_prop:s0
+vendor.nfc.fw_status       u:object_r:vendor_mot_nfc_prop:s0
 
 # Motorola fingerprint
 persist.vendor.hardware.fingerprint            u:object_r:vendor_mot_fingerprint_prop:s0
