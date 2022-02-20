@@ -1,0 +1,1 @@
+allow vendor_hal_gnss_qti fwk_sensor_hwservice:hwservice_manager find;
