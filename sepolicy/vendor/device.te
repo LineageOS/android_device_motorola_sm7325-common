@@ -1,5 +1,6 @@
 # Fingerprint
 type etsd_device, dev_type;
+type goodix_device, dev_type;
 
 # Moto partitions
 type vendor_hw_block_device, dev_type;

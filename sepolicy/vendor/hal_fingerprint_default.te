@@ -1,5 +1,6 @@
 allow hal_fingerprint_default {
   etsd_device
+  goodix_device
   tee_device
 }: chr_file rw_file_perms;
 

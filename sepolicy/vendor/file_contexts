@@ -38,12 +38,17 @@
 # Fingerprint
 /(mnt/vendor/persist|persist)/fps(/.*)?                 u:object_r:vendor_persist_fps_file:s0
 /(vendor|system/vendor)/bin/fpc_ident                   u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-goodixservice            u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-ets              u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-fpc              u:object_r:hal_fingerprint_default_exec:s0
 /data/vendor/.fps(/.*)?                                 u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/fpc(/.*)?                                  u:object_r:fingerprint_vendor_data_file:s0
+/data/vendor/gf_data(/.*)?                              u:object_r:fingerprint_vendor_data_file:s0
+/dev/goodix_fp                                          u:object_r:goodix_device:s0
 /dev/esfp0                                              u:object_r:etsd_device:s0
 /sys/devices/soc/0\.et320(/.*)?                         u:object_r:vendor_sysfs_fingerprint:s0
+/sys/class/fingerprint/fpc1020(/.*)?                    u:object_r:vendor_sysfs_fingerprint:s0
+/sys/devices/virtual/fingerprint/fpc1020(/.*)?          u:object_r:vendor_sysfs_fingerprint:s0
 
 # IFAA
 /(vendor|system/vendor)/bin/hw/vendor\.zui\.hardware\.ifaa@1\.0-service                 u:object_r:hal_ifaa_default_exec:s0
