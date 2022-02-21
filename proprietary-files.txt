@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from RRA31.Q3-19-19
+# All unpinned blobs below are extracted from RRA31.Q3-19-86
 
 # ADSP
 vendor/bin/adsprpcd
@@ -801,6 +801,8 @@ vendor/radio/qcril_database/upgrade/22_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/23_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/24_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/25_version_qcrildb.sql
+vendor/radio/qcril_database/upgrade/26_version_qcrildb.sql
+vendor/radio/qcril_database/upgrade/27_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/3_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/4_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/5_version_qcrildb.sql
