@@ -13,7 +13,7 @@
 // limitations under the License.
 
 cc_defaults {
-    name: "livedisplay_motorola_lito",
+    name: "livedisplay_motorola_kona",
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     srcs: [
@@ -38,8 +38,8 @@ cc_defaults {
 }
 
 cc_binary {
-    name: "vendor.lineage.livedisplay@2.0-service-sysfs.motorola_lito",
-    init_rc: ["vendor.lineage.livedisplay@2.0-service-sysfs.motorola_lito.rc"],
-    defaults: ["livedisplay_motorola_lito"],
+    name: "vendor.lineage.livedisplay@2.0-service-sysfs.motorola_kona",
+    init_rc: ["vendor.lineage.livedisplay@2.0-service-sysfs.motorola_kona.rc"],
+    defaults: ["livedisplay_motorola_kona"],
     vendor: true,
 }
