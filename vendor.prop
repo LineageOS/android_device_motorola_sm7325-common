@@ -218,7 +218,6 @@ persist.vendor.radio.sib16_support=1
 persist.vendor.radio.start_ota_daemon=0
 persist.vendor.radio.sw_mbn_update=0
 rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
-ro.vendor.hw.dualsim=true
 ro.vendor.radio.imei.sv=1
 
 # Sensors
