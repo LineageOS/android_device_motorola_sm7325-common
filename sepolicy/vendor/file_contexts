@@ -56,6 +56,9 @@
 # Lights
 /(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.motokona              u:object_r:hal_light_default_exec:s0
 
+# LiveDisplay
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.motorola_kona    u:object_r:hal_lineage_livedisplay_qti_exec:s0
+
 # Motobox
 /(vendor|system/vendor)/bin/motobox                     u:object_r:vendor_motobox_exec:s0
 

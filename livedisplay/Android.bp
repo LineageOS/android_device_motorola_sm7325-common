@@ -20,6 +20,7 @@ cc_defaults {
         ":vendor.lineage.livedisplay@2.0-sdm-pa",
         ":vendor.lineage.livedisplay@2.0-sdm-utils",
         "AdaptiveBacklight.cpp",
+        "AntiFlicker.cpp",
         "SunlightEnhancement.cpp",
         "service.cpp",
     ],
@@ -31,6 +32,7 @@ cc_defaults {
         "libhidlbase",
         "libutils",
         "vendor.lineage.livedisplay@2.0",
+        "vendor.lineage.livedisplay@2.1",
     ],
     header_libs: [
         "vendor.lineage.livedisplay@2.0-sdm-headers",
@@ -38,8 +40,8 @@ cc_defaults {
 }
 
 cc_binary {
-    name: "vendor.lineage.livedisplay@2.0-service-sysfs.motorola_kona",
-    init_rc: ["vendor.lineage.livedisplay@2.0-service-sysfs.motorola_kona.rc"],
+    name: "vendor.lineage.livedisplay@2.1-service.motorola_kona",
+    init_rc: ["vendor.lineage.livedisplay@2.1-service.motorola_kona.rc"],
     defaults: ["livedisplay_motorola_kona"],
     vendor: true,
 }

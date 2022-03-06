@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2020 The LineageOS Project
+ * Copyright (C) 2019-2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,8 +30,8 @@ using ::android::base::WriteStringToFile;
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
-namespace sysfs {
+namespace V2_1 {
+namespace implementation {
 
 SunlightEnhancement::SunlightEnhancement() {
     if (!access(kFileHbm, R_OK | W_OK)) {
@@ -46,7 +46,7 @@ bool SunlightEnhancement::isSupported() {
     return file_ != nullptr;
 }
 
-// Methods from ::vendor::lineage::livedisplay::V2_0::ISunlightEnhancement follow.
+// Methods from ::vendor::lineage::livedisplay::V2_1::ISunlightEnhancement follow.
 Return<bool> SunlightEnhancement::isEnabled() {
     std::string tmp;
     int32_t contents = 0;
@@ -62,8 +62,8 @@ Return<bool> SunlightEnhancement::setEnabled(bool enabled) {
     return WriteStringToFile(enabled ? std::to_string(enabled_mode_) : "0", file_, true);
 }
 
-}  // namespace sysfs
-}  // namespace V2_0
+}  // namespace implementation
+}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor

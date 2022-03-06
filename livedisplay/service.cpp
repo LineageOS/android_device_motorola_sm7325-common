@@ -14,11 +14,15 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.livedisplay@2.0-service-sysfs.motorola_kona"
+#define LOG_TAG "vendor.lineage.livedisplay@2.1-service.motorola_kona"
 
 #include <android-base/logging.h>
+#include <binder/ProcessState.h>
 #include <hidl/HidlTransportSupport.h>
+#include <livedisplay/sdm/PictureAdjustment.h>
+#include <vendor/lineage/livedisplay/2.1/IPictureAdjustment.h>
 #include "AdaptiveBacklight.h"
+#include "AntiFlicker.h"
 #include "SunlightEnhancement.h"
 
 using ::android::OK;
@@ -27,8 +31,12 @@ using ::android::status_t;
 using ::android::hardware::configureRpcThreadpool;
 using ::android::hardware::joinRpcThreadpool;
 
-using ::vendor::lineage::livedisplay::V2_0::sysfs::AdaptiveBacklight;
-using ::vendor::lineage::livedisplay::V2_0::sysfs::SunlightEnhancement;
+using ::vendor::lineage::livedisplay::V2_0::sdm::PictureAdjustment;
+using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
+using ::vendor::lineage::livedisplay::V2_1::IPictureAdjustment;
+using ::vendor::lineage::livedisplay::V2_1::implementation::AdaptiveBacklight;
+using ::vendor::lineage::livedisplay::V2_1::implementation::AntiFlicker;
+using ::vendor::lineage::livedisplay::V2_1::implementation::SunlightEnhancement;
 
 status_t RegisterAsServices() {
     status_t status = OK;
@@ -52,11 +60,32 @@ status_t RegisterAsServices() {
             return status;
         }
     }
+	
+	sp<AntiFlicker> af = new AntiFlicker();
+    if (af->isSupported()) {
+        status = af->registerAsService();
+        if (status != OK) {
+            LOG(ERROR) << "Could not register service for LiveDisplay HAL AntiFlicker Iface"
+                       << " (" << status << ")";
+            return status;
+        }
+    }
+
+    std::shared_ptr<SDMController> controller = std::make_shared<SDMController>();
+    sp<PictureAdjustment> pa = new PictureAdjustment(controller);
+	status = pa->registerAsService();
+    if (status != OK) {
+        LOG(ERROR) << "Could not register service for LiveDisplay HAL PictureAdjustment Iface ("
+                   << status << ")";
+        return status;
+    }
 
     return OK;
 }
 
 int main() {
+	android::ProcessState::initWithDriver("/dev/vndbinder");
+	
     LOG(DEBUG) << "LiveDisplay HAL service is starting.";
 
     configureRpcThreadpool(1, true /*callerWillJoin*/);

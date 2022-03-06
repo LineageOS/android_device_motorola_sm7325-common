@@ -14,22 +14,18 @@
  * limitations under the License.
  */
 
-#include "AdaptiveBacklight.h"
+#include "AntiFlicker.h"
 
 #include <android-base/file.h>
-#include <android-base/properties.h>
 #include <android-base/strings.h>
 
-using ::android::base::GetBoolProperty;
+namespace {
+    constexpr const char *kFileDc = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_dc";
+};  // anonymous namespace
+
 using ::android::base::ReadFileToString;
 using ::android::base::Trim;
 using ::android::base::WriteStringToFile;
-
-namespace {
-    constexpr const char *kFileAcl = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_acl";
-    constexpr const char *kFileCabc = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_cabc";
-    constexpr const char *kFossProperty = "ro.vendor.display.foss";
-}  // anonymous namespace
 
 namespace vendor {
 namespace lineage {
@@ -37,25 +33,21 @@ namespace livedisplay {
 namespace V2_1 {
 namespace implementation {
 
-AdaptiveBacklight::AdaptiveBacklight() {
-    if (!access(kFileAcl, R_OK | W_OK)) {
-        file_ = kFileAcl;
-    } else if (!access(kFileCabc, R_OK | W_OK)) {
-        file_ = kFileCabc;
+AntiFlicker::AntiFlicker() {
+    if (!access(kFileDc, R_OK | W_OK)) {
+        file_ = kFileDc;
+        enabled_mode_ = 1;
     } else {
         file_ = nullptr;
     }
 }
 
-bool AdaptiveBacklight::isSupported() {
-    if (GetBoolProperty(kFossProperty, false) || file_ == nullptr) {
-        return false;
-    }
-    return true;
+bool AntiFlicker::isSupported() {
+    return file_ != nullptr;
 }
 
-// Methods from ::vendor::lineage::livedisplay::V2_1::IAdaptiveBacklight follow.
-Return<bool> AdaptiveBacklight::isEnabled() {
+// Methods from ::vendor::lineage::livedisplay::V2_1::IAntiFlicker follow.
+Return<bool> AntiFlicker::isEnabled() {
     std::string tmp;
     int32_t contents = 0;
 
@@ -66,8 +58,8 @@ Return<bool> AdaptiveBacklight::isEnabled() {
     return contents > 0;
 }
 
-Return<bool> AdaptiveBacklight::setEnabled(bool enabled) {
-    return WriteStringToFile(std::to_string(enabled), file_, true);
+Return<bool> AntiFlicker::setEnabled(bool enabled) {
+    return WriteStringToFile(enabled ? std::to_string(enabled_mode_) : "0", file_, true);
 }
 
 }  // namespace implementation

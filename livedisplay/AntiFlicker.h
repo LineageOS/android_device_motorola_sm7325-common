@@ -16,7 +16,7 @@
 
 #pragma once
 
-#include <vendor/lineage/livedisplay/2.1/ISunlightEnhancement.h>
+#include <vendor/lineage/livedisplay/2.1/IAntiFlicker.h>
 
 namespace vendor {
 namespace lineage {
@@ -26,12 +26,12 @@ namespace implementation {
 
 using ::android::hardware::Return;
 
-class SunlightEnhancement : public ISunlightEnhancement {
+class AntiFlicker : public IAntiFlicker {
   public:
-    SunlightEnhancement();
+    AntiFlicker();
     bool isSupported();
 
-    // Methods from ::vendor::lineage::livedisplay::V2_1::ISunlightEnhancement follow.
+    // Methods from ::vendor::lineage::livedisplay::V2_1::IAntiFlicker follow.
     Return<bool> isEnabled() override;
     Return<bool> setEnabled(bool enabled) override;
 

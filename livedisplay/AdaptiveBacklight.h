@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2020 The LineageOS Project
+ * Copyright (C) 2019-2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,13 +16,13 @@
 
 #pragma once
 
-#include <vendor/lineage/livedisplay/2.0/IAdaptiveBacklight.h>
+#include <vendor/lineage/livedisplay/2.1/IAdaptiveBacklight.h>
 
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_0 {
-namespace sysfs {
+namespace V2_1 {
+namespace implementation {
 
 using ::android::hardware::Return;
 
@@ -31,7 +31,7 @@ class AdaptiveBacklight : public IAdaptiveBacklight {
     AdaptiveBacklight();
     bool isSupported();
 
-    // Methods from ::vendor::lineage::livedisplay::V2_0::IAdaptiveBacklight follow.
+    // Methods from ::vendor::lineage::livedisplay::V2_1::IAdaptiveBacklight follow.
     Return<bool> isEnabled() override;
     Return<bool> setEnabled(bool enabled) override;
 
@@ -39,8 +39,8 @@ class AdaptiveBacklight : public IAdaptiveBacklight {
     const char* file_;
 };
 
-}  // namespace sysfs
-}  // namespace V2_0
+}  // namespace implementation
+}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor
