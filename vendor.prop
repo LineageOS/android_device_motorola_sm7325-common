@@ -101,6 +101,7 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Dalvik
 dalvik.vm.dex2oat-threads=6
+dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.heapgrowthlimit=256m
 dalvik.vm.heapmaxfree=32m
 dalvik.vm.heapminfree=8m
