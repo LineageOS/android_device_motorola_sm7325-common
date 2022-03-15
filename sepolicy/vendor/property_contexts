@@ -3,6 +3,7 @@ vendor.camera.coming.cts   u:object_r:vendor_camera_prop:s0
 
 # Radio
 vendor.ril.                u:object_r:vendor_radio_prop:s0
+vendor.net.qmi.rev_ip_info u:object_r:vendor_radio_prop:s0
 
 # Motorola
 persist.vendor.nfc.        u:object_r:vendor_mot_nfc_prop:s0
