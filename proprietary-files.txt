@@ -784,6 +784,12 @@ framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
 -system_ext/priv-app/ims/ims.apk|6899c19f642d692f1c86c56651bd4d7db892ba7a
 
 # RIL - IMS
+-system_ext/app/ImsRcsService/ImsRcsService.apk|58ea6b82ec993a16ff8a771ba04aec890d594ce8
+system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml|74476767d19fc0f08ba171ecd21b904301f4f1a6
+system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar|43fbd2e3a7f46cfa2606e0997f9deed8d0d8e56e
+system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar|a5791aa90552999909e52648d576055a8c533397
+system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar|440fa6b79203f7f1ffe2be9af21ab7371f832326
+system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar|bb641d5e317a7a72c138d9ffad7a90287b3726cd
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
