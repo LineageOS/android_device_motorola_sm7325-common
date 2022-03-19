@@ -18,18 +18,6 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-   <!-- Average Current for bluetooth controller when idle. 0 by default-->
-   <integer translatable="false" name="config_bluetooth_idle_cur_ma">3</integer>
-
-   <!-- Average Current for bluetooth controller when receiving. 0 by default-->
-   <integer translatable="false" name="config_bluetooth_rx_cur_ma">20</integer>
-
-   <!-- Average Current for bluetooth controller when transmitting. 0 by default-->
-   <integer translatable="false" name="config_bluetooth_tx_cur_ma">33</integer>
-
-   <!-- Operating volatage for bluetooth controller. 0 by default-->
-   <integer translatable="false" name="config_bluetooth_operating_voltage_mv">3700</integer>
-
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
@@ -296,9 +284,19 @@
 
     <!-- The default peak refresh rate for a given device. Change this value if you want to allow
          for higher refresh rates to be automatically used out of the box -->
-    <integer name="config_defaultPeakRefreshRate">180</integer>
+    <integer name="config_defaultPeakRefreshRate">240</integer>
+
+    <!-- Whether to select voice/data/sms preference without user confirmation -->
+    <bool name="config_voice_data_sms_auto_fallback">true</bool>
+    <!-- Package names to use with vendor iwlan implementation. -->
+    <string name="config_wlan_data_service_package" translatable="false">vendor.qti.iwlan</string>
+    <string name="config_wlan_network_service_package" translatable="false">vendor.qti.iwlan</string>
+    <string name="config_qualified_networks_service_package" translatable="false">vendor.qti.iwlan</string>
 
     <!-- set to false if we need to show user confirmation
          when alpha identifier is not provided by the UICC -->
     <bool name="config_stkNoAlphaUsrCnf">false</bool>
+
+    <!-- Configure emergency apn as empty(null) apn -->
+    <string name="config_emergency_apn" translatable="false"></string>
 </resources>
