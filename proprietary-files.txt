@@ -647,11 +647,16 @@ vendor/lib64/vendor.qti.qspmhal@1.0.so
 
 # RIL
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
+-system_ext/app/uimgbaservice/uimgbaservice.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
 system_ext/etc/permissions/telephonyservice.xml
+system_ext/etc/permissions/UimGba.xml
+system_ext/etc/permissions/UimGbaManager.xml
 system_ext/framework/qcrilhook.jar
+system_ext/framework/uimgbalibrary.jar
+system_ext/framework/uimgbamanagerlibrary.jar
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -vendor/app/IWlanService/IWlanService.apk
 vendor/bin/hw/qcrild
