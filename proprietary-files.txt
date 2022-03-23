@@ -197,23 +197,23 @@ vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 # Display - HDR
 vendor/lib64/libhdr_tm.so
 
-# Display - HWC
+# Display - HWC - from nio - S1RN32.19
 vendor/bin/qdcmss
 vendor/etc/init/qdcmss.rc
-vendor/lib64/libdpps.so
+vendor/lib64/libdpps.so|aed0ddf27cae0c0d6fed1e27a7b19b1ffeb22002
 vendor/lib64/libhdrdynamic.so
 vendor/lib64/libhdrdynamicootf.so
 
-# Display - SDM
+# Display - SDM - from nio - S1RN32.19
 vendor/etc/display/advanced_sf_offsets.xml
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdisplayskuutils.so
+vendor/lib64/libdisplayqos.so|15701f18257c43be5657bbd867a8acf1f469e373
+vendor/lib64/libdisplayskuutils.so|3ddb2ffe55aa9aef686cf3be00ae5e0d1d8f9d93
 vendor/lib64/libqseed3.so
-vendor/lib64/libsdm-color.so
+vendor/lib64/libsdm-color.so|29cbc16f6fa573d21f48e2be2ff0d51de3357378
 vendor/lib64/libsdm-colormgr-algo.so
-vendor/lib64/libsdm-diag.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
+vendor/lib64/libsdm-diag.so|57e8b57e52b98a0a151434414756fcf91147a511
+vendor/lib64/libsdm-disp-vndapis.so|fd0b0beac164c92bfa012dbc059cb50cdde2dec6
+vendor/lib64/libsdmextension.so|99377ab065105f0cbd17bbe5907cdbb8027a9f17
 vendor/lib64/libtinyxml2_1.so
 
 # Display postprocessing
