@@ -1,3 +1,15 @@
+prebuilt_etc {
+    name: "apdr.conf",
+    vendor: true,
+    src: "apdr.conf",
+}
+
+prebuilt_etc {
+
+    name: "flp.conf",
+    vendor: true,
+    src: "flp.conf",
+}
 
 prebuilt_etc {
 
@@ -7,10 +19,27 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-
-    name: "flp.conf",
+    name: "izat.conf",
     vendor: true,
-    src: "flp.conf",
+    src: "izat.conf",
+}
+
+prebuilt_etc {
+    name: "lowi.conf",
+    vendor: true,
+    src: "lowi.conf",
+}
+
+prebuilt_etc {
+    name: "sap.conf",
+    vendor: true,
+    src: "sap.conf",
+}
+
+prebuilt_etc {
+    name: "xtwifi.conf",
+    vendor: true,
+    src: "xtwifi.conf",
 }
 
 prebuilt_etc {
