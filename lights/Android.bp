@@ -14,10 +14,10 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.lights-service.motokona",
+    name: "android.hardware.lights-service.motolahaina",
     relative_install_path: "hw",
-    init_rc: ["android.hardware.lights.motokona.rc"],
-    vintf_fragments: ["android.hardware.lights.motokona.xml"],
+    init_rc: ["android.hardware.lights.motolahaina.rc"],
+    vintf_fragments: ["android.hardware.lights.motolahaina.xml"],
     vendor: true,
     shared_libs: [
         "libbase",

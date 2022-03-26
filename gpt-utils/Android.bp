@@ -16,7 +16,7 @@
 
 
 cc_library {
-    name: "libgptutils.moto_kona",
+    name: "libgptutils.moto_lahaina",
     vendor: true,
     recovery_available: true,
     shared_libs: [

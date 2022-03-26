@@ -13,7 +13,7 @@
 // limitations under the License.
 
 cc_defaults {
-    name: "livedisplay_motorola_kona",
+    name: "livedisplay_motorola_lahaina",
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     srcs: [
@@ -40,8 +40,8 @@ cc_defaults {
 }
 
 cc_binary {
-    name: "vendor.lineage.livedisplay@2.1-service.motorola_kona",
-    init_rc: ["vendor.lineage.livedisplay@2.1-service.motorola_kona.rc"],
-    defaults: ["livedisplay_motorola_kona"],
+    name: "vendor.lineage.livedisplay@2.1-service.motorola_lahaina",
+    init_rc: ["vendor.lineage.livedisplay@2.1-service.motorola_lahaina.rc"],
+    defaults: ["livedisplay_motorola_lahaina"],
     vendor: true,
 }

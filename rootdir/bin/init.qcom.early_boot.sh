@@ -538,14 +538,6 @@ fi
 
 # copy GPU frequencies to vendor property
 if [ -f /sys/class/kgsl/kgsl-3d0/gpu_available_frequencies ]; then
-    # Remove turbo freq from prop
-    gpu_freq=`cat /sys/class/kgsl/kgsl-3d0/gpu_available_frequencies | sed 's/905000000 //g'` 2> /dev/null
+    gpu_freq=`cat /sys/class/kgsl/kgsl-3d0/gpu_available_frequencies` 2> /dev/null
     setprop vendor.gpu.available_frequencies "$gpu_freq"
-fi
-
-# GPU turbo
-gpu_max_freq=`cat /sys/class/kgsl/kgsl-3d0/devfreq/max_freq` 2> /dev/null
-if [ ${gpu_max_freq} == '905000000' ]; then
-    setprop vendor.gpu.turbo_supported 1
-    setprop vendor.gpu.turbo_enabled 0
 fi

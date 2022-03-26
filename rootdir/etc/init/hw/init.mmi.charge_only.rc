@@ -1,10 +1,4 @@
 on charger
-    stop vendor.sensors
-    chown radio wakelock /sys/power/wake_lock
-    chmod 0660 /sys/power/wake_lock
-    chown radio wakelock /sys/power/wake_unlock
-    chmod 0660 /sys/power/wake_unlock
-
     start vendor.thermal-com
     start system_suspend
 
@@ -18,10 +12,6 @@ on charger
     write /sys/devices/system/cpu/cpu5/online 0
     write /sys/devices/system/cpu/cpu6/online 0
     write /sys/devices/system/cpu/cpu7/online 0
-
-    # Allow system to sleep when in COM
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
-    write /proc/sys/kernel/sched_boost 0
 
 service vendor.thermal-com /vendor/bin/thermal-engine --minimode
     class charger

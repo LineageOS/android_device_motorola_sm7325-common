@@ -1,4 +1,4 @@
-# Copyright (c) 2009-2012, 2014-2021, The Linux Foundation. All rights reserved.
+# Copyright (c) 2009-2012, 2014-2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -240,7 +240,7 @@ on post-fs-data
     mkdir /data/vendor/pwr 0700 root root
 
     # Create directory used by media clients
-    mkdir /data/vendor/media 0775 mediacodec media
+    mkdir /data/vendor/media 0770 mediacodec media
 
     # Create /data/vendor/tzstorage directory for SFS listener
     mkdir /data/vendor/tzstorage 0770 system system
@@ -688,23 +688,6 @@ on property:vendor.opengles.version=*
 #Set gpu available frequencies property
 on property:vendor.gpu.available_frequencies=*
     setprop ro.vendor.gpu.available_frequencies ${vendor.gpu.available_frequencies}
-
-# huangzq2: GPU trubo
-on property:vendor.gpu.turbo_enabled=1
-    setprop vendor.thermal.mode perf
-    stop thermal-engine
-    start thermal-engine
-
-on property:vendor.gpu.turbo_enabled=0
-    setprop vendor.thermal.mode normal
-    stop thermal-engine
-    start thermal-engine
-
-on property:vendor.gpu.turbo_supported=1 && property:vendor.gpu.turbo_enabled=1
-    write /sys/class/kgsl/kgsl-3d0/max_pwrlevel 0
-
-on property:vendor.gpu.turbo_supported=1 && property:vendor.gpu.turbo_enabled=0
-    write /sys/class/kgsl/kgsl-3d0/max_pwrlevel 1
 
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override

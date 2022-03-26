@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (c) 2018-2021 Qualcomm Technologies, Inc.
+    All Rights Reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+
+    Not a Contribution.
+
+    Copyright (C) 2012-2018 The Linux Foundation. All rights reserved.
+    Copyright (C) 2012-2013 The Android Open Source Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<!--
+"performance-point"
+    Vendor-guaranteed performance advertised to the applications
+        <Limit name="performance-point-widthxheight" value="fps" />
+
+    -For each of the resolutions, the advertised fps is the max supported,
+    with HW-friendly color format and considering video-only.
+    -Performance for any intermediate resolution will be that of the
+    next-higher-advertised-resolution.
+
+    standard sizes: 480p/576p (SD), 720p (HD), 1080p (FHD), 2160p (UHD)
+    standard frame rates: 24, 25, 30, 48+, 50, 60, 100*, 120*, 200*, 240* fps
+        * HD+ only
+        + SD only
+    - All supported standard performance points are listed (unless they are
+    covered by another listed standard performance point)
+    - Non-standard performance points are listed along with all the standard
+    performance points covered by them.
+-->
+
+<!--
+ Lahaina Non-Secure decoder capabilities
+ (MB is defined as 16x16)
+ _______________________________________________________
+ | Codec       |  W      H      fps     Mbps    MB/s   |
+ |_____________|_______________________________________|
+ | h264        | 3840   2176    60      100    1958400 |
+ |             | 4096   2176    48      100            |
+ | hevc        | 3840   2176    60      100    1958400 |
+ |             | 4096   2176    48      100            |
+ | vp9         | 3840   2176    60      100    1958400 |
+ |             | 4096   2176    48      100            |
+ | mpeg2       | 1920   1088    30       40     244800 |
+ |_____________|_______________________________________|
+
+ Lahaina Secure decoder capabilities
+ (MB is defined as 16x16)
+ __________________________________________________
+ | Codec    |  W      H      fps    Mbps   MB/s   |
+ |__________|_____________________________________|
+ | h264     | 3840   2176    60     40    1958400 |
+ |          | 4096   2176    48     40            |
+ | vp9      | 3840   2176    60     40    1958400 |
+ |          | 4096   2176    48     40            |
+ | hevc     | 3840   2176    60     40    1958400 |
+ |          | 4096   2176    48     40            |
+ |__________|_____________________________________|
+
+ Lahaina Non-Secure encoder capabilities (Secure not supported)
+ (MB is defined as 16x16)
+ __________________________________________________
+ | Codec    |  W      H      fps   Mbps    MB/s   |
+ |__________|_____________________________________|
+ | h264     | 3840   2176    60    100    1958400 |
+ |          | 4096   2176    48    100            |
+ | hevc     | 3840   2176    60    100    1958400 |
+ |          | 4096   2176    48    100            |
+ |__________|_____________________________________|
+-->
+
+<!--
+1) media_codecs.xml is used omx, C2 is copied to the media_codecs_c2.xml
+2) media_codecs_google_audio|video|c2.xml are removed, and instead of c2 from
+   /apex/com.android.media.swcodec/etc/media_codecs.xml
+3) media_codecs_google_telephony.xml is removed,it is copyed to media_codecs_c2.xml
+   The replacement file is media_codecs_google_c2_telephony.xml
+   ref frameworks/av/media/libstagefright/data/media_codecs_google_c2_telephony.xml
+-->
+<MediaCodecs>
+<!--
+    <Include href="media_codecs_google_audio.xml" />
+    <Include href="media_codecs_google_video.xml" />
+    <Include href="media_codecs_google_c2.xml" />
+    <Include href="media_codecs_google_telephony.xml" />
+-->
+</MediaCodecs>

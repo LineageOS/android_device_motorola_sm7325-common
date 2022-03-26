@@ -181,7 +181,7 @@ debug()
 notice()
 {
 	echo "$*"
-	log -t "$scriptname" -p i "$*"
+	echo "$scriptname: $*" > /dev/kmsg
 }
 
 add_device_params()

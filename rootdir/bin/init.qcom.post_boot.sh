@@ -803,12 +803,6 @@ KernelVersionA=${KernelVersionStr:0:1}
 KernelVersionB=${KernelVersionS%.*}
 
 function configure_zram_parameters() {
-    # Moto huangzq2: Skip this if we are using zram from fstab.
-    using_zram_from_fstab=`getprop ro.boot.using_zram_from_fstab`
-    if [ "$using_zram_from_fstab" == "true" ]; then
-        return
-    fi
-
     MemTotalStr=`cat /proc/meminfo | grep MemTotal`
     MemTotal=${MemTotalStr:16:8}
 
@@ -931,16 +925,15 @@ function configure_memory_parameters() {
     # Set allocstall_threshold to 0 for all targets.
     #
 
-BoardPlatform=`getprop ro.board.platform`
+ProductName=`getprop ro.product.name`
 low_ram=`getprop ro.config.low_ram`
 
-if [ "$BoardPlatform" == "msmnile" ] || [ "$BoardPlatform" == "kona" ] || [ "$BoardPlatform" == "lito" ] || [ "$BoardPlatform" == "sdmshrike_au" ]; then
+if [ "$ProductName" == "msmnile" ] || [ "$ProductName" == "kona" ] || [ "$ProductName" == "sdmshrike_au" ]; then
       # Enable ZRAM
       configure_zram_parameters
       configure_read_ahead_kb_values
-      # Moto huangzq2: Remove duplicate configs as we already set it in init.mmi.rc
-      #echo 0 > /proc/sys/vm/page-cluster
-      #echo 100 > /proc/sys/vm/swappiness
+      echo 0 > /proc/sys/vm/page-cluster
+      echo 100 > /proc/sys/vm/swappiness
 else
     arch_type=`uname -m`
 
@@ -986,7 +979,7 @@ else
         else
             # Set LMK series, vmpressure_file_min for 32 bit non-go targets.
             # Disable Core Control, enable KLMK for non-go 8909.
-            if [ "$BoardPlatform" == "msm8909" ]; then
+            if [ "$ProductName" == "msm8909" ]; then
                 disable_core_ctl
                 echo 1 > /sys/module/lowmemorykiller/parameters/enable_lmk
             fi
@@ -2160,8 +2153,8 @@ case "$target" in
                 echo 1 > /sys/devices/system/cpu/cpu7/online
 
                 #Disable CPU retention modes for 32bit builds
-                BoardPlatform=`getprop ro.board.platform`
-                if [ "$BoardPlatform" == "msm8952_32" ] || [ "$BoardPlatform" == "msm8952_32_LMT" ]; then
+                ProductName=`getprop ro.product.name`
+                if [ "$ProductName" == "msm8952_32" ] || [ "$ProductName" == "msm8952_32_LMT" ]; then
                     echo N > /sys/module/lpm_levels/system/a72/cpu4/retention/idle_enabled
                     echo N > /sys/module/lpm_levels/system/a72/cpu5/retention/idle_enabled
                     echo N > /sys/module/lpm_levels/system/a72/cpu6/retention/idle_enabled
@@ -3802,7 +3795,6 @@ case "$target" in
         echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
         echo 8 > /sys/devices/system/cpu/cpu0/core_ctl/task_thres
         echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
-        echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
 
         # Disable Core control on gold, prime
         echo 0 > /sys/devices/system/cpu/cpu6/core_ctl/enable
@@ -3951,12 +3943,7 @@ case "$target" in
         setprop vendor.dcvs.prop 1
 
         # cpuset parameters
-        # Enable corectrl on needed targets
-        if [ "$corectl_enable" == "true" ]; then
-            echo 0-3 > /dev/cpuset/background/cpus
-        else
-            echo 0-5 > /dev/cpuset/background/cpus
-        fi
+        echo 0-5 > /dev/cpuset/background/cpus
         echo 0-5 > /dev/cpuset/system-background/cpus
 
         # Turn off scheduler boost at the end
@@ -3972,13 +3959,7 @@ case "$target" in
         "434" | "459" )
 
         # Core control parameters on silver
-        corectl_enable=`getprop ro.vendor.config.corectl`
-        # Enable corectrl on needed targets
-        if [ "$corectl_enable" == "true" ]; then
-            echo 0 0 0 0 1 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
-        else
-            echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
-        fi
+        echo 0 0 0 0 1 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
         echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
         echo 60 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
         echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
@@ -4108,12 +4089,6 @@ case "$target" in
         # device/target specific folder
         setprop vendor.dcvs.prop 1
 
-        # moto add by yangbq2, set wsf value as 1
-        # Disable wsf for all targets beacause we are using efk.
-        # wsf Range : 1..1000 So set to bare minimum value 1.
-        echo 1 > /proc/sys/vm/watermark_scale_factor
-        # moto end
-
         # cpuset parameters
         echo 0-5 > /dev/cpuset/background/cpus
         echo 0-5 > /dev/cpuset/system-background/cpus
@@ -4125,14 +4100,6 @@ case "$target" in
         echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
       ;;
     esac
-
-    # Log kernel wake-up source
-    echo 1 > /sys/module/msm_show_resume_irq/parameters/debug_mask
-
-    # Log kernel enabled clock before suspend
-    if [ -f /sys/kernel/debug/clk/debug_suspend ]; then
-        echo 1 > /sys/kernel/debug/clk/debug_suspend
-    fi
 esac
 
 case "$target" in
@@ -5585,9 +5552,8 @@ case "$target" in
 	echo 400000000 > /proc/sys/kernel/sched_coloc_downmigrate_ns
 
 	# cpuset parameters
-	# Use parameters in init.target.rc
-	#echo 0-3 > /dev/cpuset/background/cpus
-	#echo 0-3 > /dev/cpuset/system-background/cpus
+	echo 0-3 > /dev/cpuset/background/cpus
+	echo 0-3 > /dev/cpuset/system-background/cpus
 
 	# Turn off scheduler boost at the end
 	echo 0 > /proc/sys/kernel/sched_boost
@@ -5709,9 +5675,6 @@ case "$target" in
 	setprop vendor.dcvs.prop 1
     echo N > /sys/module/lpm_levels/parameters/sleep_disabled
     configure_memory_parameters
-
-	# Log kernel wake-up source
-	echo 1 > /sys/module/msm_show_resume_irq/parameters/debug_mask
     ;;
 esac
 

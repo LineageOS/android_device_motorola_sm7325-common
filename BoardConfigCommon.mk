@@ -16,7 +16,7 @@
 
 BOARD_VENDOR := motorola
 
-COMMON_PATH := device/motorola/sm8250-common
+COMMON_PATH := device/motorola/sm7325-common
 
 # Architecture
 TARGET_ARCH := arm64
@@ -43,60 +43,29 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom
-BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xa90000
-BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8
+BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom androidboot.console=ttyMSM0
+BOARD_KERNEL_CMDLINE += androidboot.memcg=1 lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237
 BOARD_KERNEL_CMDLINE += service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3
-BOARD_KERNEL_CMDLINE += swiotlb=2048 loop.max_part=7 cgroup.memory=nokmem,nosocket
-BOARD_KERNEL_CMDLINE += reboot=panic_warm firmware_class.path=/vendor/firmware_mnt/image
+BOARD_KERNEL_CMDLINE += swiotlb=0 loop.max_part=7 cgroup.memory=nokmem,nosocket
+BOARD_KERNEL_CMDLINE += pcie_ports=compat loop.max_part=7 iptable_raw.raw_before_defrag=1
+BOARD_KERNEL_CMDLINE += ip6table_raw.raw_before_defrag=1 androidboot.hab.csv=0
+BOARD_KERNEL_CMDLINE += androidboot.hab.product=berlin androidboot.hab.cid=50
+BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware_mnt/image
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc \
-                                  LLVM=1
-TARGET_KERNEL_SOURCE := kernel/motorola/sm8250
+TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc LLVM=1
+TARGET_KERNEL_SOURCE := kernel/motorola/sm7325
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CONFIG := vendor/kona-perf_defconfig vendor/lineage_moto-kona.config
-
-# Kernel modules - Audio
-TARGET_MODULE_ALIASES += \
-    adsp_loader_dlkm.ko:audio_adsp_loader.ko \
-    apr_dlkm.ko:audio_apr.ko \
-    bolero_cdc_dlkm.ko:audio_bolero_cdc.ko \
-    hdmi_dlkm.ko:audio_hdmi.ko \
-    machine_dlkm.ko:audio_machine_kona.ko \
-    mbhc_dlkm.ko:audio_mbhc.ko \
-    native_dlkm.ko:audio_native.ko \
-    pinctrl_lpi_dlkm.ko:audio_pinctrl_lpi.ko \
-    pinctrl_wcd_dlkm.ko:audio_pinctrl_wcd.ko \
-    platform_dlkm.ko:audio_platform.ko \
-    q6_dlkm.ko:audio_q6.ko \
-    q6_notifier_dlkm.ko:audio_q6_notifier.ko \
-    q6_pdr_dlkm.ko:audio_q6_pdr.ko \
-    rx_macro_dlkm.ko:audio_rx_macro.ko \
-    snd_event_dlkm.ko:audio_snd_event.ko \
-    stub_dlkm.ko:audio_stub.ko \
-    swr_ctrl_dlkm.ko:audio_swr_ctrl.ko \
-    swr_dlkm.ko:audio_swr.ko \
-    tx_macro_dlkm.ko:audio_tx_macro.ko \
-    usf_dlkm.ko:audio_usf.ko \
-    va_macro_dlkm.ko:audio_va_macro.ko \
-    wcd938x_dlkm.ko:audio_wcd938x.ko \
-    wcd938x_slave_dlkm.ko:audio_wcd938x_slave.ko \
-    wcd9xxx_dlkm.ko:audio_wcd9xxx.ko \
-    wcd_core_dlkm.ko:audio_wcd_core.ko \
-    wsa881x_dlkm.ko:audio_wsa881x.ko \
-    wsa_macro_dlkm.ko:audio_wsa_macro.ko
-
-# Kernel modules - WLAN
-TARGET_MODULE_ALIASES += \
-    wlan.ko:qca_cld3_qca6390.ko
+TARGET_KERNEL_CONFIG := gki_defconfig
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOARD_PLATFORM := kona
+TARGET_BOARD_PLATFORM := lahaina
 
 # A/B
 AB_OTA_UPDATER := true
@@ -174,7 +143,7 @@ BOARD_USES_METADATA_PARTITION := true
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
-BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 67108864
+BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296
 ifneq ($(WITH_GMS),true)
 BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT := -1
 BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT := -1
@@ -246,4 +215,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
--include vendor/motorola/sm8250-common/BoardConfigVendor.mk
+-include vendor/motorola/sm7325-common/BoardConfigVendor.mk

@@ -1,4 +1,4 @@
-service vendor.light /vendor/bin/hw/android.hardware.lights-service.motokona
+service vendor.light /vendor/bin/hw/android.hardware.lights-service.motolahaina
     class hal
     user system
     group system
