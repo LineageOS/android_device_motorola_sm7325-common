@@ -3,6 +3,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := libsynergy_loc_api
+LOCAL_SANITIZE += $(GNSS_SANITIZE)
 # activate the following line for debug purposes only, comment out for production
 #LOCAL_SANITIZE_DIAG += $(GNSS_SANITIZE_DIAG)
 

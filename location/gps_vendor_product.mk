@@ -1,6 +1,10 @@
 # vendor opensource packages
 ifneq ($(BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE),)
 
+# Activate the following two lines for regression testing
+#GNSS_SANITIZE := address cfi alignment bounds null unreachable integer
+#GNSS_SANITIZE_DIAG := address cfi alignment bounds null unreachable integer
+
 # Add product packages
 #add QMI libraries for QMI targets
 LOC_BOARD_PLATFORM_LIST += msm8953
@@ -16,7 +20,7 @@ LOC_BOARD_PLATFORM_LIST += msmnile
 LOC_BOARD_PLATFORM_LIST += sdmshrike
 LOC_BOARD_PLATFORM_LIST += $(MSMSTEPPE)
 LOC_BOARD_PLATFORM_LIST += $(TRINKET)
-LOC_BOARD_PLATFORM_LIST += lahaina
+LOC_BOARD_PLATFORM_LIST += kona
 LOC_BOARD_PLATFORM_LIST += lito
 LOC_BOARD_PLATFORM_LIST += bengal
 LOC_BOARD_PLATFORM_LIST += atoll
