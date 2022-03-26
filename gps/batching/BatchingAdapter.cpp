@@ -37,9 +37,7 @@
 using namespace loc_core;
 
 BatchingAdapter::BatchingAdapter() :
-    LocAdapterBase(0,
-                   LocContext::getLocContext(LocContext::mLocationHalName),
-                   false, nullptr, true),
+    LocAdapterBase(0, LocContext::getLocContext(LocContext::mLocationHalName)),
     mOngoingTripDistance(0),
     mOngoingTripTBFInterval(0),
     mTripWithOngoingTBFDropped(false),
@@ -52,10 +50,6 @@ BatchingAdapter::BatchingAdapter() :
     LOC_LOGD("%s]: Constructor", __func__);
     readConfigCommand();
     setConfigCommand();
-
-    // at last step, let us inform adapater base that we are done
-    // with initialization, e.g.: ready to process handleEngineUpEvent
-    doneInit();
 }
 
 void
