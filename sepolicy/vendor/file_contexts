@@ -60,9 +60,6 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.nfc@1\.2-service\.st        u:object_r:hal_nfc_default_exec:s0
 /dev/st21nfc                                                                   u:object_r:nfc_device:s0
 
-#poweropt-service
-/(vendor|system/vendor)/bin/poweropt-service            u:object_r:vendor_poweroptservice_exec:s0
-
 # Radio
 /data/vendor/misc/cutback(/.*)?                         u:object_r:cutback_data_file:s0
 /dev/socket/cutback                                     u:object_r:cutback_socket:s0
