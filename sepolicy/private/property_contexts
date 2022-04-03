@@ -1,0 +1,5 @@
+# Camera
+camera.mot.is.coming.cts   u:object_r:exported_system_prop:s0
+
+# Motorola
+ro.mot.build.customerid    u:object_r:build_prop:s0

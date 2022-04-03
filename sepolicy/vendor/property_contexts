@@ -1,12 +1,8 @@
-# Camera
-camera.mot.is.coming.cts   u:object_r:vendor_camera_prop:s0
-
 # Radio
 vendor.ril.                u:object_r:vendor_radio_prop:s0
 
 # Motorola
 persist.vendor.nfc.        u:object_r:vendor_mot_nfc_prop:s0
-ro.mot.build.customerid    u:object_r:exported_default_prop:s0
 ro.vendor.hw.              u:object_r:vendor_mot_hw_prop:s0
 ro.vendor.mot.gki.         u:object_r:vendor_mot_hw_prop:s0
 ro.vendor.product.device   u:object_r:vendor_mot_hw_prop:s0
