@@ -5,7 +5,6 @@
 
 <resources>
 
-
     <!-- Boolean indicating whether the wifi chipset has 5GHz frequency band support -->
     <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
 
@@ -65,6 +64,11 @@
     <!-- integer indicating additional disconnect delay (in ms) after IMS onLost() indication is received -->
     <integer translatable="false" name="config_wifiDelayDisconnectOnImsLostMs">1000</integer>
 
-	<!-- Boolean indicating whether 802.11r Fast BSS Transition is enabled on this platform -->
-	<bool name="config_wifi_fast_bss_transition_enabled">true</bool>
+    <!-- Boolean indicating whether 802.11r Fast BSS Transition is enabled on this platform -->
+    <bool name="config_wifi_fast_bss_transition_enabled">true</bool>
+
+    <!-- Enable concurrent restricted connectivity + internet connectivity
+         Note: this is conditional on the device supporting dual concurrent STAs. -->
+    <bool translatable="false" name="config_wifiMultiStaRestrictedConcurrencyEnabled">true</bool>
+
 </resources>
