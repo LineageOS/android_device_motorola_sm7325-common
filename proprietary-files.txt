@@ -77,6 +77,7 @@ vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so
 system_ext/lib/com.qualcomm.qti.ant@1.0.so
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
+vendor/lib64/com.dsi.ant@1.0.so
 
 # Audio libraries
 vendor/etc/maxx_conf.ini
