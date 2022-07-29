@@ -20,7 +20,7 @@ COMMON_PATH := device/motorola/sm7325-common
 
 # Architecture
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a-branchprot
+TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
@@ -136,7 +136,9 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(COMMON_PATH)/device_framework_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
+DEVICE_MANIFEST_SKUS := yupik
+DEVICE_MANIFEST_YUPIK_FILES += $(COMMON_PATH)/manifest_yupik.xml
+#DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
