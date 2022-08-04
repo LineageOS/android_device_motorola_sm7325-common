@@ -51,7 +51,7 @@ BOARD_KERNEL_CMDLINE += service_locator.enable=1 androidboot.usbcontroller=a6000
 BOARD_KERNEL_CMDLINE += swiotlb=0 loop.max_part=7 cgroup.memory=nokmem,nosocket
 BOARD_KERNEL_CMDLINE += pcie_ports=compat loop.max_part=7 iptable_raw.raw_before_defrag=1
 BOARD_KERNEL_CMDLINE += ip6table_raw.raw_before_defrag=1 androidboot.hab.csv=0
-BOARD_KERNEL_CMDLINE += androidboot.hab.product=berlin androidboot.hab.cid=50
+BOARD_KERNEL_CMDLINE += androidboot.hab.cid=50
 BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware_mnt/image
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image
