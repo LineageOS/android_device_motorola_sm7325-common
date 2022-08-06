@@ -31,6 +31,11 @@
 #=============================================================================
 
 function configure_zram_parameters() {
+	# Moto yangbq2: Skip this if we are using zram from fstab.
+	using_zram_from_fstab=`getprop ro.boot.using_zram_from_fstab`
+	if [ "$using_zram_from_fstab" == "true" ]; then
+		return
+	fi
 	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
 	MemTotal=${MemTotalStr:16:8}
 
@@ -123,7 +128,6 @@ function configure_memory_parameters() {
 
 	configure_zram_parameters
 	configure_read_ahead_kb_values
-	echo 0 > /proc/sys/vm/page-cluster
 	echo 100 > /proc/sys/vm/swappiness
 }
 

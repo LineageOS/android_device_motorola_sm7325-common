@@ -622,7 +622,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.lpa</name>
-        <version>1.0-1</version>
+        <version>1.0-2</version>
         <interface>
             <name>IUimLpa</name>
             <instance>UimLpa0</instance>

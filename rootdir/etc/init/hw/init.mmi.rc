@@ -226,7 +226,7 @@ on post-fs-data
     mkdir /data/vendor/bug2go 0770 log log
 
     # Setup folder for aplogd
-    mkdir /data/vendor/aplogd 0750 log log
+    mkdir /data/vendor/aplogd 0770 log log
 
     # Subsystem RAM-dumps
     mkdir /data/vendor/ss-ram-dumps 0750 system log
@@ -405,6 +405,16 @@ service vendor.touchRec /vendor/bin/touchRec
 # from hardware/interfaces/sensors/2.0/multihal
 # to add input and uhid group access
 service vendor.sensors-hal-2-0-multihal /vendor/bin/hw/android.hardware.sensors@2.0-service.multihal
+    class hal
+    user system
+    group system wakelock context_hub input uhid
+    writepid /dev/cpuset/system-background/tasks
+    capabilities BLOCK_SUSPEND
+    rlimit rtprio 10 10
+
+# from hardware/interfaces/sensors/2.1/multihal
+# to add input and uhid group access
+service vendor.sensors-hal-2-1-multihal /vendor/bin/hw/android.hardware.sensors@2.1-service.multihal
     class hal
     user system
     group system wakelock context_hub input uhid

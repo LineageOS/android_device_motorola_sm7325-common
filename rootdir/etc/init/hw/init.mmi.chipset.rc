@@ -12,6 +12,10 @@ on property:ro.boot.default_usb_mode=device && property:vendor.usb.controller=*
     setprop sys.usb.controller ${vendor.usb.controller}
     write /sys/class/udc/${vendor.usb.controller}/device/../mode peripheral
 
+on early-boot
+    # Permission for Health Storage HAL
+    chown system system /sys/devices/platform/soc/1d84000.ufshc/manual_gc
+    chown system system /sys/devices/platform/soc/1d84000.ufshc/ufshid/trigger
     #sync power supply with healthd
     wait /sys/class/power_supply/battery
     wait /sys/class/power_supply/usb

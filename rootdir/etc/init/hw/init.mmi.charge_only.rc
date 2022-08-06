@@ -1,4 +1,6 @@
 on charger
+    stop vendor.sensors
+    wait /sys/class/power_supply/battery
     start vendor.thermal-com
     start system_suspend
 

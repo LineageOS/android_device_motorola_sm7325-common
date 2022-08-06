@@ -18,7 +18,6 @@ persist.vendor.audio.dualmic.config=endfire
 persist.vendor.audio.fluence.speaker=false
 persist.vendor.audio.fluence.tmic.enabled=false
 persist.vendor.audio.fluence.voicecall=true
-persist.vendor.audio.fluence.voicecomm=true
 persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.ha_proxy.enabled=true
 persist.vendor.audio.ras.enabled=false
@@ -204,6 +203,7 @@ ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
 vendor.gralloc.disable_ubwc=0
+vendor.hw.sf.IdleLazyResetThresholdT=1000
 
 # IMS
 persist.vendor.ims.cam_sensor_delay=20
@@ -227,6 +227,7 @@ ro.nfc.port=I2C
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
+ro.vendor.perf-hal.ver=2.2
 
 # QSPM
 ro.vendor.qspm.enable=true
@@ -272,8 +273,7 @@ persist.vendor.radio.start_ota_daemon=0
 persist.vendor.radio.suppress_ussd_rel=1
 persist.vendor.radio.sw_mbn_update=0
 persist.vendor.rcs.presence.provision=0
-ro.vendor.hw.dualsim=true
-ro.vendor.radio.imei.sv=3
+ro.vendor.radio.imei.sv=14
 
 # Sensors
 persist.vendor.sensors.allow_non_default_discovery=true
@@ -291,6 +291,9 @@ ro.soc.model=SM7325
 # SSR
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
+# Stagefright
+debug.stagefright.c2inputsurface=-1
+
 # Surfaceflinger
 ro.sf.lcd_density=400
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
@@ -307,8 +310,12 @@ ro.surface_flinger.use_smart_90_for_video=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 
 # USB
+sys.usb.mtp.batchcancel=1
 vendor.usb.diag.func.name=ffs
 vendor.usb.use_ffs_mtp=1
+
+# Wfd
+vendor.media.wfd.automode=1
 
 # WiFi
 wifi.aware.interface=wifi-aware0
