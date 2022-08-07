@@ -101,7 +101,6 @@ PRODUCT_PACKAGES += \
     libldnhncr \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libqcreverb \
     libreverbwrapper \
     libvisualizer \
     sound_trigger.primary.lahaina
@@ -300,7 +299,6 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
     libOmxAacEnc \
@@ -309,9 +307,6 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxG711Enc \
     libOmxQcelp13Enc \
-    libOmxVdec \
-    libOmxVenc \
-    libOmxVidcCommon \
     libstagefrighthw
 
 # Perf
