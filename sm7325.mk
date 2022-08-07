@@ -73,6 +73,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Ant
+PRODUCT_PACKAGES += \
+    com.dsi.ant@1.0.vendor
+
 # Atrace
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
@@ -135,6 +139,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
+    libcamera2ndk_vendor \
     libgui_vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
@@ -149,6 +154,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
+    init.qti.display_boot.rc \
     init.qti.display_boot.sh \
     gralloc.default \
     libdisplayconfig.qti \
@@ -219,10 +225,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder.vendor
-
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v30/arm64/arch-arm-armv8-a/shared/vndk-core/android.hidl.memory.block@1.0.so:vendor/lib/android.hidl.memory.block@1.0.so \
-    prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hidl.memory.block@1.0.so:vendor/lib64/android.hidl.memory.block@1.0.so
 
 # Init
 PRODUCT_COPY_FILES += \
@@ -463,6 +465,11 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti \
     android.hardware.thermal@2.0 \
     android.hardware.thermal@2.0.vendor
+
+# Trusted UI
+PRODUCT_PACKAGES += \
+    android.hidl.memory.block@1.0.vendor \
+    vendor.qti.hardware.systemhelper@1.0.vendor
 
 # Update engine
 PRODUCT_PACKAGES += \
