@@ -6,10 +6,6 @@ audio.offload.min.duration.secs=60
 audio.offload.video=false
 media.aac_51_output_enabled=true
 
-# Bluetooth
-persist.vendor.btstack.aac_frm_ctl.enabled=true
-ro.bluetooth.library_name=libbluetooth_qti.so
-
 # Charger
 ro.charger.enable_suspend=1
 
