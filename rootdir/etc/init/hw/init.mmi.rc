@@ -4,9 +4,6 @@ import /vendor/etc/init/hw/init.mmi.chipset.rc
 # Target-specific file
 import /vendor/etc/init/hw/init.mmi.overlay.rc
 
-# Moto USB configuration
-import /vendor/etc/init/hw/init.mmi.usb.rc
-
 on early-boot
     write /sys/module/subsystem_restart/parameters/disable_restart_work 0x0
 
