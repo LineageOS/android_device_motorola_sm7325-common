@@ -30,6 +30,9 @@ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.q
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/panelName              u:object_r:vendor_sysfs_data:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/panelRegDA             u:object_r:vendor_sysfs_data:s0
 
+# SKU version
+genfscon sysfs /devices/platform/soc/aa00000.qcom,vidc/sku_version                         u:object_r:vendor_sysfs_sku_version:s0
+
 # Touchscreen
 genfscon sysfs /class/touchscreen                                               u:object_r:vendor_sysfs_touchpanel:s0
 genfscon sysfs /devices/virtual/touchscreen                                     u:object_r:vendor_sysfs_touchpanel:s0
