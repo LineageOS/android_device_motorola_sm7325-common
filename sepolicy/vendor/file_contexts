@@ -80,6 +80,10 @@
 /(vendor|system/vendor)/bin/init\.mmi\.touch\.sh                u:object_r:vendor_init_touch_exec:s0
 /(vendor|system/vendor)/bin/init\.oem\.hw\.sh                   u:object_r:vendor_init_hw_exec:s0
 
+# V4L2 Name
+/sys/devices/platform/soc/soc:qcom,cam-sync/video4linux/video([0-9])+/name                u:object_r:vendor_sysfs_v4l2_name:s0
+/sys/devices/platform/soc/soc:qcom,cam-req-mgr/video4linux/video([0-9])+/name             u:object_r:vendor_sysfs_v4l2_name:s0
+
 # Wakeups
 /sys/devices/virtual/input/input[0-9]+/wakeup[0-9]+(/.*)?       u:object_r:sysfs_wakeup:s0
 /sys/devices/platform/soc/[^*]+/wakeup/wakeup[0-9]+(/.*)?       u:object_r:sysfs_wakeup:s0

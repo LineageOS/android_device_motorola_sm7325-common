@@ -28,3 +28,6 @@ type vendor_sysfs_sku_version, fs_type, sysfs_type;
 
 # Touchscreen
 type vendor_sysfs_touchpanel, fs_type, sysfs_type;
+
+# V4L2 Name
+type vendor_sysfs_v4l2_name, fs_type, sysfs_type;
