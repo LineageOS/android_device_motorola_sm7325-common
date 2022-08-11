@@ -85,6 +85,10 @@
 /sys/devices/platform/soc/soc:qcom,cam-req-mgr/video4linux/video([0-9])+/name             u:object_r:vendor_sysfs_v4l2_name:s0
 
 # Wakeups
-/sys/devices/virtual/input/input[0-9]+/wakeup[0-9]+(/.*)?       u:object_r:sysfs_wakeup:s0
-/sys/devices/platform/soc/[^*]+/wakeup/wakeup[0-9]+(/.*)?       u:object_r:sysfs_wakeup:s0
-/sys/devices/virtual/misc/[^*]+/wakeup[0-9]+(/.*)?              u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/input/input[0-9]+/wakeup[0-9]+(/.*)?                                 u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/[^*]+/wakeup/wakeup[0-9]+(/.*)?                                 u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/misc/[^*]+/wakeup[0-9]+(/.*)?                                        u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:mmi,charger/power_supply/mmi_battery/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/fastrpc/adsprpc-smd/wakeup[0-9]+(/.*)?                               u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/fastrpc/adsprpc-smd-secure/wakeup[0-9]+(/.*)?                        u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:rtc@6100/rtc/rtc0/wakeup[0-9]+(/.*)?   u:object_r:sysfs_wakeup:s0
