@@ -15,3 +15,5 @@ set_prop(vendor_init_hw, vendor_mot_hw_prop)
 set_prop(vendor_init_hw, vendor_mot_touch_prop)
 
 allow vendor_init_hw vendor_file:file execute_no_trans;
+
+allow vendor_init_hw kmsg_device:chr_file rw_file_perms;
