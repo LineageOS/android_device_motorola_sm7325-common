@@ -1,5 +1,7 @@
 # Camera
-camera.mot.is.coming.cts   u:object_r:exported_system_prop:s0
+vendor.camera.coming.cts   u:object_r:moto_camera_config_prop:s0 exact bool
+ro.camera.req.fmq.size     u:object_r:moto_camera_config_prop:s0 exact bool
+ro.camera.res.fmq.size     u:object_r:moto_camera_config_prop:s0 exact bool
 
 # Motorola
 ro.mot.build.customerid    u:object_r:build_prop:s0
