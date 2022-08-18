@@ -4,8 +4,6 @@ cc_library_shared {
     name: "libgnsspps",
     vendor: true,
 
-    sanitize: GNSS_SANITIZE,
-
     shared_libs: [
         "libutils",
         "libcutils",

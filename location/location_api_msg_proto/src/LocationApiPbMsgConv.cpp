@@ -4361,7 +4361,7 @@ int LocationApiPbMsgConv::pbConvertToLocation(const PBLocation &pbLoc, Location 
     loc.bearingAccuracy = pbLoc.bearingaccuracy();
 
     // uint32 techMask = 12; - bitwise OR of PBLocationTechnologyMask
-    loc.techMask = getLocationFlagsMaskFromPB(pbLoc.techmask());
+    loc.techMask = getLocationTechnologyMaskFromPB(pbLoc.techmask());
 
     LOC_LOGd("LocApiPB: pbLoc - Timestamp: %" PRIu64" Lat:%lf, Lon:%lf, Alt:%lf, TechMask:%x",
             loc.timestamp, loc.latitude, loc.longitude, loc.altitude, loc.techMask);

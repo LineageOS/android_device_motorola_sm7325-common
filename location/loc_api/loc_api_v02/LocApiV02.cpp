@@ -961,6 +961,8 @@ void LocApiV02 ::
             (time_info_current.tv_nsec)/1e6;
     }
 
+    //Use this bit to indicate the injected position source is NLP
+    location.techMask |= LOCATION_TECHNOLOGY_WIFI_BIT;
     injectPosition(location, onDemandCpi);
 }
 
@@ -1015,7 +1017,11 @@ void LocApiV02::injectPosition(const Location& location, bool onDemandCpi)
     }
 
     injectPositionReq.positionSrc_valid = 1;
-    injectPositionReq.positionSrc = eQMI_LOC_POSITION_SRC_OTHER_V02;
+    if (LOCATION_TECHNOLOGY_WIFI_BIT & location.techMask) {
+        injectPositionReq.positionSrc = eQMI_LOC_POSITION_SRC_WIFI_V02;
+    } else {
+        injectPositionReq.positionSrc = eQMI_LOC_POSITION_SRC_OTHER_V02;
+    }
 
     if (onDemandCpi) {
         injectPositionReq.onDemandCpi_valid = 1;
@@ -2623,6 +2629,17 @@ void LocApiV02 :: reportPosition (
             location.gpsLocation.flags  |= LOC_GPS_LOCATION_HAS_LAT_LONG;
             location.gpsLocation.latitude  = location_report_ptr->latitude;
             location.gpsLocation.longitude = location_report_ptr->longitude;
+            if (location_report_ptr->altitudeWrtEllipsoid_valid) {
+                LocApiProxyBase* locApiProxyObj = getLocApiProxy();
+                float geoidalSeparation = 0.0;
+                if (nullptr != locApiProxyObj) {
+                    geoidalSeparation = locApiProxyObj->getGeoidalSeparation(
+                            location_report_ptr->latitude, location_report_ptr->longitude);
+                    locationExtended.altitudeMeanSeaLevel =
+                            location_report_ptr->altitudeWrtEllipsoid - geoidalSeparation;
+                    locationExtended.flags |= GPS_LOCATION_EXTENDED_HAS_ALTITUDE_MEAN_SEA_LEVEL;
+                }
+            }
         } else {
             LocApiBase::reportData(dataNotify, msInWeek);
         }
@@ -2717,12 +2734,6 @@ void LocApiV02 :: reportPosition (
             locationExtended.pdop = location_report_ptr->DOP.PDOP;
             locationExtended.hdop = location_report_ptr->DOP.HDOP;
             locationExtended.vdop = location_report_ptr->DOP.VDOP;
-        }
-
-        if (location_report_ptr->altitudeWrtMeanSeaLevel_valid)
-        {
-            locationExtended.flags |= GPS_LOCATION_EXTENDED_HAS_ALTITUDE_MEAN_SEA_LEVEL;
-            locationExtended.altitudeMeanSeaLevel = location_report_ptr->altitudeWrtMeanSeaLevel;
         }
 
         if (location_report_ptr->vertUnc_valid)
