@@ -58,20 +58,14 @@ system_ext/lib64/com.qualcomm.qti.ant@1.0.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
 # Audio libraries
-vendor/etc/maxx_conf.ini
-vendor/etc/maxx_default.mps
-vendor/lib/libAndroidAlgSys.so
 vendor/lib/libacdb-fts.so
-vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libadsprpc.so
 vendor/lib/libaudcal.so
-vendor/lib/libc++_shared.so
 vendor/lib/libqtigef.so
 vendor/lib64/libacdb-fts.so
-vendor/lib64/libacdbloader.so
 vendor/lib64/libacdbrtac.so
 vendor/lib64/libadiertac.so
 vendor/lib64/libadsprpc.so
@@ -80,7 +74,6 @@ vendor/lib64/libqtigef.so
 
 # Audio - soundfx
 vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libmaxxeffect-cembedded.so
 vendor/lib/soundfx/libmmieffectswrapper.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
@@ -995,8 +988,6 @@ vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/libsdsprpc.so
-vendor/lib64/sensors.moto.so
-vendor/lib64/sensors.ssc.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Snapdragon Computer Vision Engine
@@ -1059,61 +1050,6 @@ vendor/lib64/vendor.qti.hardware.trustedui@1.0.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.1.so
 vendor/lib64/vendor.qti.hardware.trustedui@1.2.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
-
-# Vibrator firmware
-vendor/firmware/aw8695_haptic.bin
-vendor/firmware/aw8695_rtp.bin
-vendor/firmware/aw8695_rtp_Argo_Navis.bin
-vendor/firmware/aw8695_rtp_Attentive.bin
-vendor/firmware/aw8695_rtp_Awake.bin
-vendor/firmware/aw8695_rtp_Bird_Loop.bin
-vendor/firmware/aw8695_rtp_Brilliant_Times.bin
-vendor/firmware/aw8695_rtp_Chimey_Phone.bin
-vendor/firmware/aw8695_rtp_City_Lights.bin
-vendor/firmware/aw8695_rtp_Complex.bin
-vendor/firmware/aw8695_rtp_Crazy_Dream.bin
-vendor/firmware/aw8695_rtp_Curve_Ball_Blend.bin
-vendor/firmware/aw8695_rtp_Digital_Phone.bin
-vendor/firmware/aw8695_rtp_Electrovision.bin
-vendor/firmware/aw8695_rtp_Ether_Shake.bin
-vendor/firmware/aw8695_rtp_Fateful_Words.bin
-vendor/firmware/aw8695_rtp_Firefly.bin
-vendor/firmware/aw8695_rtp_Flutey_Phone.bin
-vendor/firmware/aw8695_rtp_Future_Funk.bin
-vendor/firmware/aw8695_rtp_Future_Hi_Tech.bin
-vendor/firmware/aw8695_rtp_Girtab.bin
-vendor/firmware/aw8695_rtp_Hello.bin
-vendor/firmware/aw8695_rtp_Hexagon.bin
-vendor/firmware/aw8695_rtp_Hydra.bin
-vendor/firmware/aw8695_rtp_Insert_Coin.bin
-vendor/firmware/aw8695_rtp_Jumping_Dots.bin
-vendor/firmware/aw8695_rtp_Keys.bin
-vendor/firmware/aw8695_rtp_Loopy.bin
-vendor/firmware/aw8695_rtp_Loopy_Lounge.bin
-vendor/firmware/aw8695_rtp_Modular.bin
-vendor/firmware/aw8695_rtp_Momentum.bin
-vendor/firmware/aw8695_rtp_Morning.bin
-vendor/firmware/aw8695_rtp_Moto.bin
-vendor/firmware/aw8695_rtp_Moto_Original.bin
-vendor/firmware/aw8695_rtp_Moto_Retro.bin
-vendor/firmware/aw8695_rtp_Natural.bin
-vendor/firmware/aw8695_rtp_New_Player.bin
-vendor/firmware/aw8695_rtp_Now_or_Never.bin
-vendor/firmware/aw8695_rtp_Onward.bin
-vendor/firmware/aw8695_rtp_Organ_Dub.bin
-vendor/firmware/aw8695_rtp_Overclocked.bin
-vendor/firmware/aw8695_rtp_Pegasus.bin
-vendor/firmware/aw8695_rtp_Play.bin
-vendor/firmware/aw8695_rtp_Pyxis.bin
-vendor/firmware/aw8695_rtp_Regrade.bin
-vendor/firmware/aw8695_rtp_Scarabaeus.bin
-vendor/firmware/aw8695_rtp_Sceptrum.bin
-vendor/firmware/aw8695_rtp_Simple.bin
-vendor/firmware/aw8695_rtp_Solarium.bin
-vendor/firmware/aw8695_rtp_Sparse.bin
-vendor/firmware/aw8695_rtp_Terrabytes.bin
-vendor/firmware/aw8695_rtp_Verizon_Airwaves.bin
-vendor/firmware/aw8695_rtp_Zero_Hour.bin
 
 # VPP
 vendor/bin/hw/qconfigservice
