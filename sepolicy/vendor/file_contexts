@@ -84,6 +84,9 @@
 /sys/devices/platform/soc/soc:qcom,cam-sync/video4linux/video([0-9])+/name                u:object_r:vendor_sysfs_v4l2_name:s0
 /sys/devices/platform/soc/soc:qcom,cam-req-mgr/video4linux/video([0-9])+/name             u:object_r:vendor_sysfs_v4l2_name:s0
 
+# Vibrator
+/sys/devices/platform/soc/990000.i2c/i2c-1/1-005a/leds/vibrator(/.*)?                     u:object_r:vendor_sysfs_vibrator:s0
+
 # Wakeups
 /sys/devices/virtual/input/input[0-9]+/wakeup[0-9]+(/.*)?                                 u:object_r:sysfs_wakeup:s0
 /sys/devices/platform/soc/[^*]+/wakeup/wakeup[0-9]+(/.*)?                                 u:object_r:sysfs_wakeup:s0
