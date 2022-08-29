@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db5a97fd_b1975cdb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2022-08-29T20:38:56Z",
+      "side": 1,
+      "message": "Fixes sending media on apps like Telegram for dubai",
+      "revId": "26c6ab6578e3c264f88d01f8f5fa01ed97a9df43",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
