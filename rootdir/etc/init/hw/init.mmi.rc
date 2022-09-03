@@ -40,6 +40,7 @@ on early-init
     setprop ro.vendor.boot.bl_state ${ro.boot.bl_state}
     setprop ro.vendor.boot.serialno ${ro.boot.serialno}
     setprop ro.vendor.zygote ${ro.zygote}
+    setprop persist.radio.multisim.config ${persist.vendor.radio.multisim.config}
 
     # Make sure ro.boot.product.hardware.sku is set before hwservicemanager startup.
     setprop ro.boot.product.hardware.sku ${ro.vendor.product.hardware.sku.variant}
@@ -311,13 +312,6 @@ on property:sys.boot_completed=1 && property:ro.vendor.zram.product_swapon=""
     swapon_all /vendor/etc/fstab.qcom
     write /proc/sys/vm/swappiness 100
     setprop sys.sysctl.swappiness 100
-
-# translate MMI property in order to keep the consistent with QCOM
-on property:ro.vendor.hw.dualsim=true
-   setprop persist.radio.multisim.config dsds
-
-on property:ro.vendor.hw.dualsim=false
-   setprop persist.radio.multisim.config ""
 
 on property:sys.sysctl.swappiness=*
     write /proc/sys/vm/swappiness ${sys.sysctl.swappiness}

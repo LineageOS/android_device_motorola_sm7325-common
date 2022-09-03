@@ -359,6 +359,10 @@ set_ro_hw_properties_upgrade()
 		utag_value=$(cat $utag_path/ascii)
 		setprop $prop_prefix$utag_name "$utag_value"
 		notice "ro.vendor.hw.$utag_name='$utag_value'"
+
+		if [ "$utag_name" = "dualsim" ] && [ "$utag_value" = "true" ]; then
+			setprop persist.vendor.radio.multisim.config dsds
+		fi
 	done
 }
 
@@ -384,6 +388,10 @@ set_ro_hw_properties()
 		utag_value=$(cat $utag_path/ascii)
 		setprop $prop_prefix$utag_name "$utag_value"
 		notice "$prop_prefix$utag_name='$utag_value'"
+
+		if [ "$utag_name" = "dualsim" ] && [ "$utag_value" = "true" ]; then
+			setprop persist.vendor.radio.multisim.config dsds
+		fi
 	done
 }
 
