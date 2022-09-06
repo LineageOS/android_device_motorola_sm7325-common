@@ -117,8 +117,8 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
 # Bluetooth (aptX)
-lib64/libaptX_encoder.so
-lib64/libaptXHD_encoder.so
+system/lib64/libaptX_encoder.so
+system/lib64/libaptXHD_encoder.so
 
 # CDSP
 vendor/bin/cdsprpcd
