@@ -1,6 +1,14 @@
-on charger
+# Wait for the USB init shell script to finish, to prevent enumeration issues
+on property:init.svc.vendor.mmi-usb-sh=stopped && property:ro.boot.mode=charger
+    setprop sys.usb.configfs 1
+    setprop sys.usb.config charging
+
+on moto-charger
     stop vendor.sensors
+    trigger firmware_mounts_complete
     wait /sys/class/power_supply/battery
+    start vendor.charge_only_mode
+    start vendor.batt_health
     start vendor.thermal-com
     start system_suspend
 

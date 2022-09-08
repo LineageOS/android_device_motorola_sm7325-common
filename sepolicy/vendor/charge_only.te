@@ -1,0 +1,94 @@
+type charge_only, domain;
+type charge_only_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(charge_only)
+
+# Read chargeonly_data_file
+allow charge_only chargeonly_data_file:dir rw_dir_perms;
+allow charge_only chargeonly_data_file:file create_file_perms;
+
+# Write to /dev/kmsg
+allow charge_only kmsg_device:chr_file rw_file_perms;
+
+# Read access to pseudo filesystems.
+r_dir_file(charge_only, sysfs_type)
+r_dir_file(charge_only, rootfs)
+r_dir_file(charge_only, cgroup)
+
+# Self permissions
+allow charge_only self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+
+# Wakelock
+wakelock_use(charge_only)
+
+# Allow access to sysfs
+allow charge_only sysfs:dir { read open };
+allow charge_only sysfs:file rw_file_perms;
+
+# Allow access to wakelock sysfs
+allow charge_only sysfs_wake_lock:file rw_file_perms;
+
+# Allow access to battery info sysfs
+allow charge_only sysfs_batteryinfo:file r_file_perms;
+
+# Allow access to battery supply sysfs
+allow charge_only sysfs_battery_supply:dir r_dir_perms;
+allow charge_only sysfs_battery_supply:file r_file_perms;
+allow charge_only sysfs_battery_supply:lnk_file r_file_perms;
+
+# Allow access to usb supply sysfs
+allow charge_only sysfs_usb_supply:dir r_dir_perms;
+allow charge_only sysfs_usb_supply:file r_file_perms;
+
+# Allow access to thermal sysfs
+allow charge_only sysfs_thermal:dir r_dir_perms;
+allow charge_only sysfs_thermal:file r_file_perms;
+allow charge_only sysfs_thermal:lnk_file r_file_perms;
+
+# Allow access to power sysfs
+allow charge_only sysfs_power:file rw_file_perms;
+
+# Allow access to graphics sysfs
+allow charge_only sysfs_graphics:dir r_dir_perms;
+allow charge_only sysfs_graphics:file rw_file_perms;
+
+# Read /sys/fs/pstore/console-ramoops
+# Don't worry about overly broad permissions for now, as there's
+# only one file in /sys/fs/pstore
+allow charge_only pstorefs:dir r_dir_perms;
+allow charge_only pstorefs:file r_file_perms;
+
+# Allow access to graphics dev
+allow charge_only graphics_device:dir r_dir_perms;
+allow charge_only graphics_device:chr_file rw_file_perms;
+
+# Allow access to input dev
+allow charge_only input_device:dir r_dir_perms;
+allow charge_only input_device:chr_file r_file_perms;
+
+# Allow access to tty dev
+allow charge_only tty_device:chr_file rw_file_perms;
+
+# Allow access to rtc dev
+allow charge_only rtc_device:chr_file rw_file_perms;
+
+# Allow access to proc_sysrq
+allow charge_only proc_sysrq:file rw_file_perms;
+
+# Allow access to persist dir
+allow charge_only persist_chargeonly_file:dir r_dir_perms;
+allow charge_only persist_chargeonly_file:file r_file_perms;
+
+# Allow access to vendor dir
+allow charge_only mnt_vendor_file:dir r_dir_perms;
+
+# Exec shell scripts
+allow charge_only vendor_shell_exec:file rx_file_perms;
+
+# Socks
+allow charge_only property_socket:sock_file write;
+allow charge_only init:unix_stream_socket connectto;
+
+# Props
+get_prop(charge_only, powerctl_prop)
+set_prop(charge_only, powerctl_prop)
+get_prop(charge_only, vendor_display_prop)
