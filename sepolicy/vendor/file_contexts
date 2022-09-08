@@ -34,6 +34,11 @@
 /sys/devices/virtual/input/input[0-9]+/offset           u:object_r:vendor_sysfs_laser:s0
 /sys/devices/virtual/input/input[0-9]+/xtalk            u:object_r:vendor_sysfs_laser:s0
 
+# Charger
+/data/vendor/chargeonly(/.*)?                           u:object_r:chargeonly_data_file:s0
+/(mnt/vendor/persist|persist)/chargeonly(/.*)?          u:object_r:persist_chargeonly_file:s0
+/(vendor|system/vendor)/bin/charge_only_mode            u:object_r:charge_only_exec:s0
+
 # Fingerprint
 /(mnt/vendor/persist|persist)/fps(/.*)?                 u:object_r:vendor_persist_fps_file:s0
 /(vendor|system/vendor)/bin/fpc_ident                   u:object_r:hal_fingerprint_default_exec:s0

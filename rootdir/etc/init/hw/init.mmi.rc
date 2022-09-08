@@ -226,6 +226,9 @@ on post-fs-data
     # Setup folder for aplogd
     mkdir /data/vendor/aplogd 0770 log log
 
+    # Create directory used by chargeonlymode
+    mkdir /data/vendor/chargeonly 0750 root log
+
     # Subsystem RAM-dumps
     mkdir /data/vendor/ss-ram-dumps 0750 system log
     mkdir /data/vendor/ss-ram-dumps/bp-dumps 0750 system log
@@ -296,6 +299,12 @@ on boot
    chown audio audio /sys/kernel/aov/register
    chown audio audio /sys/kernel/aov/event
 
+   # Clear cooldown state
+   mkdir /mnt/vendor/persist/chargeonly 0770 system system
+   write /mnt/vendor/persist/chargeonly/cooldown n
+   chown system system /mnt/vendor/persist/chargeonly/cooldown
+   chmod 0660 /mnt/vendor/persist/chargeonly/cooldown
+
    # Quiet binder logs
    write /sys/module/binder/parameters/debug_mask 0x5
 
@@ -306,6 +315,24 @@ on boot
    # change ownership of capsensor related sysfs node
    chown system system /sys/class/capsense/reset
    chown system system /sys/class/capsense/int_state
+
+on late-fs-charger
+    class_start early_hal
+    wait_for_prop hwservicemanager.ready true
+    exec_start wait_for_keymaster
+    mount_all /vendor/etc/fstab.qcom --late
+    # Boot time fs tune
+    write /sys/block/dm-9/queue/read_ahead_kb 2048
+
+on charger
+    trigger early-fs
+    trigger fs
+    trigger post-fs
+    trigger late-fs-charger
+    trigger post-fs-data
+    trigger moto-charger
+    class_stop main
+    class_stop late_start
 
 on property:sys.boot_completed=1 && property:ro.vendor.zram.product_swapon=""
     write /proc/sys/vm/page-cluster 0
@@ -375,6 +402,12 @@ on property:vendor.hw.touch.status="dead"
 
 on property:vendor.hw.touch.status="ready"
     start vendor.touch-ready-sh
+
+service vendor.charge_only_mode /vendor/bin/charge_only_mode
+    user root
+    group graphics system input
+    capabilities SYS_BOOT
+    disabled
 
 # bugreport is triggered by holding down volume down, volume up and power
 service bugreport /system/bin/dumpstate -d -p -B -z \

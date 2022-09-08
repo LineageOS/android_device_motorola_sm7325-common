@@ -129,8 +129,11 @@ vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 
 # Charger
+vendor/bin/charge_only_mode
 vendor/bin/hvdcp_opti
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
+vendor/etc/charger_fstab.qti
+vendor/etc/charger_fw_fstab.qti
 
 # CNE
 -vendor/app/CneApp/CneApp.apk
