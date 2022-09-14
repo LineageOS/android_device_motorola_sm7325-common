@@ -36,19 +36,6 @@
        <item>"wigig0"</item>
    </string-array>
 
-    <!-- Average Current for bluetooth controller when idle. 0 by default-->
-    <integer translatable="false" name="config_bluetooth_idle_cur_ma">6</integer>
-
-    <!-- Average Current for bluetooth controller when receiving. 0 by default-->
-    <integer translatable="false" name="config_bluetooth_rx_cur_ma">28</integer>
-
-    <!-- Average Current for bluetooth controller when transmitting. 0 by default-->
-    <integer translatable="false" name="config_bluetooth_tx_cur_ma">36</integer>
-
-    <!-- Operating volatage for bluetooth controller. 0 by default-->
-    <integer translatable="false" name="config_bluetooth_operating_voltage_mv">3700</integer>
-
-
     <!-- WPA3 sap mode is supported on this device. -->
     <bool name="config_wifi_wap3_sap_mode_enabled">true</bool>
 
