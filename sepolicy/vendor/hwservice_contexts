@@ -4,6 +4,7 @@ motorola.hardware.camera.desktop::ICameraDesktop                        u:object
 # Fingerprint
 com.motorola.hardware.biometric.fingerprint::IMotoFingerPrint           u:object_r:hal_fingerprint_hwservice:s0
 com.motorola.hardware.biometric.fingerprint::IMotoFingerPrintSensorTest u:object_r:hal_fingerprint_hwservice:s0
+vendor.egistec.hardware.fingerprint::IBiometricsFingerprintRbs          u:object_r:hal_fingerprint_hwservice:s0
 
 # IFAA
 vendor.zui.hardware.ifaa::IIFAADevice 					u:object_r:hal_ifaa_hwservice:s0

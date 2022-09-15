@@ -5,6 +5,8 @@ init_daemon_domain(vendor_init_fingerprint)
 allow vendor_init_fingerprint self:capability { kill sys_module };
 allow vendor_init_fingerprint vendor_file:system module_load;
 allow vendor_init_fingerprint vendor_toolbox_exec:file rx_file_perms;
+allow vendor_init_fingerprint vendor_persist_egis_file:file create_file_perms;
+allow vendor_init_fingerprint vendor_persist_egis_file:dir rw_dir_perms;
 allow vendor_init_fingerprint vendor_persist_fps_file:file create_file_perms;
 allow vendor_init_fingerprint vendor_persist_fps_file:dir rw_dir_perms;
 allow vendor_init_fingerprint mnt_vendor_file:dir search;
