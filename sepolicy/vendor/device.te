@@ -1,4 +1,5 @@
 # Fingerprint
+type egis_device, dev_type;
 type etsd_device, dev_type;
 type goodix_device, dev_type;
 
