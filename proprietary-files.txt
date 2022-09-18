@@ -282,6 +282,10 @@ vendor/lib64/libsnapdragoncolor-manager.so
 vendor/lib64/libsnapdragoncolor-qdcm.so
 
 # Display - SDM
+system_ext/lib/libsd_sdk_display.qti.so
+system_ext/lib/libsdm-disp-apis.qti.so
+system_ext/lib64/libsd_sdk_display.qti.so
+system_ext/lib64/libsdm-disp-apis.qti.so
 vendor/etc/display/DPU660.xml
 vendor/etc/display/DPU670.xml
 vendor/etc/display/DPU720.xml
