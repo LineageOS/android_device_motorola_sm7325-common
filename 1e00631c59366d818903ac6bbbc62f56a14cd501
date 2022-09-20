@@ -16,6 +16,23 @@
       "message": "Works good on dubai. Please test on berlin",
       "revId": "1e00631c59366d818903ac6bbbc62f56a14cd501",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "784459f8_2b458f5c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2022-09-20T03:41:45Z",
+      "side": 1,
+      "message": "\u003e Patch Set 1: Code-Review-1\n\u003e \n\u003e Opt out of lineage charger product flag as well pls\n\nhttps://review.lineageos.org/c/LineageOS/android_device_motorola_sm7325-common/+/339412/",
+      "revId": "1e00631c59366d818903ac6bbbc62f56a14cd501",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
