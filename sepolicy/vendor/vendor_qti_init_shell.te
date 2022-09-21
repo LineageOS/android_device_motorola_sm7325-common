@@ -1,6 +1,7 @@
 allow vendor_qti_init_shell configfs:dir create_dir_perms;
 allow vendor_qti_init_shell configfs:file create_file_perms;
 allow vendor_qti_init_shell configfs:lnk_file create_file_perms;
+allow vendor_qti_init_shell kmsg_device:chr_file w_file_perms;
 allow vendor_qti_init_shell proc_page_cluster:file w_file_perms;
 
 allow vendor_qti_init_shell vendor_file:file execute_no_trans;
