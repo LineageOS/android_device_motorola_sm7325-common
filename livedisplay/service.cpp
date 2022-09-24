@@ -21,7 +21,6 @@
 #include <hidl/HidlTransportSupport.h>
 #include <livedisplay/sdm/PictureAdjustment.h>
 #include <vendor/lineage/livedisplay/2.1/IPictureAdjustment.h>
-#include "AdaptiveBacklight.h"
 #include "AntiFlicker.h"
 #include "SunlightEnhancement.h"
 
@@ -34,22 +33,11 @@ using ::android::hardware::joinRpcThreadpool;
 using ::vendor::lineage::livedisplay::V2_0::sdm::PictureAdjustment;
 using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
 using ::vendor::lineage::livedisplay::V2_1::IPictureAdjustment;
-using ::vendor::lineage::livedisplay::V2_1::implementation::AdaptiveBacklight;
 using ::vendor::lineage::livedisplay::V2_1::implementation::AntiFlicker;
 using ::vendor::lineage::livedisplay::V2_1::implementation::SunlightEnhancement;
 
 status_t RegisterAsServices() {
     status_t status = OK;
-
-    sp<AdaptiveBacklight> ab = new AdaptiveBacklight();
-    if (ab->isSupported()) {
-        status = ab->registerAsService();
-        if (status != OK) {
-            LOG(ERROR) << "Could not register service for LiveDisplay HAL AdaptiveBacklight Iface ("
-                       << status << ")";
-            return status;
-        }
-    }
 
     sp<SunlightEnhancement> se = new SunlightEnhancement();
     if (se->isSupported()) {

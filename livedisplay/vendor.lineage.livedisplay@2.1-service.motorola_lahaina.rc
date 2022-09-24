@@ -1,9 +1,5 @@
 on init
     # LiveDisplay sysfs
-    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_acl
-    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_acl
-    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_cabc
-    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_cabc
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_hbm
     chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_hbm
     chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_dc
