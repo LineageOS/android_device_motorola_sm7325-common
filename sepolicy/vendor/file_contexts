@@ -78,8 +78,9 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element@1\.2-service\.st        u:object_r:hal_secure_element_default_exec:s0
 
 # Touch
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.berlin      u:object_r:hal_lineage_touch_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.dubai       u:object_r:hal_lineage_touch_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.berlin               u:object_r:hal_lineage_touch_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.dubai                u:object_r:hal_lineage_touch_default_exec:s0
+/sys/devices/platform/soc/a94000\.spi/spi_master/spi0/spi0\.0/touchscreen/primary(/.*)?  u:object_r:vendor_sysfs_touchpanel:s0
 
 # Thermal
 /dev/mmi_sys_temp                                       u:object_r:vendor_thermal_device:s0
