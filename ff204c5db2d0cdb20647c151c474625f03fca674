@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "04af1ec1_a9310348",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2022-09-26T02:01:00Z",
+      "side": 1,
+      "message": "requires similar commit in berlin\u0027s tree",
+      "revId": "ff204c5db2d0cdb20647c151c474625f03fca674",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
