@@ -1,5 +1,7 @@
 # Camera
 vendor.camera.coming.cts   u:object_r:vendor_camera_prop:s0
+ro.camera.req.fmq.size     u:object_r:vendor_camera_prop:s0
+ro.camera.res.fmq.size     u:object_r:vendor_camera_prop:s0
 
 # Radio
 vendor.ril.                u:object_r:vendor_radio_prop:s0
