@@ -1,4 +1,6 @@
 # Motorola
+vendor_public_prop(moto_camera_config_prop)
+
 vendor_internal_prop(vendor_mot_fingerprint_prop);
 vendor_internal_prop(vendor_mot_hw_prop);
 vendor_internal_prop(vendor_mot_touch_prop);
