@@ -1,0 +1,1 @@
+allow system_server mot_system_service:service_manager add;
