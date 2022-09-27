@@ -1,2 +1,3 @@
 motoexttelephony                          u:object_r:mot_radio_service:s0
 moto_ext_telephony.registry               u:object_r:mot_system_service:s0
+motsettings                               u:object_r:mot_system_service:s0
