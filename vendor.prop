@@ -135,6 +135,7 @@ vendor.qcom.bluetooth.soc=moselle
 
 # Camera
 camera.disable_zsl_mode=1
+persist.vendor.camera.privapp.list=com.motorola.camera3
 vendor.camera.aux.packagelist=com.motorola.camera3
 
 # Crypto
