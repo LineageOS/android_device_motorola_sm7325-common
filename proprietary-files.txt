@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from 12-S1RD32M.55-67 356bc release-keys.
+# All unpinned blobs below are extracted from 12-S1RDS32.55-67-4 f3f840 release-keys.
 
 # ADSP
 vendor/bin/adsprpcd
@@ -790,6 +790,7 @@ vendor/etc/init/qcrilNrd.rc
 vendor/etc/init/vendor.qti.rmt_storage.rc
 vendor/etc/init/vendor.qti.tftp.rc
 vendor/etc/qcril_database/upgrade/config/10.0_config.sql
+vendor/etc/qcril_database/upgrade/config/11.0_config.sql
 vendor/etc/qcril_database/upgrade/config/6.0_config.sql
 vendor/etc/qcril_database/upgrade/config/9.0_config.sql
 vendor/etc/qcril_database/upgrade/ecc/0_initial.sql
@@ -814,6 +815,10 @@ vendor/etc/qcril_database/upgrade/ecc/27_version_qcrildb.sql
 vendor/etc/qcril_database/upgrade/ecc/28_version_qcrildb.sql
 vendor/etc/qcril_database/upgrade/ecc/29_version_qcrildb.sql
 vendor/etc/qcril_database/upgrade/ecc/30_version_qcrildb.sql
+vendor/etc/qcril_database/upgrade/ecc/31_version_qcrildb.sql
+vendor/etc/qcril_database/upgrade/ecc/34_version_qcrildb.sql
+vendor/etc/qcril_database/upgrade/ecc/35_version_qcrildb.sql
+vendor/etc/qcril_database/upgrade/ecc/39_version_qcrildb.sql
 vendor/etc/qcril_database/upgrade/ecc/3_version_qcrildb.sql
 vendor/etc/qcril_database/upgrade/ecc/4_version_qcrildb.sql
 vendor/etc/qcril_database/upgrade/ecc/5_version_qcrildb.sql
@@ -894,7 +899,7 @@ system/etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-teleph
 system/framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
 
 # Radio - IMS (APK) - from patched source
--system_ext/priv-app/ims/ims.apk|2a46a736807f03f14f7272d825c0714c480ad1ae
+-system_ext/priv-app/ims/ims.apk|31bf5fbc5a8396c032ba56919eb184dd383fcaf0
 
 # RIL - IMS
 -system_ext/app/ImsRcsService/ImsRcsService.apk
