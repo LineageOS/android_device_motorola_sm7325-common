@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3623bcc0_2be21f2a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2022-10-04T02:59:32Z",
+      "side": 1,
+      "message": "Please test this plus the next IMS commit and the mot camera commit too\n\nBlobs are here:",
+      "revId": "a9bdac0e041618385a97bc4a945b3d8342a0d752",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
