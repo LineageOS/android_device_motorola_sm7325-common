@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f64f4220_f6ee10f0",
+        "filename": "vendor.prop",
+        "patchSetId": 2
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 18220
+      },
+      "writtenOn": "2022-10-07T16:05:31Z",
+      "side": 1,
+      "message": "Should org.codeaurora.snap also be on this list?",
+      "revId": "33c0e1aa06f3a6090658d71f3be48f77952effb5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
