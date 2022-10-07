@@ -1,3 +1,4 @@
+<<<<<<< HEAD   (4be17b sm7325-common: livedisplay: Fix racy init)
 //
 // Copyright (C) 2019-2020 The LineageOS Project
 //
@@ -31,3 +32,5 @@ cc_binary {
         "main.cpp",
     ],
 }
+=======
+>>>>>>> CHANGE (42576d sm7325-common: remove light hal)
