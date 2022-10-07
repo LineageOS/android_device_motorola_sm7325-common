@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2ff5b02_9f11fec4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 18220
+      },
+      "writtenOn": "2022-10-07T16:03:11Z",
+      "side": 1,
+      "message": "This also exists on 12L builds",
+      "revId": "e2f1091a7821b046f2928e603c37ab19b9a74043",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
