@@ -85,6 +85,7 @@ vendor.audio.feature.dynamic_ecns.enable=false
 vendor.audio.feature.ext_hw_plugin.enable=false
 vendor.audio.feature.external_dsp.enable=false
 vendor.audio.feature.external_speaker.enable=false
+vendor.audio.feature.external_speaker_bun.enable=true
 vendor.audio.feature.external_speaker_tfa.enable=false
 vendor.audio.feature.fluence.enable=true
 vendor.audio.feature.fm.enable=true
