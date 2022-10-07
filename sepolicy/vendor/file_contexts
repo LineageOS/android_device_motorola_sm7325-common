@@ -56,9 +56,6 @@
 # IFAA
 /(vendor|system/vendor)/bin/hw/vendor\.zui\.hardware\.ifaa@1\.0-service                 u:object_r:hal_ifaa_default_exec:s0
 
-# Lights
-/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.motolahaina              u:object_r:hal_light_default_exec:s0
-
 # LiveDisplay
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.motorola_lahaina    u:object_r:hal_lineage_livedisplay_qti_exec:s0
 
