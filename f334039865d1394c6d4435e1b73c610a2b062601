@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6cad60a2_42fd1cc4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2022-10-08T02:37:05Z",
+      "side": 1,
+      "message": "Just to check Markus, does berlin not have those sysfs paths? dubai does not have them",
+      "revId": "f334039865d1394c6d4435e1b73c610a2b062601",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
