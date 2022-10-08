@@ -16,6 +16,23 @@
       "message": "We should only merge this if the dependency gets merged",
       "revId": "e4591e553ff7ff6a8de3ea485e0ed0cfb251e9bb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f3310893_98ca5a6d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2022-10-08T02:51:14Z",
+      "side": 1,
+      "message": "https://review.lineageos.org/q/camera+skip+stream+for+whitelisted+apps",
+      "revId": "e4591e553ff7ff6a8de3ea485e0ed0cfb251e9bb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
