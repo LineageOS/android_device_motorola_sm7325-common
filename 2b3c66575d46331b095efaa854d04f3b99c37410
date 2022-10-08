@@ -16,6 +16,23 @@
       "message": "After talking with SGCMarkus we should probably avoid doing this and if we come upon a camera app that doesn\u0027t work with aux cameras to instead use a blacklist",
       "revId": "2b3c66575d46331b095efaa854d04f3b99c37410",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "318a3efe_faaaba37",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 18220
+      },
+      "writtenOn": "2022-10-08T03:30:28Z",
+      "side": 1,
+      "message": "Ok Marc, will revert to previous patchset",
+      "revId": "2b3c66575d46331b095efaa854d04f3b99c37410",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
