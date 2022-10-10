@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb921a07_dd6421b9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2022-10-10T15:54:49Z",
+      "side": 1,
+      "message": "maybe these should be in common sepolicy?\n\nhardware/interfaces/camera/device/3.2/default/CameraDeviceSession.cpp:        resFMQSize \u003d property_get_int32(\"ro.camera.res.fmq.size\", /*default*/-1)",
+      "revId": "17cd910bcfc79fdbaaaa0b5f4d1a501b8269d699",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
