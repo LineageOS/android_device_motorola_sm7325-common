@@ -94,6 +94,30 @@
       },
       "revId": "7eb08cea5415c060cc95f8eddd2f836800e2624c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "674006be_e0c28d62",
+        "filename": "sepolicy/vendor/hal_camera_default.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2022-10-11T15:58:23Z",
+      "side": 1,
+      "message": "https://github.com/LineageOS/android_system_sepolicy/blob/lineage-19.1/public/te_macros#L323",
+      "parentUuid": "8841428f_12235f02",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 8
+      },
+      "revId": "7eb08cea5415c060cc95f8eddd2f836800e2624c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
