@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8f601ff_171b9fae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19165
+      },
+      "writtenOn": "2022-10-14T18:02:41Z",
+      "side": 1,
+      "message": "dependencies got merged",
+      "revId": "e6fa47a6ab7216c24d65cfde3fc1429224528900",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
