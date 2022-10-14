@@ -19,9 +19,6 @@ persist.data.df.ul_mode=5
 # DPM
 persist.vendor.dpm.feature=11
 
-# Graphics
-persist.demo.hdmirotationlock=false
-
 # HWUI
 debug.hwui.skia_atrace_enabled=false
 
