@@ -280,9 +280,10 @@ PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
     libcodec2_hidl@1.0.vendor
 
-# MotoActions
+# Moto hardware
 PRODUCT_PACKAGES += \
-    MotoActions
+    MotoActions \
+    MotoCommonOverlay
 
 # Neural Networks
 PRODUCT_PACKAGES += \
