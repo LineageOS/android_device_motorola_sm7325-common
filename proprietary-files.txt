@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from 12-S1RDS32.55-67-4 f3f840 release-keys.
+# All unpinned blobs below are extracted from 12-S1RD32.55-94 f3f840 release-keys.
 
 # ADSP
 vendor/bin/adsprpcd
