@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f98d85a1_c226e120",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2022-12-11T22:40:09Z",
+      "side": 1,
+      "message": "On hold until dependencies are merged on lineage-20 branch\n\nhttps://review.lineageos.org/q/skip+stream\n\nor\n\nhttps://review.lineageos.org/q/topic:twelve-camera-privapp",
+      "revId": "39c6b04f23f9d93b3a54bc0677f5ce8b053f80b9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
