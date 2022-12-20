@@ -901,7 +901,7 @@ system/etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-teleph
 system/framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
 
 # Radio - IMS (APK) - from patched source
--system_ext/priv-app/ims/ims.apk|4abc439450c40f14ff6f2c83dee8abcb13f3dd1f
+-system_ext/priv-app/ims/ims.apk|43c0fe3ca84d702d37b2958c6e1ab399e2e4ba52
 
 # RIL - IMS
 -system_ext/app/ImsRcsService/ImsRcsService.apk
