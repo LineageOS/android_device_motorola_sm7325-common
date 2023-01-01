@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d61cff2_8f87be00",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2023-01-01T22:56:11Z",
+      "side": 1,
+      "message": "As the commit message says, the framework defaults seem to break peak display values so I guess if anything the framework defaults should be changed but no idea if LOS team is willing to change those or not? But we can fix it in our tree at least.\n\nNot sure if berlin is affected by this or not but on dubai we are",
+      "revId": "1624a1a714085e671faa3f1b96796c229bc103c1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
