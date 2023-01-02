@@ -46,6 +46,7 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.dubai           u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-ets              u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.berlin          u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.berlna          u:object_r:hal_fingerprint_default_exec:s0
 /data/vendor/.fps(/.*)?                                 u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/egis(/.*)?                                 u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/fpc(/.*)?                                  u:object_r:fingerprint_vendor_data_file:s0
