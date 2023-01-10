@@ -62,10 +62,6 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/
 TARGET_KERNEL_SOURCE := kernel/motorola/sm7325
 TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig vendor/lineage_moto-lahaina.config
 
-# Kernel modules - WLAN
-TARGET_MODULE_ALIASES += \
-    qca6750.ko:qca_cld3_qca6750.ko
-
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := lahaina
