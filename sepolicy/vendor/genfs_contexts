@@ -40,14 +40,12 @@ genfscon sysfs /devices/platform/soc/a94000.i2c/i2c-2/2-0049/touchscreen        
 genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-005a/leds/vibrator      u:object_r:sysfs_vibrator:s0
 
 # Wakeup
-genfscon sysfs /devices/platform/soc/1e00000.qcom,ipa/wakeup/wakeup             u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-005a/wakeup/wakeup      u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/wakeup                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/power/wakeup                          u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/power_supply/battery/power/wakeup     u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/power_supply/wireless/power/wakeup    u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/power_supply/usb/power/wakeup         u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:mmi,charger/wakeup                                        u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:mmi,charger/power/wakeup                                  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:mmi,charger/power_supply/mmi_battery/wakeup               u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:mmi,charger/power_supply/mmi_battery/power/wakeup         u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/rx-macro/rx_swr_ctrl/wakeup/wakeup u:object_r:sysfs_wakeup:s0
