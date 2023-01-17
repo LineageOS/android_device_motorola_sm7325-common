@@ -22,6 +22,30 @@
       },
       "revId": "002c2450a603f66233398b20935dd078c9b810b6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3bbe2010_5faded5f",
+        "filename": "sepolicy/vendor/file_contexts",
+        "patchSetId": 2
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-01-17T23:52:49Z",
+      "side": 1,
+      "message": "will do as a follow up, edited to remove an additional duplicated node for now. She builds.",
+      "parentUuid": "7ab084b2_4abc808e",
+      "range": {
+        "startLine": 97,
+        "startChar": 0,
+        "endLine": 100,
+        "endChar": 0
+      },
+      "revId": "002c2450a603f66233398b20935dd078c9b810b6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
