@@ -11,6 +11,7 @@ ro.vendor.product.display  u:object_r:vendor_mot_hw_prop:s0
 ro.vendor.product.hardware.sku.variant          u:object_r:vendor_mot_hw_prop:s0
 ro.vendor.product.model    u:object_r:vendor_mot_hw_prop:s0
 ro.vendor.product.name     u:object_r:vendor_mot_hw_prop:s0
+ro.vendor.touch.           u:object_r:vendor_mot_touch_prop:s0
 vendor.hw.touch.           u:object_r:vendor_mot_touch_prop:s0
 vendor.nfc.fw_status       u:object_r:vendor_mot_nfc_prop:s0
 
