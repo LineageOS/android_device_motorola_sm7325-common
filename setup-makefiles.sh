@@ -30,6 +30,10 @@ write_headers "berlin berlna dubai"
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
+printf "\n%s\n" "ifeq (\$(TARGET_NEEDS_BTYUPIK),true)" >> "$PRODUCTMK"
+write_makefiles "$MY_DIR"/proprietary-files-btyupik.txt true
+echo "endif" >> "$PRODUCTMK"
+
 # Finish
 write_footers
 
