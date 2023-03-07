@@ -16,6 +16,23 @@
       "message": "works on dubai with the mentioned CLO display tag merge",
       "revId": "ac43768cf31e9b2ca8909849d4eeb3f889662ab2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c704843_87f33d5e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2023-03-07T04:10:15Z",
+      "side": 1,
+      "message": "DNM until CLO display tag is merged because without it the display fails to initialize and it keeps displaying the Motorola boot logo even once the device is booted into system.",
+      "revId": "ac43768cf31e9b2ca8909849d4eeb3f889662ab2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
