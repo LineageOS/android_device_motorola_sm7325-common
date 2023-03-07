@@ -16,6 +16,23 @@
       "message": "works on dubai with this commit https://review.lineageos.org/c/LineageOS/android_device_motorola_dubai/+/350449/",
       "revId": "593f0ce4f174fbc32fa273f0ca472597a2206088",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4597b4ab_4555b66f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2023-03-07T04:11:12Z",
+      "side": 1,
+      "message": "putting CR-2 hold on this as the bluetooth firmware partition update method is cleaner and wouldn\u0027t require any device tree workarounds",
+      "revId": "593f0ce4f174fbc32fa273f0ca472597a2206088",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
