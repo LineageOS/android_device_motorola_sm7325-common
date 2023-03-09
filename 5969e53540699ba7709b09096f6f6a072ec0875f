@@ -16,6 +16,23 @@
       "message": "this works great with the fix for the bluetooth image flashing on dubai. Please test on berlin/berlna as well so we can merge both",
       "revId": "5969e53540699ba7709b09096f6f6a072ec0875f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2cb803f_5e8dabed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 23878
+      },
+      "writtenOn": "2023-03-09T14:19:51Z",
+      "side": 1,
+      "message": "Works as intended on berlna",
+      "revId": "5969e53540699ba7709b09096f6f6a072ec0875f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
