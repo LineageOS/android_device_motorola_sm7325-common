@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from dubai_g-user 12 S1RD32.55-106 0cdff5-e7305 release-keys.
+# All unpinned blobs below are extracted from dubai_g-user 12 S1RD32.55-106-3 98ea12-d3640 release-keys.
 
 # ADSP
 vendor/bin/adsprpcd
