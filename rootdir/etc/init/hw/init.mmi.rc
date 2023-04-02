@@ -360,19 +360,6 @@ service vendor.oem-super-image-detector-sh /vendor/bin/init.oem.hw.sh -M
     oneshot
     disabled
 
-service vendor.hal-fps-sh /vendor/bin/init.oem.fingerprint2.sh
-    class late_start
-    user root
-    group system
-    oneshot
-
-service fpc_ident /vendor/bin/fpc_ident
-    class late_start
-    user system
-    group system
-    oneshot
-    disabled
-
 service vendor.touch-dead-sh /vendor/bin/init.oem.hw.sh -f
     class main
     user root
