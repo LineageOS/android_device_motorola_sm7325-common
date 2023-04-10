@@ -8,5 +8,9 @@ allow vendor_init_touch vendor_sysfs_touchpanel:file { setattr write };
 
 allow vendor_init_touch vendor_toolbox_exec:file rx_file_perms;
 
+allow vendor_init_touch self:capability chown;
+
 r_dir_file(vendor_init_touch , vendor_sysfs_touchpanel)
+allow vendor_init_touch vendor_sysfs_touchpanel:file { setattr rw_file_perms };
+
 set_prop(vendor_init_touch, vendor_mot_touch_prop)
