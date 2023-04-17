@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (c) 2018-2021 Qualcomm Technologies, Inc.
+    All Rights Reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+
+    Not a Contribution.
+
+    Copyright (C) 2012-2018 The Linux Foundation. All rights reserved.
+    Copyright (C) 2012-2013 The Android Open Source Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<!--
+"performance-point"
+    Vendor-guaranteed performance advertised to the applications
+        <Limit name="performance-point-widthxheight" value="fps" />
+
+    -For each of the resolutions, the advertised fps is the max supported,
+    with HW-friendly color format and considering video-only.
+    -Performance for any intermediate resolution will be that of the
+    next-higher-advertised-resolution.
+
+    standard sizes: 480p/576p (SD), 720p (HD), 1080p (FHD), 2160p (UHD)
+    standard frame rates: 24, 25, 30, 48+, 50, 60, 100*, 120*, 200*, 240* fps
+        * HD+ only
+        + SD only
+    - All supported standard performance points are listed (unless they are
+    covered by another listed standard performance point)
+    - Non-standard performance points are listed along with all the standard
+    performance points covered by them.
+-->
+
+<!--
+ Lahaina Non-Secure decoder capabilities
+ (MB is defined as 16x16)
+ _____________________________________________________________________
+ | Codec       | W       H       fps     Mbps    MB/s        Max MB/s|
+ |_____________|_____________________________________________________|
+ | h264        | 1920    1088    480     220     3916800     7776000 |
+ |             | 3820    2160    240     220     7735500             |
+ |             | 4096    2160    120     220     4147200             |
+ |             | 7680    4320    60      220     7776000             |
+ | hevc        | 1920    1088    480     160     3916800     7776000 |
+ |             | 3820    2160    240     160     7735500             |
+ |             | 4096    2160    120     160     4147200             |
+ |             | 7680    4320    60      160     7776000             |
+ | vp9         | 1920    1088    480     100     3916800     7776000 |
+ |             | 3820    2160    240     100     7735500             |
+ |             | 4096    2160    120     100     4147200             |
+ |             | 7680    4320    60      100     7776000             |
+ |_____________|_____________________________________________________|
+
+ Lahaina Secure decoder capabilities
+ (MB is defined as 16x16)
+ __________________________________________________________________
+ | Codec    | W       H       fps     Mbps    MB/s        Max MB/s|
+ |__________|_____________________________________________________|
+ | h264     | 1280    720     60      40      216000      2073600 |
+ |          | 1920    1088    60      40      489600              |
+ |          | 3840    2160    60      40      1944000             |
+ |          | 4096    2160    60      40      2073600             |
+ |          | 4096    2304    30      40      1105920             |
+ | hevc     | 1280    720     60      40      216000      2073600 |
+ |          | 1920    1088    60      40      489600              |
+ |          | 3840    2160    60      40      1944000             |
+ |          | 4096    2160    60      40      2073600             |
+ |          | 4096    2304    30      40      1105920             |
+ | vp9      | 1280    720     60      40      216000      2073600 |
+ |          | 1920    1088    60      40      489600              |
+ |          | 3840    2160    60      40      1944000             |
+ |          | 4096    2160    60      40      2073600             |
+ |          | 4096    2304    30      40      1105920             |
+ |__________|_____________________________________________________|
+
+ Lahaina Non-Secure encoder capabilities (Secure not supported)
+ (MB is defined as 16x16)
+ __________________________________________________________________
+ | Codec    | W       H       fps     Mbps    MB/s        Max MB/s|
+ |__________|_____________________________________________________|
+ | h264     | 1280    720     960     220     3456000     3916800 |
+ |          | 1920    1088    480     220     3916800             |
+ |          | 3840    2160    120     220     3888000             |
+ |          | 4096    2160    60      220     2073600             |
+ |          | 8192    4320    24      220     3317760             |
+ | hevc     | 1280    720     960     160     3456000     3916800 |
+ |          | 1920    1088    480     160     3916800             |
+ |          | 3840    2160    120     160     3888000             |
+ |          | 4096    2160    60      160     2073600             |
+ |          | 8192    4320    24      160     3317760             |
+ |__________|_____________________________________________________|
+-->
+
+<MediaCodecs>
+    <Include href="media_codecs_google_audio.xml" />
+    <Include href="media_codecs_google_video.xml" />
+    <Include href="media_codecs_vendor_audio.xml" />
+    <Include href="media_codecs_dolby_audio.xml" />
+    <Include href="media_codecs_google_telephony.xml" />
+</MediaCodecs>
