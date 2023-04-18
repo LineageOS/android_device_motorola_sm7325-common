@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6d6524e_afcc8104",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2023-04-18T22:03:04Z",
+      "side": 1,
+      "message": "works fine on dubai but requires dependency commits merged first",
+      "revId": "3f5fa714ac3edf3490a6798f4ab6ba4a6fd3b842",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
