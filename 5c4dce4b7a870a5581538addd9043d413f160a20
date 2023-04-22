@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "66dc2ba5_87951ecf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2023-04-22T23:33:49Z",
+      "side": 1,
+      "message": "works fine on Dubai and xpeng",
+      "revId": "5c4dce4b7a870a5581538addd9043d413f160a20",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
