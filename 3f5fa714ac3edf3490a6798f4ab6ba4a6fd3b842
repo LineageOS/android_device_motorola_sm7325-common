@@ -16,6 +16,23 @@
       "message": "works fine on dubai but requires dependency commits merged first",
       "revId": "3f5fa714ac3edf3490a6798f4ab6ba4a6fd3b842",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b21dca4_71145d76",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2023-04-25T21:40:16Z",
+      "side": 1,
+      "message": "swap to CR+1 since dependency might merge soon",
+      "revId": "3f5fa714ac3edf3490a6798f4ab6ba4a6fd3b842",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
