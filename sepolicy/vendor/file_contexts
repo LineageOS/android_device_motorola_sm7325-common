@@ -57,9 +57,14 @@
 /data/vendor/gf_data(/.*)?                              u:object_r:fingerprint_vendor_data_file:s0
 /dev/esfp0                                              u:object_r:egis_device:s0
 /dev/goodix_fp                                          u:object_r:goodix_device:s0
+/sys/devices/soc/0.et320(/.*)?                          u:object_r:vendor_sysfs_fingerprint:s0
 
 # IFAA
 /(vendor|system/vendor)/bin/hw/vendor\.zui\.hardware\.ifaa@1\.0-service                 u:object_r:hal_ifaa_default_exec:s0
+
+# Lights
+/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.berlna                                         u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.xpeng                                          u:object_r:hal_light_default_exec:s0
 
 # LiveDisplay
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.motorola_lahaina    u:object_r:hal_lineage_livedisplay_qti_exec:s0
@@ -89,9 +94,10 @@
 /dev/mmi_sys_temp                                       u:object_r:vendor_thermal_device:s0
 
 # Vendor init scripts
+/(vendor|system/vendor)/bin/load_touch\.sh                      u:object_r:vendor_qti_init_shell_exec:s0
 /(vendor|system/vendor)/bin/init\.mmi\.laser\.sh                u:object_r:vendor_mmi_laser_exec:s0
 /(vendor|system/vendor)/bin/init\.mmi\.touch\.sh                u:object_r:vendor_init_touch_exec:s0
-/(vendor|system/vendor)/bin/init\.oem\.fingerprint2\.sh         u:object_r:vendor_init_fingerprint_exec:s0
+/(vendor|system/vendor)/bin/init\.oem\.(fingerprint2|fingerprint\.overlay)\.sh                    u:object_r:vendor_init_fingerprint_exec:s0
 /(vendor|system/vendor)/bin/init\.oem\.hw\.sh                   u:object_r:vendor_init_hw_exec:s0
 
 # V4L2 Name
