@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "39ba3818_ae032045",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 23878
+      },
+      "writtenOn": "2023-05-02T13:01:00Z",
+      "side": 1,
+      "message": "Working as intended for berlna",
+      "revId": "c233285c229acb63c9410bf61abd21056567aaff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
