@@ -16,6 +16,23 @@
       "message": "WIP! Need to solve IMS crashes first\n\nI am_crash: [3034,0,org.codeaurora.ims,814235213,java.lang.ClassNotFoundException,org.codeaurora.ims.utils.QtiCarrierConfigHelper,ImsService.java,223]",
       "revId": "3088f91d5beeba53eaa9f69bbf7031e8431baeb7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ca74bfde_91c89426",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 903,
+      "author": {
+        "id": 23878
+      },
+      "writtenOn": "2023-05-20T00:06:45Z",
+      "side": 1,
+      "message": "Aren\u0027t these a symlink already covered by Android.mk?",
+      "revId": "3088f91d5beeba53eaa9f69bbf7031e8431baeb7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
