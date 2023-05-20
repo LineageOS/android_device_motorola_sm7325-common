@@ -908,8 +908,8 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 system/etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
 system/framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
 
-# Radio - IMS (APK) - from patched source
--system_ext/priv-app/ims/ims.apk
+# Radio - IMS (APK) -from tundra_g-user 12 S3SJ32.1-86-2 (modified)
+-system_ext/priv-app/ims/ims.apk|9a8837c54ee39417c3262c0d04a8d9fd865154f7
 
 # RIL - IMS
 -system_ext/app/ImsRcsService/ImsRcsService.apk
