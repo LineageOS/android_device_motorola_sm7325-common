@@ -72,6 +72,9 @@ function blob_fixup() {
         vendor/lib/libmot_chi_desktop_helper.so | vendor/lib64/libmot_chi_desktop_helper.so)
             grep -q "libgui_shim_vendor.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim_vendor.so" "${2}"
             ;;
+        vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc)
+            sed -i "/disabled/d" "${2}"
+            ;;
     esac
 }
 
