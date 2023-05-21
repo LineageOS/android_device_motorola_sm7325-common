@@ -33,6 +33,24 @@
       "message": "Aren\u0027t these a symlink already covered by Android.mk?",
       "revId": "3088f91d5beeba53eaa9f69bbf7031e8431baeb7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ca017d4_0168e182",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 903,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2023-05-21T16:41:30Z",
+      "side": 1,
+      "message": "Oops lol fixed",
+      "parentUuid": "ca74bfde_91c89426",
+      "revId": "3088f91d5beeba53eaa9f69bbf7031e8431baeb7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
