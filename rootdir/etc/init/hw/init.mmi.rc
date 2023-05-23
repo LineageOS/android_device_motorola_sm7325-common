@@ -390,6 +390,9 @@ on property:vendor.hw.touch.status="dead"
 on property:vendor.hw.touch.status="ready"
     start vendor.touch-ready-sh
 
+on property:ro.boot.revision=*
+    setprop ro.boot.hardware.revision ${ro.boot.revision}
+
 service vendor.charge_only_mode /vendor/bin/charge_only_mode
     user root
     group graphics system input
