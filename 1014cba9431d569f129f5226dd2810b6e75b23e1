@@ -16,6 +16,24 @@
       "message": "I could be wrong but we aren\u0027t pulling libmot_chi_desktop_helper.so to begin with?",
       "revId": "1014cba9431d569f129f5226dd2810b6e75b23e1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7080c409_6cbb989a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2023-05-31T17:45:23Z",
+      "side": 1,
+      "message": "it\u0027s in the device\u0027s trees. Adding it here will patch it for the other devices when they need it too\n\notherwise we could decommonize this?",
+      "parentUuid": "52a38ba4_fad493e7",
+      "revId": "1014cba9431d569f129f5226dd2810b6e75b23e1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
