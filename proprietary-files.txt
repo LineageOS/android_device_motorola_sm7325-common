@@ -477,12 +477,6 @@ vendor/gpu/kbc/unified_ksqs.bin
 vendor/lib/hw/vulkan.adreno.so|3bcf0e4869f4870654df2e14c410a7573704538f
 vendor/lib64/hw/vulkan.adreno.so|77a0bc3621df044f3219c0279ae83c2e78a871d7
 
-# HotwordEnrollment
--product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
--product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
-system_ext/framework/com.android.hotwordenrollment.common.util.jar
-
 # IO prefetcher
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
