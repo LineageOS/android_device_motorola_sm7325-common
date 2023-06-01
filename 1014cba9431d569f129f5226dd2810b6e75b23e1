@@ -34,6 +34,24 @@
       "parentUuid": "52a38ba4_fad493e7",
       "revId": "1014cba9431d569f129f5226dd2810b6e75b23e1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d6bd4060_be573742",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 23878
+      },
+      "writtenOn": "2023-06-01T13:47:48Z",
+      "side": 1,
+      "message": "Ah then we should decommon this.\nFrom my past exp this likely break blob fixup function when using --only-target",
+      "parentUuid": "7080c409_6cbb989a",
+      "revId": "1014cba9431d569f129f5226dd2810b6e75b23e1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
