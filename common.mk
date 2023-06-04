@@ -397,7 +397,7 @@ PRODUCT_PACKAGES += \
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
-    libjsoncpp.vendor:64 \
+    libjsoncpp.vendor \
     libnetutils.vendor:64 \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
