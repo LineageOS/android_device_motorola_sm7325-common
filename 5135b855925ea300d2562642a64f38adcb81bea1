@@ -74,6 +74,30 @@
       },
       "revId": "5135b855925ea300d2562642a64f38adcb81bea1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ef55c19_2ee62d71",
+        "filename": "media/init.qti.media.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 23878
+      },
+      "writtenOn": "2023-06-29T21:15:25Z",
+      "side": 1,
+      "message": "No?\nvendor.media.target_variant reports \"_yupik_v1\"\nBut as Jeferson pointed out need to resolve sepolicy.",
+      "parentUuid": "85d2e0a0_5c6988c7",
+      "range": {
+        "startLine": 52,
+        "startChar": 43,
+        "endLine": 52,
+        "endChar": 58
+      },
+      "revId": "5135b855925ea300d2562642a64f38adcb81bea1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
