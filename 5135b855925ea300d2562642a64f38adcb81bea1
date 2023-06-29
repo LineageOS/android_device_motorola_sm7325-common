@@ -33,6 +33,24 @@
       "message": "MAybe label?\nW libc    : Unable to set property \"media.settings.xml\" to \"/vendor/etc/media_profiles_yupik_v1.xml\": error code: 0x18",
       "revId": "5135b855925ea300d2562642a64f38adcb81bea1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c3187a9_f93a9bec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 23878
+      },
+      "writtenOn": "2023-06-29T19:29:16Z",
+      "side": 1,
+      "message": "Ah didn\u0027t see that, can fix sepolicy instead but should drop it from vendor prop still. Fine to me either way.",
+      "parentUuid": "42753fce_70ff1ee3",
+      "revId": "5135b855925ea300d2562642a64f38adcb81bea1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
