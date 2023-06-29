@@ -16,6 +16,23 @@
       "message": "Verified on berlna",
       "revId": "5135b855925ea300d2562642a64f38adcb81bea1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42753fce_70ff1ee3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 22728
+      },
+      "writtenOn": "2023-06-29T19:24:01Z",
+      "side": 1,
+      "message": "MAybe label?\nW libc    : Unable to set property \"media.settings.xml\" to \"/vendor/etc/media_profiles_yupik_v1.xml\": error code: 0x18",
+      "revId": "5135b855925ea300d2562642a64f38adcb81bea1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
