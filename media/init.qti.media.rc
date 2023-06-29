@@ -49,6 +49,7 @@ on post-fs-data
     setprop ro.media.xml_variant.codecs ${vendor.media.target_variant}
     setprop ro.media.xml_variant.codecs_performance ${vendor.media.target_variant}
     setprop ro.media.xml_variant.profiles ${vendor.media.target_variant}
+    setprop media.settings.xml /vendor/etc/media_profiles${vendor.media.target_variant}.xml
 
 on property:vendor.netflix.bsp_rev=*
     setprop ro.netflix.bsp_rev ${vendor.netflix.bsp_rev}
