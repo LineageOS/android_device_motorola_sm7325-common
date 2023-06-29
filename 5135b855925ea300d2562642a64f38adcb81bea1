@@ -51,6 +51,29 @@
       "parentUuid": "42753fce_70ff1ee3",
       "revId": "5135b855925ea300d2562642a64f38adcb81bea1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85d2e0a0_5c6988c7",
+        "filename": "media/init.qti.media.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-06-29T20:38:50Z",
+      "side": 1,
+      "message": "I guess you missed an _ after media_profiles.",
+      "range": {
+        "startLine": 52,
+        "startChar": 43,
+        "endLine": 52,
+        "endChar": 58
+      },
+      "revId": "5135b855925ea300d2562642a64f38adcb81bea1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
