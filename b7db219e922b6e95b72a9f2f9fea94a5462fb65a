@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7b4c3a70_72524b64",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 23878
+      },
+      "writtenOn": "2023-08-09T15:17:06Z",
+      "side": 1,
+      "message": "Paired with the Patchset from berlna, Notification LED now can blink as intended.",
+      "revId": "b7db219e922b6e95b72a9f2f9fea94a5462fb65a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
