@@ -20,3 +20,7 @@ set_prop(vendor_init_fingerprint, ctl_start_prop)
 set_prop(vendor_init_fingerprint, vendor_mot_fingerprint_prop)
 
 allow vendor_init_fingerprint vendor_file:file execute_no_trans;
+allow vendor_init_fingerprint goodix_device:chr_file { getattr ioctl open read write };
+allow vendor_init_fingerprint hal_fingerprint_default_exec:file execute_no_trans;
+allow vendor_init_fingerprint ctl_stop_prop:property_service set;
+allow vendor_init_fingerprint ctl_start_prop:property_service set;
