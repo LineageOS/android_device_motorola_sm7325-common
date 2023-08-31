@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "349ca1dc_e68f0d79",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-08-31T15:39:30Z",
+      "side": 1,
+      "message": "need confirmation on dubai/xpeng, but Berlin doesn\u0027t have this",
+      "revId": "d2f6ea07a5087f45f5e4c8dd127639c869464f4c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
