@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0eede44_1d46452a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 23878
+      },
+      "writtenOn": "2023-09-06T18:28:32Z",
+      "side": 1,
+      "message": "Don\u0027t have Wifi6 to test against. No idea if it works as-is but I\u0027d assume this should be set true.",
+      "revId": "d547418d5e6bebba5bc3487ff4b9159ea80266bb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
