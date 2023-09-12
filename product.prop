@@ -4,6 +4,9 @@ audio.record.delay=50
 # eBPF
 ro.bpf.kver_override=5.10.239
 
+# Motorola
+ro.mot.build.customerid=global
+
 # Radio
 persist.vendor.rcs.presence.provision=0
 
