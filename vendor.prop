@@ -138,7 +138,6 @@ bluetooth.profile.sap.server.enabled?=true
 persist.bluetooth.a2dp_offload.disabled=false
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
-persist.vendor.btstack.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aac-aptx-aptxhd-ldac
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
@@ -243,9 +242,6 @@ ro.incremental.enable=true
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
 
-# NFC
-ro.nfc.port=I2C
-
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.perf-hal.ver=2.2
@@ -308,9 +304,6 @@ sys.vendor.shutdown.waittime=500
 # SOC
 ro.soc.manufacturer=QTI
 ro.soc.model=SM7325
-
-# SSR
-persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # Stagefright
 debug.stagefright.c2inputsurface=-1
