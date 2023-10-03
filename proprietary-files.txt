@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from dubai_g-user 13 T1RD33.116-33-3 f829db-a0c97 release-keys.
+# All unpinned blobs below are extracted from dubai_g-user 13 T1RD33.116-33-3 fe936 c0109 release-keys.
 
 # ADSP
 vendor/bin/adsprpcd
@@ -905,7 +905,7 @@ system/etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-teleph
 system/framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
 
 # Radio - IMS (APK) - from patched source
--system_ext/priv-app/ims/ims.apk|70170fff2df066315e4bce09ecd203d3e28cfec4
+-system_ext/priv-app/ims/ims.apk|410414153e3b4b85c5e9f5b6f5c4fc6b98c2994b
 
 # RIL - IMS
 -system_ext/app/ImsRcsService/ImsRcsService.apk
