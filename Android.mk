@@ -64,6 +64,7 @@ RFS_MSM_MPSS_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/mpss/
 $(RFS_MSM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS MSM MPSS folder structure: $@"
 	@rm -rf $@/*
+	@mkdir -p $(dir $@)/readonly/fsg
 	@mkdir -p $(dir $@)/readonly/vendor
 	$(hide) ln -sf /data/vendor/tombstones/rfs/modem $@/ramdumps
 	$(hide) ln -sf /mnt/vendor/persist/rfs/msm/mpss $@/readwrite
@@ -71,6 +72,7 @@ $(RFS_MSM_MPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /mnt/vendor/persist/hlos_rfs/shared $@/hlos
 	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
 	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
+	$(hide) ln -sf /vendor/fsg $@/readonly/vendor/fsg
 
 RFS_MSM_SLPI_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/slpi/
 $(RFS_MSM_SLPI_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
