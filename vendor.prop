@@ -241,6 +241,9 @@ persist.vendor.ims.vt.enableadb=1
 # Incremental FS
 ro.incremental.enable=true
 
+# mbm_spy
+ro.build.version.qcom=LA.UM.9.14.r1-21000-LAHAINA.QSSI13.0
+
 # Media
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
