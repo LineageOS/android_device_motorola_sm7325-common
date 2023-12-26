@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46a8af12_c4089e0d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2023-12-26T00:44:43Z",
+      "side": 1,
+      "message": "cherry-picked from 20 branch. No more denials spamming logs for this issue",
+      "revId": "39187e22c25c878f27bc7b22adbb73a5f581fbfd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
