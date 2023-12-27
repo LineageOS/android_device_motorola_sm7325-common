@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from dubai_g-user 13 T1RD33.116-33-12 d501e0 7757c release-keys - RETAIL variant.
+# All unpinned blobs below are extracted from dubai_g-user 13 T1RD33.116-33-13 441420-2d5de8 release-keys - RETAIL variant.
 
 # ADSP
 vendor/bin/adsprpcd
