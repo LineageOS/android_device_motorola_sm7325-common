@@ -85,6 +85,8 @@ function prepare_firmware() {
                 sh "${STAR}" "${SRC}/${IMAGE}.img" "${SRC}"
             fi
         done
+        local INFO="${ANDROID_ROOT}"/lineage/scripts/motorola/info.sh
+        ./${INFO} "${SRC}"
     fi
 }
 
