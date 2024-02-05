@@ -402,7 +402,6 @@ vendor/lib64/liblocationservice_glue.so
 vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_wifihal.so
 vendor/lib64/libminksocket.so
-vendor/lib64/libqcc_file_agent.so
 vendor/lib64/libslimclient.so
 vendor/lib64/libxtadapter.so
 vendor/lib64/libxtwifi_server_protocol.so
@@ -416,7 +415,6 @@ vendor/lib64/vendor.qti.gnss@3.0.so
 vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.gnss@4.0.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 
 # Graphics - Adreno
 vendor/lib/egl/eglSubDriverAndroid.so
@@ -661,9 +659,23 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|0b5b86c7ea668197244b83dad4d686897b5e4fb4
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|8956937951c6f99727ace3380f46275e62c932c0
 
-# QCC
-vendor/lib/vendor.qti.hardware.qccsyshal@1.0.so
-vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
+# QCC - System - from phone 1 - Nothing/Spacewar/Spacewar:11/RKQ1.211222.001/2401191910:user/release-keys
+system_ext/bin/qccsyshal@1.2-service|1d3fa5feff11e463204d31927cfb659f707989e1
+system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc|7279d09cf4d6f594dbab5c288ec16101bd668a95
+system_ext/lib64/libqcc_file_agent_sys.so|594caf0a2fba843dd34c87a7e4775cc1c25bc93a
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0.so|196bce8c481180705cc04074af4fd8362f15f6d9
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.1.so|cb060471bccda79a173bd26f58aea0e7162d65eb
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so|9663f4512a1e33956a9a348ac19b139ddfe02ee6
+system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2.so|db1ea124c0f42fcc1a814d69308d4f9522012e1b
+
+# QCC - vendor - from phone 1 - Nothing/Spacewar/Spacewar:11/RKQ1.211222.001/2401191910:user/release-keys
+vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service|72637aa6e65e77b29bf270008281d82028a5185b
+vendor/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc|afeb332a4750a11587658fcc9a75a27f63bbccdd
+vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so|56b91c2addf67315bb4d992f816fe2607a942125
+vendor/lib64/libqcc_file_agent.so|9f7f6fade19994465c2c43a094200e5cf59752cd
+vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so|dc270d1ec097a877374f23e5ba85cdfac19d9797
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so|b71ce8557c58ff13ee37408d4edc5570568ef4cb
+vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so|26f7c4d097a7e21ef62f9218e0ccebc5cab00a3f
 
 # QMI
 system/etc/permissions/privapp-permissions-qti.xml
