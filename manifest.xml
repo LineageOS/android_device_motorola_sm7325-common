@@ -174,11 +174,6 @@
         <fqname>@1.1::IEid/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.embmssl</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.1::IEmbms/embmsslServer0</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.qti.hardware.fm</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IFmHci/default</fqname>
@@ -192,11 +187,6 @@
         <name>vendor.qti.hardware.perf</name>
         <transport>hwbinder</transport>
         <fqname>@2.2::IPerf/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.qccvndhal</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IQccvndhal/qccvndhal</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.qconfig</name>
@@ -294,11 +284,6 @@
         <name>vendor.qti.hardware.vpp</name>
         <transport>hwbinder</transport>
         <fqname>@2.0::IHidlVppService/vppService</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.wifi.wifilearner</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IWifiStats/wifiStats</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.wifidisplaysession</name>
