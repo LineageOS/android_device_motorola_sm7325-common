@@ -90,16 +90,8 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     firmware_aw_cali.bin_symlink \
-    libaudiopreprocessing \
-    libbundlewrapper \
-    libdownmix \
-    libdynproc \
-    libeffectproxy \
-    libldnhncr \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libreverbwrapper \
-    libvisualizer \
     sound_trigger.primary.lahaina
 
 PRODUCT_COPY_FILES += \
