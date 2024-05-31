@@ -7,3 +7,5 @@ allow rild mnt_vendor_file:dir r_dir_perms;
 allow rild proc_moto_boot:file r_file_perms;
 allow rild cutback_data_file:dir rw_dir_perms;
 allow rild cutback_data_file:sock_file create_file_perms;
+
+allow rild fwk_sensor_service:service_manager find;
