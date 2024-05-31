@@ -33,6 +33,24 @@
       "message": "actually Andrew, can you please double-check this on berlna then? A tester said it was fine but forgot to get me a new logcat just in case further selinux denials popped up",
       "revId": "e43cd110286a6530a7569586b6b544f414f4b973",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3a707bca_ff0f655a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 23878
+      },
+      "writtenOn": "2024-05-31T23:52:40Z",
+      "side": 1,
+      "message": "Log where I saw some of these was with goodix fpc variant\nThough local in hal_fingerprint_default and vendor_init_fingerprint I had added:\nget_prop(hal_fingerprint_default, vendor_mot_fingerprint_prop)\n\nWhich seems accurate to oem script to get/set prop for services.\nTbh I dumped that script as goodix would work initial boot and set the valve to none breaking it after rebooting.\n\nAs for rild.te I added this on another device but replaced the hwservice one as it seems to be renamed to service instead.",
+      "parentUuid": "0000f072_ae23c8ca",
+      "revId": "e43cd110286a6530a7569586b6b544f414f4b973",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
