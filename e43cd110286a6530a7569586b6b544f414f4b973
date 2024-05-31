@@ -16,6 +16,23 @@
       "message": "I\u0027ve also seen these on berlna",
       "revId": "e43cd110286a6530a7569586b6b544f414f4b973",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0000f072_ae23c8ca",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2024-05-31T23:20:58Z",
+      "side": 1,
+      "message": "actually Andrew, can you please double-check this on berlna then? A tester said it was fine but forgot to get me a new logcat just in case further selinux denials popped up",
+      "revId": "e43cd110286a6530a7569586b6b544f414f4b973",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
