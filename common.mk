@@ -103,6 +103,7 @@ PRODUCT_PACKAGES += \
     audio.primary.lahaina \
     audio.r_submix.default \
     audio.usb.default \
+    firmware_aw_cali.bin_symlink \
     libaudiopreprocessing \
     libbundlewrapper \
     libdownmix \

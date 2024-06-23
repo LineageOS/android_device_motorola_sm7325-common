@@ -54,15 +54,6 @@ $(WIFI_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(WIFI_FIRMWARE_SYMLINKS)
 
-AW882XX_CAL_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/aw_cali.bin
-$(AW882XX_CAL_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating aw882xx firmware symlinks: $@"
-	@rm -rf $@
-	@mkdir -p $(dir $@)
-	$(hide) ln -sf /mnt/vendor/persist/factory/audio/aw_cali.bin $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(AW882XX_CAL_SYMLINKS)
-
 EXPAT_SYMLINKS := $(TARGET_OUT_VENDOR_EXECUTABLES)/expat
 $(EXPAT_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Expat bin link: $@"

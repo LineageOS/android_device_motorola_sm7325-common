@@ -19,3 +19,10 @@ install_symlink {
     installed_location: "rfs/msm/mpss/readonly/vendor/fsg",
     symlink_target: "/vendor/fsg",
 }
+
+install_symlink {
+    name: "firmware_aw_cali.bin_symlink",
+    vendor: true,
+    installed_location: "firmware/aw_cali.bin",
+    symlink_target: "/mnt/vendor/persist/factory/audio/aw_cali.bin",
+}
