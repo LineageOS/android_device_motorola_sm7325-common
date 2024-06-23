@@ -309,6 +309,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
+# OEM
+PRODUCT_PACKAGES += \
+    bin_expat_symlink
+
 # OMX
 PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor \

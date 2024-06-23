@@ -7,6 +7,13 @@ soong_namespace {
 }
 
 install_symlink {
+    name: "bin_expat_symlink",
+    vendor: true,
+    installed_location: "bin/expat",
+    symlink_target: "motobox",
+}
+
+install_symlink {
     name: "rfs_mdm_mpss_readonly_vendor_fsg_symlink",
     vendor: true,
     installed_location: "rfs/mdm/mpss/readonly/vendor/fsg",
