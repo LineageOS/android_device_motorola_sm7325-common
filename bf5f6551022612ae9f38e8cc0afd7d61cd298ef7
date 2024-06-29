@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01c1fa27_98472345",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 23878
+      },
+      "writtenOn": "2024-06-29T19:22:41Z",
+      "side": 1,
+      "message": "Berlna verified booting, should wait for verification from a lahaina device",
+      "revId": "bf5f6551022612ae9f38e8cc0afd7d61cd298ef7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
