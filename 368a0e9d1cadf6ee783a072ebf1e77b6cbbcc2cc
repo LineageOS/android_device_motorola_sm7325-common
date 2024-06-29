@@ -16,6 +16,23 @@
       "message": "This might be a better solution https://review.lineageos.org/c/LineageOS/android_device_motorola_sm8250-common/+/396366",
       "revId": "368a0e9d1cadf6ee783a072ebf1e77b6cbbcc2cc",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "adfb1b4e_57fc30c4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 23878
+      },
+      "writtenOn": "2024-06-29T21:14:21Z",
+      "side": 1,
+      "message": "Thanks, that seems more sensible going forward.",
+      "revId": "368a0e9d1cadf6ee783a072ebf1e77b6cbbcc2cc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
