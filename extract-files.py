@@ -9,7 +9,6 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 from extract_utils.fixups_lib import (
-    lib_fixup_remove,
     lib_fixups,
     lib_fixups_user_type,
 )
@@ -23,8 +22,8 @@ namespace_imports = [
     'hardware/motorola',
     'hardware/qcom-caf/sm8350',
     'hardware/qcom-caf/wlan',
-    'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/commonsys/display',
+    'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/dataservices',
     'vendor/qcom/opensource/display',
 ]
@@ -42,10 +41,6 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.hardware.wifidisplaysession@1.0',
         'vendor.qti.imsrtpservice@3.0',
     ): lib_fixup_vendor_suffix,
-    (
-        'libofflinelog',
-        'libthermalclient',
-    ): lib_fixup_remove,
 }
 
 blob_fixups: blob_fixups_user_type = {
@@ -67,8 +62,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
-    'vendor/lib64/sensors.moto.so': blob_fixup()
-        .add_needed('libbase_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
