@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79fa4ee0_3a060568",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2024-06-30T04:55:53Z",
+      "side": 1,
+      "message": "it\u0027s harmless but you don\u0027t really need to keep both msm and mdm",
+      "revId": "7a2dbac6513a60a8856cbedbe1d9953df88879d6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
