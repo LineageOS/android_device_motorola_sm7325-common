@@ -16,6 +16,24 @@
       "message": "why do you need this when it\u0027s already symlink to /vendor/fsg",
       "revId": "f9aa2e0f2eb1716b634d36e2281baf920adf0955",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0c18d8d_9e3aa651",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2024-07-02T06:39:24Z",
+      "side": 1,
+      "message": "I just checked without this commit and...\n\ndubai:/vendor/rfs/msm/mpss/readonly # ls\nfirmware  vendor\n\nSo if this directory on stock is built? We need to build it too",
+      "parentUuid": "2fc89e38_b82c7d55",
+      "revId": "f9aa2e0f2eb1716b634d36e2281baf920adf0955",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
