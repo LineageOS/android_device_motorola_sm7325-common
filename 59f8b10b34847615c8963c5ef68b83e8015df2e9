@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0685ade_f9f58776",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2024-07-02T06:45:17Z",
+      "side": 1,
+      "message": "fine on dubai",
+      "revId": "59f8b10b34847615c8963c5ef68b83e8015df2e9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
