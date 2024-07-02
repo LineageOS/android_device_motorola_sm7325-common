@@ -70,6 +70,23 @@
       "parentUuid": "f313acdb_8fecbe70",
       "revId": "f9aa2e0f2eb1716b634d36e2281baf920adf0955",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b87aa0b_33a1132a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 23878
+      },
+      "writtenOn": "2024-07-02T11:13:02Z",
+      "side": 1,
+      "message": "After mounting vendor.img I do now see readonly/fsg is a symlink rather than empty folder after extraction. \nMay explain some logic behind modemst* looking for /fsg when rebuilding after it\u0027s wiped.\nThough Ic7acabbe16d66740b3aee414be60c24d3a0de43d fixed modemst* wipe on sm8250 and up it\u0027s possible this was the proper linkage.",
+      "revId": "f9aa2e0f2eb1716b634d36e2281baf920adf0955",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
