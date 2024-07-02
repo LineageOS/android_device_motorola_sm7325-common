@@ -52,6 +52,24 @@
       "parentUuid": "f0c18d8d_9e3aa651",
       "revId": "f9aa2e0f2eb1716b634d36e2281baf920adf0955",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb37e40b_86e5f260",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10258
+      },
+      "writtenOn": "2024-07-02T06:47:36Z",
+      "side": 1,
+      "message": "\u003e FYI nio has `/vendor/rfs/mdm/mpss/readonly/vendor/fsg -\u003e /vendor/fsg` symlink, but not `/vendor/rfs/mdm/mpss/readonly/fsg` dir. I think the latter is not going to be useful\n\nOn stock there\u0027s a `/vendor/rfs/msm/mpss/readonly/fsg -\u003e /fsg` symlink. I guess this is just mistakenly created by moto.",
+      "parentUuid": "f313acdb_8fecbe70",
+      "revId": "f9aa2e0f2eb1716b634d36e2281baf920adf0955",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
