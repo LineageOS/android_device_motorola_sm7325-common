@@ -145,6 +145,7 @@ vendor/lib64/libmdsprpc.so
 # Charger
 vendor/bin/charge_only_mode
 vendor/bin/hvdcp_opti
+vendor/bin/init.qti.chg_policy.sh
 vendor/etc/charger_fstab.qti
 vendor/etc/charger_fw_fstab.qti
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
@@ -477,6 +478,14 @@ vendor/lib64/hw/vulkan.adreno.so
 vendor/bin/msm_irqbalance
 vendor/etc/msm_irqbalance.conf
 
+# Kernel
+vendor/bin/init.kernel.post_boot-lahaina.sh
+vendor/bin/init.kernel.post_boot-yupik.sh
+vendor/bin/init.kernel.post_boot.sh
+vendor/bin/init.qti.kernel.sh
+vendor/bin/vendor_modprobe.sh
+vendor/etc/init/hw/init.qti.kernel.rc
+
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
 vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
@@ -560,6 +569,10 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so|8956937951c6f99727ace3380f46275e62
 
 # QCC
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
+
+# QCV
+vendor/bin/init.qti.qcv.sh
+vendor/etc/init/init.qti.qcv.rc
 
 # QMI
 system/etc/permissions/privapp-permissions-qti.xml
@@ -867,6 +880,7 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
+vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
 vendor/etc/init/init.vendor.sensors.rc
