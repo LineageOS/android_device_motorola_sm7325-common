@@ -171,13 +171,6 @@
     <!-- dual sap mode is supported on this device. -->
     <bool name="config_wifi_dual_sap_mode_enabled">true</bool>
 
-    <!-- MMS user agent string -->
-    <string name="config_mms_user_agent" translatable="false">Android-Mms/2.0</string>
-
-    <!-- MMS user agent prolfile url -->
-    <string name="config_mms_user_agent_profile_url" translatable="false"
-            >http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
-
     <!-- Configuration to restart radio upon PDP_DEACTIVATE with
          error cause as Regular deactivation(36). -->
     <!--
@@ -277,7 +270,7 @@
     -->
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
 
-	<!-- Indicate whether to allow the device to suspend when the screen is off
+    <!-- Indicate whether to allow the device to suspend when the screen is off
          due to the proximity sensor.  This resource should only be set to true
          if the sensor HAL correctly handles the proximity sensor as a wake-up source.
          Otherwise, the device may fail to wake out of suspend reliably.
@@ -304,7 +297,6 @@
     -->
     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
 
-
     <!-- List supported color modes. -->
     <array name="config_availableColorModes">
         <item>0</item> <!-- COLOR_MODE_NATURAL -->     <!-- This uses colorimetric render intents-->
@@ -315,15 +307,6 @@
 
     <!-- Boolean indicating if current platform supports HFP inband ringing -->
     <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
-
-    <!-- The default refresh rate for a given device. If a non-zero value is set for
-         config_defaultPeakRefreshRate, then config_defaultRefreshRate may be set to 0, in that case
-         the value set for config_defaultPeakRefreshRate will act as the default peak frame rate -->
-    <integer name="config_defaultRefreshRate">0</integer>
-
-    <!-- The default peak refresh rate for a given device. Change this value if you want to allow
-         for higher refresh rates to be automatically used out of the box -->
-    <integer name="config_defaultPeakRefreshRate">60</integer>
 
     <!-- Whether to select voice/data/sms preference without user confirmation -->
     <bool name="config_voice_data_sms_auto_fallback">true</bool>
