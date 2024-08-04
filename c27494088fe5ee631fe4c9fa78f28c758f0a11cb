@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "30f5b873_15972436",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-08-04T07:50:30Z",
+      "side": 1,
+      "message": "already enabled here.",
+      "revId": "c27494088fe5ee631fe4c9fa78f28c758f0a11cb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
