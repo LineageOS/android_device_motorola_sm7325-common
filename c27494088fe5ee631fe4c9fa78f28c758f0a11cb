@@ -34,6 +34,24 @@
       "parentUuid": "30f5b873_15972436",
       "revId": "c27494088fe5ee631fe4c9fa78f28c758f0a11cb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0394f88c_17466312",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-08-04T14:11:37Z",
+      "side": 1,
+      "message": "b-but this flag only enables the flag that I pointed out here.\n\nhttps://github.com/LineageOS/android_external_wpa_supplicant_8/blob/lineage-21.0/hostapd/android.config#L139-L142\n\nthere\u0027s no other use of it, as evident by running `repo grep WIFI_FEATURE_HOSTAPD_11AX`.",
+      "parentUuid": "865d8851_100ba86f",
+      "revId": "c27494088fe5ee631fe4c9fa78f28c758f0a11cb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
