@@ -1,0 +1,91 @@
+From ab173b9875550f2462b8ed80ada0dff9bd2804d0 Mon Sep 17 00:00:00 2001
+From: Vachounet <vachounet@live.fr>
+Date: Wed, 27 Jan 2021 23:28:48 +0100
+Subject: [PATCH 2/3] ImsConfigImpl: don't call setSubscriptionProperty for
+ wfc_ims_mdn
+
+---
+ smali/org/codeaurora/ims/ImsConfigImpl.smali | 70 --------------------
+ 1 file changed, 70 deletions(-)
+
+diff --git a/smali/org/codeaurora/ims/ImsConfigImpl.smali b/smali/org/codeaurora/ims/ImsConfigImpl.smali
+index c921038c..c38fe206 100644
+--- a/smali/org/codeaurora/ims/ImsConfigImpl.smali
++++ b/smali/org/codeaurora/ims/ImsConfigImpl.smali
+@@ -3070,76 +3070,6 @@
+
+     .line 790
+     :cond_2
+-    if-ne p1, v2, :cond_3
+-
+-    .line 791
+-    new-instance v0, Ljava/lang/StringBuilder;
+-
+-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+-
+-    const-string v1, "setProvisionedStringValue WIFI_MDN set db value="
+-
+-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-
+-    move-result-object v0
+-
+-    invoke-static {p2}, Lcom/qualcomm/ims/utils/Log;->pii(Ljava/lang/Object;)Ljava/lang/String;
+-
+-    move-result-object v1
+-
+-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-
+-    move-result-object v0
+-
+-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+-
+-    move-result-object v0
+-
+-    invoke-static {p0, v0}, Lcom/qualcomm/ims/utils/Log;->i(Ljava/lang/Object;Ljava/lang/String;)V
+-
+-    .line 795
+-    :try_start_0
+-    iget v0, p0, Lorg/codeaurora/ims/ImsConfigImpl;->mSubId:I
+-
+-    const-string v1, "wfc_ims_mdn"
+-
+-    invoke-static {v0, v1, p2}, Landroid/telephony/SubscriptionManager;->setSubscriptionProperty(ILjava/lang/String;Ljava/lang/String;)V
+-    :try_end_0
+-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+-
+-    .line 799
+-    goto :goto_1
+-
+-    .line 797
+-    :catch_0
+-    move-exception v0
+-
+-    .line 798
+-    .local v0, "e":Ljava/lang/Exception;
+-    new-instance v1, Ljava/lang/StringBuilder;
+-
+-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+-
+-    const-string v2, "setSubscriptionProperty fail, e="
+-
+-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-
+-    move-result-object v1
+-
+-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+-
+-    move-result-object v1
+-
+-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+-
+-    move-result-object v1
+-
+-    invoke-static {p0, v1}, Lcom/qualcomm/ims/utils/Log;->e(Ljava/lang/Object;Ljava/lang/String;)V
+-
+-    .line 803
+-    .end local v0    # "e":Ljava/lang/Exception;
+-    :cond_3
+-    :goto_1
+     const/16 v3, 0x2c
+
+     const/4 v5, 0x1
