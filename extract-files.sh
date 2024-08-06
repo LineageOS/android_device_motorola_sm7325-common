@@ -73,6 +73,9 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i "s#/system/#/system_ext/#" "${2}"
             ;;
+        system_ext/priv-app/ims/ims.apk)
+            apktool_patch "${2}" "$MY_DIR/ims-patches"
+            ;;
         vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml)
             [ "$2" = "" ] && return 0
             sed -ni '/default.*fqname/!p' "${2}"
