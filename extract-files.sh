@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2023 The LineageOS Project
+# SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+# SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -48,7 +48,8 @@ while [ "${#}" -gt 0 ]; do
                 KANG="--kang"
                 ;;
         -s | --section )
-                SECTION="${2}"; shift
+                SECTION="${2}"
+                shift
                 CLEAN_VENDOR=false
                 ;;
         * )
@@ -65,15 +66,27 @@ fi
 function blob_fixup() {
     case "${1}" in
         system_ext/lib64/libwfdnative.so)
-            ${PATCHELF} --remove-needed "android.hidl.base@1.0.so" "${2}"
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
             ;;
         system_ext/etc/permissions/moto-telephony.xml)
+            [ "$2" = "" ] && return 0
             sed -i "s#/system/#/system_ext/#" "${2}"
             ;;
         vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml)
+            [ "$2" = "" ] && return 0
             sed -ni '/default1/!p' "${2}"
             ;;
+        *)
+            return 1
+            ;;
     esac
+
+    return 0
+}
+
+function blob_fixup_dry() {
+    blob_fixup "$1" ""
 }
 
 function prepare_firmware() {
