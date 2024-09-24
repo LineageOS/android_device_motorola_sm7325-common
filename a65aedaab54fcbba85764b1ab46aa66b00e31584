@@ -16,6 +16,23 @@
       "message": "WIP. Please test this on berl* and I\u0027ll get a test build for xpeng",
       "revId": "a65aedaab54fcbba85764b1ab46aa66b00e31584",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c633907_5419d949",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-09-24T23:38:39Z",
+      "side": 1,
+      "message": "berlin is fine!",
+      "revId": "a65aedaab54fcbba85764b1ab46aa66b00e31584",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
