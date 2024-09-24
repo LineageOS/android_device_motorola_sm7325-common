@@ -1,3 +1,5 @@
 # Audio
 audio.record.delay=50
 
+# Radio
+persist.vendor.rcs.presence.provision=0
