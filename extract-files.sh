@@ -75,7 +75,7 @@ function blob_fixup() {
             ;;
         vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml)
             [ "$2" = "" ] && return 0
-            sed -ni '/default1/!p' "${2}"
+            sed -ni '/default.*fqname/!p' "${2}"
             ;;
         *)
             return 1
