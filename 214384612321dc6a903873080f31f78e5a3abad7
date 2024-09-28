@@ -16,6 +16,23 @@
       "message": "All good now.",
       "revId": "214384612321dc6a903873080f31f78e5a3abad7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d417d7f_7829a631",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2024-09-28T19:20:36Z",
+      "side": 1,
+      "message": "good on dubai and xpeng too",
+      "revId": "214384612321dc6a903873080f31f78e5a3abad7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
