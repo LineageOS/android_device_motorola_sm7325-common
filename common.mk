@@ -528,9 +528,11 @@ PRODUCT_VENDOR_MOVE_ENABLED := true
 # WiFi Display
 PRODUCT_PACKAGES += \
     libavservices_minijail \
+    libgui_shim \
+    libinput_shim
     libnl \
     libpng.vendor \
-    libwfdaac_vendor
+    libwfdaac_vendor \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
