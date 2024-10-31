@@ -5,7 +5,6 @@
 # Current blobs with ELF checks disabled:
 # libcne, libwqe, lowi-server, mutualex depend on libwpa_client, which is a gnu makefile target
 # libmdmcutback depends on libqsap_sdk, which is a gnu makefile target
-# libmotext_inf, libril-qcril-hook-oem depend on libril, which is a gnu makefile target
 # libqti-perfd, libgameoptfeature, thermal-engine depends on libthermalclient, which is device specific
 
 # ADSP
@@ -816,7 +815,7 @@ vendor/lib64/liblqe.so
 vendor/lib64/libmdmcutback.so;DISABLE_CHECKELF
 vendor/lib64/libmdmdetect.so
 vendor/lib64/libminkdescriptor.so
-vendor/lib64/libmotext_inf.so;DISABLE_CHECKELF
+vendor/lib64/libmotext_inf.so
 vendor/lib64/libnetmgr.so
 vendor/lib64/libnetmgr_common.so
 vendor/lib64/libnetmgr_nr_fusion.so
@@ -838,7 +837,7 @@ vendor/lib64/libqsocket.so
 vendor/lib64/libril-db.so
 vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-radioconfig.so
-vendor/lib64/libril-qcril-hook-oem.so;DISABLE_CHECKELF
+vendor/lib64/libril-qcril-hook-oem.so
 vendor/lib64/librilqmimiscservices.so
 vendor/lib64/librilqmiservices.so
 vendor/lib64/libsystem_health_mon.so
