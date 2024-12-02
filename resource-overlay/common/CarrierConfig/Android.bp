@@ -1,0 +1,10 @@
+//
+// SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+runtime_resource_overlay {
+    name: "CarrierConfigResCommon_Sys",
+    aaptflags: ["--keep-raw-values"],
+    product_specific: true,
+}
