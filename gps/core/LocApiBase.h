@@ -141,7 +141,7 @@ public:
             uint32_t center __unused, uint32_t right __unused, uint8_t gloFrequency __unused) { return 0.0; }
     inline virtual float getGeoidalSeparation(double latitude __unused, double longitude __unused) { return 0.0; }
     inline virtual bool checkFeatureStatus(int* fids __unused, LocFeatureStatus* status __unused,
-            uint32_t idCount __unused, bool directQwesCall = false __unused) {return false;}
+            uint32_t idCount __unused, bool __unused directQwesCall = false) {return false;}
 };
 
 class LocApiBase {

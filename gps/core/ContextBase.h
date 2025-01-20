@@ -195,7 +195,7 @@ public:
     }
     inline void sendMsg(const LocMsg *msg) { getMsgTask()->sendMsg(msg); }
     inline bool checkFeatureStatus(int* fids,
-            LocFeatureStatus* status, uint32_t idCount, bool directQwesCall = false) const {
+            LocFeatureStatus* status, uint32_t idCount, bool __unused directQwesCall = false) const {
         return mLocApiProxy->checkFeatureStatus(fids, status, idCount, directQwesCall);
     }
     static loc_gps_cfg_s_type mGps_conf;
