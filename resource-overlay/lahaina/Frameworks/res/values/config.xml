@@ -36,9 +36,6 @@
        <item>"wigig0"</item>
    </string-array>
 
-    <!-- WPA3 sap mode is supported on this device. -->
-    <bool name="config_wifi_wap3_sap_mode_enabled">true</bool>
-
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
     on the headphone/microphone jack. When false use the older uevent framework -->
     <bool name="config_useDevInputEventForAudioJack">true</bool>
