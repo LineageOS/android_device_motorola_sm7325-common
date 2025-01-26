@@ -277,9 +277,6 @@
          when alpha identifier is not provided by the UICC -->
     <bool name="config_stkNoAlphaUsrCnf">false</bool>
 
-    <!-- Configure emergency apn as empty(null) apn -->
-    <string name="config_emergency_apn" translatable="false"></string>
-
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
          Here are a few of them:
