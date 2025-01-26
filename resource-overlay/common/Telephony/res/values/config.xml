@@ -31,9 +31,6 @@
          CPHS4_2.WW6, CPHS B.4.7.1 for more information -->
     <bool name="csp_enabled">true</bool>
 
-    <!-- Show Preferred Network Type options in No SIM case -->
-    <bool name="config_no_sim_display_network_modes">true</bool>
-
     <!-- Show RTT option in Accessibility menu -->
     <bool name="config_support_rtt">true</bool>
 
