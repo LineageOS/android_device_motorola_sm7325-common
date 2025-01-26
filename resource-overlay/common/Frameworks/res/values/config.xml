@@ -273,11 +273,6 @@
     <!-- Whether to select voice/data/sms preference without user confirmation -->
     <bool name="config_voice_data_sms_auto_fallback">true</bool>
 
-    <!-- Package names to use with vendor iwlan implementation. -->
-    <string name="config_wlan_data_service_package" translatable="false">vendor.qti.iwlan</string>
-    <string name="config_wlan_network_service_package" translatable="false">vendor.qti.iwlan</string>
-    <string name="config_qualified_networks_service_package" translatable="false">vendor.qti.iwlan</string>
-
     <!-- set to false if we need to show user confirmation
          when alpha identifier is not provided by the UICC -->
     <bool name="config_stkNoAlphaUsrCnf">false</bool>
