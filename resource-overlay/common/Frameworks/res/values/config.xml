@@ -267,9 +267,6 @@
         <item>3</item> <!-- COLOR_MODE_AUTOMATIC -->   <!-- This uses enhanced render intents-->
     </array>
 
-    <!-- Boolean indicating if current platform supports HFP inband ringing -->
-    <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
-
     <!-- Whether to select voice/data/sms preference without user confirmation -->
     <bool name="config_voice_data_sms_auto_fallback">true</bool>
 
