@@ -18,3 +18,5 @@ set_prop(vendor_init_hw, vendor_radio_prop)
 allow vendor_init_hw vendor_file:file execute_no_trans;
 
 allow vendor_init_hw kmsg_device:chr_file rw_file_perms;
+
+allow vendor_init_hw build_vendor_prop:property_service set;
