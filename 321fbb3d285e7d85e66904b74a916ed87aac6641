@@ -16,6 +16,23 @@
       "message": "moto does not have node that supports bypass?",
       "revId": "321fbb3d285e7d85e66904b74a916ed87aac6641",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "713e4f5d_b81525de",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2025-02-12T03:17:18Z",
+      "side": 1,
+      "message": "can you guys please try on berlin/berlna? It works perfectly fine on my dubai and we have the necessary kernel commits already merged\n\nhttps://github.com/LineageOS/android_kernel_motorola_sm7325/commit/c26d480c8e1a0c12753a052e45ff7a86d077d4aa\n\nhttps://github.com/LineageOS/android_kernel_motorola_sm7325/commit/039ed2c0d789e376cbd9a5f245522c4edd461260",
+      "revId": "321fbb3d285e7d85e66904b74a916ed87aac6641",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
