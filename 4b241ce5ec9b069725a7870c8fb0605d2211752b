@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f937f4f6_3818d62d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2025-02-28T05:30:31Z",
+      "side": 1,
+      "message": "google/coral/device.mk:    $(LOCAL_PATH)/init.recovery.device.rc:recovery/root/init.recovery.coral.rc \\\n\n\npls copy files to match rest of init scripts",
+      "revId": "4b241ce5ec9b069725a7870c8fb0605d2211752b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
