@@ -115,9 +115,6 @@
     <!--  Define Google play service package for FRP-->
     <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
-    <!--  Define optional package verifier name -->
-    <!-- <string name="config_optionalPackageVerifierName" translatable="false">seemp.service</string> -->
-
     <!-- Whether the Unprocessed audio source supports the required frequency range and level -->
     <bool name="config_supportAudioSourceUnprocessed">true</bool>
 
