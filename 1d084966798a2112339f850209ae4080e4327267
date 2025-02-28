@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a1de7664_221bda0d",
+        "filename": "manifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 20370
+      },
+      "writtenOn": "2025-02-28T22:30:34Z",
+      "side": 1,
+      "message": "Maybe the problem is sm6375-specific: the bump from 1.0 to 1.1 causes a build error:\n```\nERROR: files are incompatible: The following instances are in the device manifest but not specified in framework compatibility matrix: \n    vendor.qti.hardware.eid@1.1::IEid/default\n```",
+      "revId": "1d084966798a2112339f850209ae4080e4327267",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
