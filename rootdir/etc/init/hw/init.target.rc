@@ -172,30 +172,8 @@ service vendor.per_proxy /vendor/bin/pm-proxy
     group system
     disabled
 
-#service vendor.mdm_helper /vendor/bin/mdm_helper
-#    class core
-#    group log system wakelock diag vendor_rfs
-#    disabled
-
-service vendor.mdm_launcher /vendor/bin/sh /vendor/bin/init.mdm.sh
-    class core
-    oneshot
-
 on property:init.svc.vendor.per_mgr=running
     start vendor.per_proxy
 
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
-
-#fan-controller
-service fan_control_turn_on /vendor/bin/fan_control 1
-    class late_start
-    user root
-    disabled
-    oneshot
-
-service fan_control_turn_off /vendor/bin/fan_control 0
-    class late_start
-    user root
-    disabled
-    oneshot
