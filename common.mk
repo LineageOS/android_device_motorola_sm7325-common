@@ -364,7 +364,7 @@ PRODUCT_COPY_FILES += \
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    device/motorola/sm7325-common/vintf/device_framework_matrix.xml \
+    hardware/motorola/vintf/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += device/motorola/sm7325-common/vintf/manifest.xml
