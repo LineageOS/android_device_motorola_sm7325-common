@@ -1,8 +1,0 @@
-allow hal_bootctl_default vendor_uefi_block_device:blk_file getattr;
-allow hal_bootctl_default {
-    vendor_efs_boot_dev
-    vendor_modem_efs_partition_device
-}:blk_file rw_file_perms;
-
-# We never apply OTAs when GSI is running
-dontaudit hal_bootctl_default gsi_metadata_file:dir search;

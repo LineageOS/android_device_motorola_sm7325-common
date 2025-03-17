@@ -5,4 +5,4 @@ init_daemon_domain(stflashtool)
 
 allow stflashtool nfc_device:chr_file {ioctl read write getattr lock append map open watch watch_reads};
 get_prop(stflashtool, vendor_radio_prop)
-set_prop(stflashtool, vendor_mot_nfc_prop)
+set_prop(stflashtool, vendor_nfc_prop)

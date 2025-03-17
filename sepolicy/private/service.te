@@ -1,2 +1,0 @@
-type mot_radio_service, service_manager_type;
-type mot_system_service, service_manager_type;
