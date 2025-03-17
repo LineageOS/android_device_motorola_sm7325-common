@@ -1,2 +1,0 @@
-allow hal_lineage_touch_default vendor_sysfs_touchpanel:dir search;
-allow hal_lineage_touch_default vendor_sysfs_touchpanel:file rw_file_perms;

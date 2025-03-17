@@ -1,2 +1,0 @@
-hal_client_domain(platform_app, hal_ifaa);
-hal_client_domain(platform_app, vendor_hal_soter);

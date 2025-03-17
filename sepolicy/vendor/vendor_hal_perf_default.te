@@ -1,2 +1,0 @@
-allow vendor_hal_perf_default proc_sched_lib_mask_cpuinfo:file rw_file_perms;
-binder_call(vendor_hal_perf_default, vendor_poweroptservice)
