@@ -1,1 +1,0 @@
-allow vendor_qti_media vendor_sysfs_sku_version:file r_file_perms;

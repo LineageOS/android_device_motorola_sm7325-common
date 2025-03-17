@@ -1,60 +1,11 @@
-# Fingerprint
-genfscon sysfs /devices/platform/egis_input                         u:object_r:vendor_sysfs_fingerprint:s0
-genfscon sysfs /devices/platform/egis_input/navigation_enable       u:object_r:vendor_sysfs_fingerprint:s0
-genfscon sysfs /devices/platform/egis_input/navigation_event        u:object_r:vendor_sysfs_fingerprint:s0
-
 # Health
-genfscon sysfs /devices/platform/soc/soc:mmi,charger/power_supply/mmi_battery      u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/force_charger_suspend u:object_r:sysfs_battery_supply:s0
 
-# Input Devices
-genfscon sysfs /devices/virtual/input                                           u:object_r:vendor_sysfs_input:s0
-
-# Lights
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8350c@2:qcom,leds@ef00/leds/charging u:object_r:sysfs_leds:s0
-
 # LiveDisplay
-genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_hbm             u:object_r:sysfs_livedisplay_tuneable:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/dsi_display_dc              u:object_r:sysfs_livedisplay_tuneable:s0
-
-# Motorola
-genfscon proc /bootinfo                                                         u:object_r:proc_moto_boot:s0
-genfscon proc /config                                                           u:object_r:vendor_proc_hw:s0
-genfscon proc /hw                                                               u:object_r:vendor_proc_hw:s0
-
-# PowerHal
-genfscon proc /sys/kernel/sched_lib_name                                        u:object_r:proc_sched_lib_mask_cpuinfo:s0
-genfscon proc /sys/kernel/sched_lib_mask_force                                  u:object_r:proc_sched_lib_mask_cpuinfo:s0
-genfscon sysfs /devices/platform/soc/a94000.i2c/i2c-2/2-0049/double_click       u:object_r:vendor_sysfs_dt2w:s0
-
-# RTC
-genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:rtc/rtc/rtc0 u:object_r:sysfs_rtc:s0
-
-# Sensors
-genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/panelName              u:object_r:vendor_sysfs_data:s0
-genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/panelRegDA             u:object_r:vendor_sysfs_data:s0
-
-# SKU version
-genfscon sysfs /devices/platform/soc/aa00000.qcom,vidc/sku_version                         u:object_r:vendor_sysfs_sku_version:s0
-
-# Touchscreen
-genfscon sysfs /class/touchscreen                                               u:object_r:vendor_sysfs_touchpanel:s0
-genfscon sysfs /devices/virtual/touchscreen                                     u:object_r:vendor_sysfs_touchpanel:s0
-genfscon sysfs /devices/platform/soc/a94000.i2c/i2c-2/2-0049/touchscreen        u:object_r:vendor_sysfs_touchpanel:s0
 
 # UFS
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:4/block/sde/queue/discard_max_bytes u:object_r:vendor_sysfs_mmc_host:s0
 
 # Vibrator
 genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-005a/leds/vibrator      u:object_r:sysfs_vibrator:s0
-
-# Wakeup
-genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-005a/wakeup/wakeup      u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/power/wakeup                          u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/power_supply/battery/power/wakeup     u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/power_supply/wireless/power/wakeup    u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/power_supply/usb/power/wakeup         u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:mmi,charger/wakeup                                        u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:mmi,charger/power/wakeup                                  u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:mmi,charger/power_supply/mmi_battery/wakeup               u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:mmi,charger/power_supply/mmi_battery/power/wakeup         u:object_r:sysfs_wakeup:s0
