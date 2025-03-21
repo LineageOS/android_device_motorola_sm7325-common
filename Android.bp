@@ -7,13 +7,6 @@ soong_namespace {
 }
 
 install_symlink {
-    name: "rfs_msm_mpss_readonly_vendor_fsg_symlink",
-    vendor: true,
-    installed_location: "rfs/msm/mpss/readonly/vendor/fsg",
-    symlink_target: "/vendor/fsg",
-}
-
-install_symlink {
     name: "firmware_aw_cali.bin_symlink",
     vendor: true,
     installed_location: "firmware/aw_cali.bin",
