@@ -310,10 +310,10 @@ on boot
    chown system system /sys/class/capsense/reset
    chown system system /sys/class/capsense/int_state
 
-   # Charger
-   wait /sys/class/power_supply/battery/device/force_charger_suspend
-   chmod 0664 /sys/class/power_supply/battery/device/force_charger_suspend
-   chown vendor_tcmd system /sys/class/power_supply/battery/device/force_charger_suspend
+    # Charger
+    wait /sys/class/power_supply/battery/device/force_charging_disable
+    chmod 0664 /sys/class/power_supply/battery/device/force_charging_disable
+    chown system system /sys/class/power_supply/battery/device/force_charging_disable
 
 on late-fs-charger
     class_start early_hal
