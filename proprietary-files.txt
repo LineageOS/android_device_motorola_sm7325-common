@@ -1,6 +1,6 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from edge 30 (14 U1RDS34.80-40-5-4 94692f-00ef9).
-## RETAIL variant
+## are from edge 30 (14 U1RDS34.80-40-5-6 ba4fd-68ef4).
+## Variant: RETAIL
 
 # Current blobs with ELF checks disabled:
 # libqti-perfd, libgameoptfeature, thermal-engine depends on libthermalclient, which is device specific
