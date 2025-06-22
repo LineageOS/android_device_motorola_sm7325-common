@@ -25,7 +25,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import init.recovery.${ro.boot.device}.rc
+import /system/etc/init/init.recovery.${ro.boot.device}.rc
 
 on init
     setprop sys.usb.configfs 1
