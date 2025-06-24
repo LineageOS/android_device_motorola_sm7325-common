@@ -1,4 +1,4 @@
-From 4dd42142e2fbb2afd60ca6d8b4ac497c8d978f74 Mon Sep 17 00:00:00 2001
+From efb05771d9f0f7b97be57079af1dfd5f5cbd80d1 Mon Sep 17 00:00:00 2001
 From: Andrew Hexen <SyberHexen@gmail.com>
 Date: Thu, 25 May 2023 11:51:44 -0700
 Subject: [PATCH 3/5] ims: remove uses-library for moto-ims-ext
@@ -9,14 +9,14 @@ Subject: [PATCH 3/5] ims: remove uses-library for moto-ims-ext
 Signed-off-by: Andrew Hexen <SyberHexen@gmail.com>
 1c910a
 ---
- AndroidManifest.xml | 3 +--
- 1 file changed, 1 insertion(+), 2 deletions(-)
+ AndroidManifest.xml | 1 -
+ 1 file changed, 1 deletion(-)
 
 diff --git a/AndroidManifest.xml b/AndroidManifest.xml
-index 3b3dc51..6f4b3de 100644
+index c4aa64e..aa4bd42 100644
 --- a/AndroidManifest.xml
 +++ b/AndroidManifest.xml
-@@ -48,9 +48,8 @@
+@@ -49,7 +49,6 @@
          </service>
          <service android:enabled="true" android:exported="true" android:name=".QtiImsExtService" android:permission="com.qti.permission.BIND_QTI_IMS_SERVICE" android:singleUser="true"/>
          <uses-library android:name="moto-telephony"/>
@@ -24,10 +24,6 @@ index 3b3dc51..6f4b3de 100644
          <uses-library android:name="qti-telephony-hidl-wrapper"/>
          <uses-library android:name="qti-telephony-utils"/>
          <uses-library android:name="ims-ext-common"/>
-     </application>
--</manifest>
-\ No newline at end of file
-+</manifest>
 -- 
-2.43.0
+2.49.0
 
