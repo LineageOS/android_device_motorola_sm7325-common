@@ -219,9 +219,9 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.1-service.motorola_lahaina
 
 # Media
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/media/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh \
-    $(LOCAL_PATH)/media/init.qti.media.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.media.rc
+PRODUCT_PACKAGES += \
+    init.qti.media.rc \
+    init.qti.media.sh
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/lahaina/media_codecs_lahaina_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_lahaina.xml \
