@@ -159,22 +159,39 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-service
 
 # Init
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    fstab.qcom.ramdisk \
+    init.mmi.rc \
+    init.mmi.charge_only.rc \
+    init.mmi.chipset.rc \
+    init.qcom.rc \
+    init.recovery.qcom.rc \
+    init.qti.kernel.rc \
+    init.qti.qcv.rc \
+    init.target.rc \
+    ueventd.qcom.rc
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
-    $(LOCAL_PATH)/rootdir/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
-
-$(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/etc/init/hw/*.rc),\
-        $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/$(notdir $f)))
-$(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/etc/init/*.rc),\
-        $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_VENDOR)/etc/init/$(notdir $f)))
-$(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/bin/*.sh),\
-        $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_VENDOR)/bin/$(notdir $f)))
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc
+PRODUCT_PACKAGES += \
+    init.class_main.sh \
+    init.crda.sh \
+    init.kernel.post_boot.sh \
+    init.kernel.post_boot-lahaina.sh \
+    init.kernel.post_boot-shima.sh \
+    init.kernel.post_boot-yupik.sh \
+    init.mmi.boot.sh \
+    init.mmi.touch.sh \
+    init.oem.hw.sh \
+    init.qcom.class_core.sh \
+    init.qcom.coex.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sensors.sh \
+    init.qcom.sh \
+    init.qti.chg_policy.sh \
+    init.qti.kernel.sh \
+    init.qti.qcv.sh \
+    vendor_modprobe.sh
 
 # IPACM
 PRODUCT_PACKAGES += \
