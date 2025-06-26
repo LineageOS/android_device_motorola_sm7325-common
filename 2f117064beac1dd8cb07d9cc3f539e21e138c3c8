@@ -16,6 +16,23 @@
       "message": "then something is wrong:\n\n```\nERROR: files are incompatible: The following instances are in the device manifest but not specified in framework compatibility matrix: \n    vendor.lineage.touch@1.0::IHighTouchPollingRate/default\nSuggested fix:\n1. Update deprecated HALs to the latest version.\n2. Check for any typos in device manifest or framework compatibility matrices with FCM version \u003e\u003d 6.\n3. For new platform HALs, add them to any framework compatibility matrix with FCM version \u003e\u003d 6 where applicable.\n4. For device-specific HALs, add to DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE or DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE.: Success\nINCOMPATIBLE\n18:05:09 ninja failed with: exit status 1\n\n#### failed to build some targets (05:36 (mm:ss)) ####\n```",
       "revId": "2f117064beac1dd8cb07d9cc3f539e21e138c3c8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2f414292_cb42b8df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2025-06-26T22:35:50Z",
+      "side": 1,
+      "message": "mmm we use the HIDL.",
+      "revId": "2f117064beac1dd8cb07d9cc3f539e21e138c3c8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
