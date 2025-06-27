@@ -17,5 +17,19 @@
 # LiveDisplay
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.motorola_lahaina    u:object_r:hal_lineage_livedisplay_qti_exec:s0
 
+# Touchscreen
+/sys/devices/platform/soc/a94000.i2c/i2c-2/2-0049/single_click                                u:object_r:vendor_sysfs_touchpanel:s0
+/sys/devices/platform/soc/a94000.i2c/i2c-2/2-0049/double_click                                u:object_r:vendor_sysfs_touchpanel:s0
+
 # Vibrator
 /sys/devices/platform/soc/990000.i2c/i2c-1/1-005a/leds/vibrator(/.*)?                     u:object_r:vendor_sysfs_vibrator:s0
+
+# Wakeup
+/sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/wakeup/wakeup72/expire_count     u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/wakeup/wakeup72/event_count      u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/wakeup/wakeup72/active_time_ms   u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/wakeup/wakeup72/total_time_ms    u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/wakeup/wakeup72/max_time_ms      u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/wakeup/wakeup72/last_change_ms   u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/wakeup/wakeup72/active_count     u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/wakeup/wakeup72/name             u:object_r:sysfs_wakeup:s0
