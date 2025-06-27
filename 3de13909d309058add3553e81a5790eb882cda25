@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "36d3fe7e_55c3e9c0",
+        "filename": "sepolicy/vendor/file_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-06-27T18:11:18Z",
+      "side": 1,
+      "message": "Why not just put this in genfs_contexts?\n\n`genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/wakeup/wakeup                                        u:object_r:sysfs_wakeup:s0`",
+      "revId": "3de13909d309058add3553e81a5790eb882cda25",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
