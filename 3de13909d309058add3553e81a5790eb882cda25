@@ -16,6 +16,24 @@
       "message": "Why not just put this in genfs_contexts?\n\n`genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:mmi,qti-glink-charger/wakeup/wakeup                                        u:object_r:sysfs_wakeup:s0`",
       "revId": "3de13909d309058add3553e81a5790eb882cda25",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e3285050_9b1fd22d",
+        "filename": "sepolicy/vendor/file_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2025-06-27T20:30:12Z",
+      "side": 1,
+      "message": "Done\n\nfor tracking\n\nfor i in $(realpath /sys/class/wakeup/*); do if ! echo \"$(ls -dZ $i)\" | grep -q sysfs_wakeup; then echo genfscon sysfs $(echo $i | sed -e \u0027s|/sys||g\u0027 -e \u0027s|wakeup/wakeup.|wakeup|g\u0027 -e \u0027s|wakeup[0-9]*|wakeup|g\u0027) u:object_r:sysfs_wakeup:s0; fi; done | sort -u",
+      "parentUuid": "36d3fe7e_55c3e9c0",
+      "revId": "3de13909d309058add3553e81a5790eb882cda25",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
