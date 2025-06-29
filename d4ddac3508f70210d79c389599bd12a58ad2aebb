@@ -16,6 +16,24 @@
       "message": "why tho? I see 0 reason...",
       "revId": "d4ddac3508f70210d79c389599bd12a58ad2aebb",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c0fe56b_1e8dda69",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2025-06-29T16:53:29Z",
+      "side": 1,
+      "message": "I hate the rootdir and extra folders within tbh. I did this on sm8550-common. Plus if somehow in the future we accidentally duplicate these files in proprietary files? Blueprint will error out for duplicate files",
+      "parentUuid": "076f6fca_67d94dea",
+      "revId": "d4ddac3508f70210d79c389599bd12a58ad2aebb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
