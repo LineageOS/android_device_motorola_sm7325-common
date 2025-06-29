@@ -16,6 +16,24 @@
       "message": "again, why",
       "revId": "8fbd383954ff735de827877e2058aaee9d895b0d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "058e1ea7_ce39eb4f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2025-06-29T16:51:17Z",
+      "side": 1,
+      "message": "Well, the copy without blueprint failed to error out for duplicate init.qti.media.rc file, so I prefer using blueprints too tbh",
+      "parentUuid": "fa2f847a_25efb4ef",
+      "revId": "8fbd383954ff735de827877e2058aaee9d895b0d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
