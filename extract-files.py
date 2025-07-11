@@ -50,14 +50,14 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
-    'system_ext/bin/wfdservice': blob_fixup()
-        .add_needed('libwfdservice_shim.so'),
     'system_ext/etc/permissions/moto-telephony.xml': blob_fixup()
         .regex_replace('/system/', '/system_ext/'),
     'system_ext/priv-app/ims/ims.apk': blob_fixup()
         .apktool_patch('ims-patches'),
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
+<<<<<<< PATCH SET (0561f4 sm7325-common: Drop QCOM WFD)
+=======
     ('system_ext/lib/libwfdmmsrc_system.so', 'system_ext/lib64/libwfdmmsrc_system.so'): blob_fixup()
         .add_needed('libgui_shim.so'),
     'system_ext/lib64/libwfdnative.so': blob_fixup()
@@ -65,6 +65,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libinput_shim.so'),
     ('system_ext/lib/libwfdservice.so', 'system_ext/lib64/libwfdservice.so'): blob_fixup()
         .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
+>>>>>>> BASE      (c0476b sm7325-common: Switch charging control to use force_charging)
     'vendor/lib64/sensors.moto.so': blob_fixup()
         .add_needed('libbase_shim.so'),
 }  # fmt: skip
