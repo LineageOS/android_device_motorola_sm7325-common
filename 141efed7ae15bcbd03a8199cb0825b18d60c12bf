@@ -22,6 +22,30 @@
       },
       "revId": "141efed7ae15bcbd03a8199cb0825b18d60c12bf",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "23a9c53e_12df4329",
+        "filename": "resource-overlay/common/Frameworks/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2025-10-11T22:15:14Z",
+      "side": 1,
+      "message": "Thanks Bruno! Fixed it",
+      "parentUuid": "09bd774a_c6486f89",
+      "range": {
+        "startLine": 125,
+        "startChar": 0,
+        "endLine": 125,
+        "endChar": 4
+      },
+      "revId": "141efed7ae15bcbd03a8199cb0825b18d60c12bf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
