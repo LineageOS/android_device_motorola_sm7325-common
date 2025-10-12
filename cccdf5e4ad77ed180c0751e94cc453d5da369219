@@ -16,6 +16,23 @@
       "message": "works on dubai and fixes using 48Hz or 60Hz as min and 90Hz to 144Hz as peak as it properly goes between them again",
       "revId": "cccdf5e4ad77ed180c0751e94cc453d5da369219",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5cda3270_947a3857",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2025-10-12T03:37:21Z",
+      "side": 1,
+      "message": "Fine on Berlin!",
+      "revId": "cccdf5e4ad77ed180c0751e94cc453d5da369219",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
