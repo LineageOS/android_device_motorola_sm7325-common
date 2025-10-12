@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91b14cb7_61f50b59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2025-10-12T02:55:01Z",
+      "side": 1,
+      "message": "works on dubai and fixes using 48Hz or 60Hz as min and 90Hz to 144Hz as peak as it properly goes between them again",
+      "revId": "cccdf5e4ad77ed180c0751e94cc453d5da369219",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
