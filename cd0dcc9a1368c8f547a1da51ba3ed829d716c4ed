@@ -16,6 +16,23 @@
       "message": "WIP, waiting on test results from a user with a hearing aid",
       "revId": "cd0dcc9a1368c8f547a1da51ba3ed829d716c4ed",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e31d7d5e_d5bb10b5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-11-07T05:40:26Z",
+      "side": 1,
+      "message": "You need to actually include this in audio_policy_configuration if you want it to work",
+      "revId": "cd0dcc9a1368c8f547a1da51ba3ed829d716c4ed",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
