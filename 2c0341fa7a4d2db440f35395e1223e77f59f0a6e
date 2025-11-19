@@ -33,6 +33,23 @@
       "message": "Waiting on dependency from hardware/motorola to be merged first",
       "revId": "2c0341fa7a4d2db440f35395e1223e77f59f0a6e",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "72c4812b_da37616e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2025-11-19T08:14:27Z",
+      "side": 1,
+      "message": "waiting on dependency commit to be merged first",
+      "revId": "2c0341fa7a4d2db440f35395e1223e77f59f0a6e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
