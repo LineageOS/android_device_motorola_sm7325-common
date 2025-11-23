@@ -102,7 +102,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64
 
-$(call soong_config_set,stagefright,target_disable_thumbnail_block_model,true)
+$(call soong_config_set_bool,stagefright,target_disable_thumbnail_block_model,true)
 
 # Charger
 WITH_LINEAGE_CHARGER := false
@@ -197,15 +197,15 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
 $(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery/device/force_charging_disable)
-$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
+$(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay-service.sdm \
     vendor.lineage.livedisplay-service.sysfs
 
-$(call soong_config_set,livedisplay_sdm,enable_dm,false)
-$(call soong_config_set,livedisplay_sysfs,enable_se,true)
+$(call soong_config_set_bool,livedisplay_sdm,enable_dm,false)
+$(call soong_config_set_bool,livedisplay_sysfs,enable_se,true)
 
 # Media
 PRODUCT_COPY_FILES += \
