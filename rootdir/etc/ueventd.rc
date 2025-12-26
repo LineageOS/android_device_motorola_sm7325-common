@@ -508,3 +508,13 @@ firmware_directories /vendor/firmware_mnt/image/
 
 # NFC ST Driver permissions
 /dev/st21nfc              0660   nfc        nfc
+
+# Additional sensors
+/sys/class/touchscreen/*    double_tap_enabled                                                0664    system  system
+/sys/class/touchscreen/*    double_tap_pressed                                                0664    system  system
+/sys/class/touchscreen/*    udfps_enabled                                                     0664    system  system
+/sys/class/touchscreen/*    udfps_pressed                                                     0664    system  system
+/sys/devices/platform/soc/*.spi/spi_master/spi0/spi0.*/touchscreen/*    double_tap_enabled    0664    system  system
+/sys/devices/platform/soc/*.spi/spi_master/spi0/spi0.*/touchscreen/*    double_tap_pressed    0664    system  system
+/sys/devices/platform/soc/*.spi/spi_master/spi0/spi0.*/touchscreen/*    udfps_enabled         0664    system  system
+/sys/devices/platform/soc/*.spi/spi_master/spi0/spi0.*/touchscreen/*    udfps_pressed         0664    system  system
