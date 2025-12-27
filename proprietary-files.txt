@@ -568,7 +568,6 @@ vendor/lib/libperfioctl.so
 vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-perfd.so;DISABLE_CHECKELF
 vendor/lib/libqti-util.so
-vendor/lib/libqti-utils.so
 vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib/vendor.qti.memory.pasrmanager@1.1.so
 vendor/lib64/libperfconfig.so
@@ -578,31 +577,9 @@ vendor/lib64/libpowercore.so
 vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so;DISABLE_CHECKELF
 vendor/lib64/libqti-util.so
-vendor/lib64/libqti-utils.so
-vendor/lib64/libskewknob.so
 vendor/lib64/libvideooptfeature.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
-
-# Perf LM
-vendor/etc/lm/AdaptLaunchFeature.xml
-vendor/etc/lm/AppClassifierFeature.xml
-vendor/etc/lm/GameOptimizationFeature.xml
-vendor/etc/lm/PreKillFeature.xml
-vendor/etc/lm/gPLAFFeature.xml
-vendor/etc/lm/prekill/prekill_2GB.data
-vendor/etc/lm/prekill/prekill_4GB.data
-vendor/etc/lm/prekill/prekill_6GB.data
-vendor/etc/lm/sPLHFeature.xml
-vendor/lib64/libadaptlaunch.so
-vendor/lib64/libappclassifier.so
-vendor/lib64/libgameoptfeature.so;DISABLE_CHECKELF
-vendor/lib64/libgplaf.so
-vendor/lib64/liblmutils-ns.so
-vendor/lib64/libmemperfd.so
-vendor/lib64/libmeters-ns.so
-vendor/lib64/libprekill.so
-vendor/lib64/libsplh.so
 
 # Peripheral manager
 vendor/bin/pm-proxy
