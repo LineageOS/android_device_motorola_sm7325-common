@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb6f062b_13df1597",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 36296
+      },
+      "writtenOn": "2026-01-03T16:42:55Z",
+      "side": 1,
+      "message": "why not copy the xml from frameworks?\n\n`frameworks/av/services/audiopolicy/config/hearing_aid_audio_policy_configuration.xml`",
+      "revId": "e4abb40285b1216141b9b5039c48232a72225881",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": []
 }
