@@ -34,6 +34,24 @@
       "parentUuid": "a4f72a3b_3407d6e3",
       "revId": "35773b034468695195e5db166562d25dff5fd241",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2473c480_e65d4064",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-01-03T18:33:45Z",
+      "side": 1,
+      "message": "He meant the one from framework/av, not QTI one.",
+      "parentUuid": "d2780b3e_197aefb1",
+      "revId": "35773b034468695195e5db166562d25dff5fd241",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
