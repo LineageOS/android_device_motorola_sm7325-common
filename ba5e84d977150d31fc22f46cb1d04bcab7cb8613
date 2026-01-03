@@ -52,6 +52,24 @@
       "parentUuid": "4bb4993d_a23a7dd3",
       "revId": "ba5e84d977150d31fc22f46cb1d04bcab7cb8613",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "999591f2_1989208e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-01-03T20:02:23Z",
+      "side": 1,
+      "message": "yeah, looks weird in the build I just installed - does that now need it\u0027s own HAL?",
+      "parentUuid": "dcb9e82d_08929575",
+      "revId": "ba5e84d977150d31fc22f46cb1d04bcab7cb8613",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
