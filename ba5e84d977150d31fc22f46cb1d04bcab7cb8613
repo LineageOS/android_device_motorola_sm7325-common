@@ -16,6 +16,24 @@
       "message": "This is not exactly the same, tho.",
       "revId": "ba5e84d977150d31fc22f46cb1d04bcab7cb8613",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4bb4993d_a23a7dd3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-01-03T19:32:15Z",
+      "side": 1,
+      "message": "Correct, it reformats 1 entry with no change, and it changes the module name.\n\n\u003cmodule name\u003d\"bluetooth\" halVersion\u003d\"2.0\"\u003e -\u003e \u003cmodule name\u003d\"hearing_aid\" halVersion\u003d\"2.0\"\u003e\n\nHence the lack of V+, waiting on a build.",
+      "parentUuid": "7888d6d7_84486950",
+      "revId": "ba5e84d977150d31fc22f46cb1d04bcab7cb8613",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
