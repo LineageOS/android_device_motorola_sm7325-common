@@ -34,6 +34,24 @@
       "parentUuid": "7888d6d7_84486950",
       "revId": "ba5e84d977150d31fc22f46cb1d04bcab7cb8613",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dcb9e82d_08929575",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-01-03T19:36:46Z",
+      "side": 1,
+      "message": "That makes all the difference, FYI.",
+      "parentUuid": "4bb4993d_a23a7dd3",
+      "revId": "ba5e84d977150d31fc22f46cb1d04bcab7cb8613",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
