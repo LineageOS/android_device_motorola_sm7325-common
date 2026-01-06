@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "faccf492_1535c460",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-01-06T22:34:58Z",
+      "side": 1,
+      "message": "we had some moto camera specific hints - but I don\u0027t think we care.\n\nIf mike finds them useful and pulls them to device tree, I\u0027ll take a look then at doing it.",
+      "revId": "cabb53632e4ec6239107c550ba41f4c979735642",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
