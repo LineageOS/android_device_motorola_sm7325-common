@@ -307,8 +307,13 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
     libqti-perfd-client
 
+ifeq ($(TARGET_IS_LAHAINA),true)
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/perf/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+    $(LOCAL_PATH)/configs/perf/powerhint_lahaina.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+else
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/perf/powerhint_yupik.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+endif
 
 # RFS MSM MPSS symlinks
 PRODUCT_PACKAGES += \
