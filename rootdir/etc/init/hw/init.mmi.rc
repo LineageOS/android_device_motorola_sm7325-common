@@ -408,3 +408,6 @@ service vendor.touchRec /vendor/bin/touchRec
     group input
     oneshot
     disabled
+
+on init
+    setprop vendor.powerhal.config powerhint_${ro.boot.product.vendor.sku}.json
