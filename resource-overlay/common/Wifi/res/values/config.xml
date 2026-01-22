@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      SPDX-FileCopyrightText: The Linux Foundation
+     SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: BSD-3-Clause
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
     <!-- boolean indicating whether the WiFi chipset has 5GHz band support.
          Note: This config is replacing the config_wifi_dual_band_support
          since more bands may now be supported (such as 6GHz), the naming dual_band
