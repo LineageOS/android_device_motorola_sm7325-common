@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      SPDX-FileCopyrightText: The Linux Foundation
+     SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: BSD-3-Clause
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
     <!-- Default files to pin via Pinner Service -->
     <string-array name="config_defaultPinnerServiceFiles" translatable="false">
         <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
@@ -14,6 +15,6 @@
         <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
     </string-array>
 
-    <!-- Bytes that the PinnerService will pin for Home app -->
+    <!-- Default: 60 MB. Bytes that the PinnerService will pin for Home app -->
     <integer name="config_pinnerHomePinBytes">6291456</integer>
 </resources>
