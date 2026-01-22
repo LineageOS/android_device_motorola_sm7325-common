@@ -23,12 +23,12 @@
     <bool name="config_unplugTurnsOnScreen">true</bool>
 
     <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
-    <array name="config_availableColorModes">
+    <integer-array name="config_availableColorModes">
         <item>0</item> <!-- COLOR_MODE_NATURAL -->     <!-- This uses colorimetric render intents-->
         <item>1</item> <!-- COLOR_MODE_BOOSTED -->     <!-- This applies a 10% boost using the PCC-->
         <item>2</item> <!-- COLOR_MODE_SATURATED -->
         <item>3</item> <!-- COLOR_MODE_AUTOMATIC -->   <!-- This uses enhanced render intents-->
-    </array>
+    </integer-array>
 
     <!-- Indicate whether to allow the device to suspend when the screen is off
          due to the proximity sensor.  This resource should only be set to true
