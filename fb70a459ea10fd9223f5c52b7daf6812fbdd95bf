@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8cb51164_bd836087",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-02-13T17:55:29Z",
+      "side": 1,
+      "message": "@marcbourgoin85@gmail.com pls drop -2",
+      "revId": "fb70a459ea10fd9223f5c52b7daf6812fbdd95bf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
