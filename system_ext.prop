@@ -1,2 +1,5 @@
+# Charger
+ro.charger.enable_suspend=1
+
 # Graphics
 persist.demo.hdmirotationlock=false
