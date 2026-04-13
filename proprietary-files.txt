@@ -414,6 +414,11 @@ vendor/lib64/vendor.qti.gnss@4.1.so
 vendor/lib64/vendor.qti.gnss@4.2-service.so
 vendor/lib64/vendor.qti.gnss@4.2.so
 
+# GNSS configs
+vendor/etc/lowi.conf
+vendor/etc/sap.conf
+vendor/etc/xtwifi.conf
+
 # Graphics - Adreno
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so
