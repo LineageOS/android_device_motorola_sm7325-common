@@ -1,7 +1,9 @@
 # Audio
+audio.deep_buffer.media=true
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
+audio.offload.min.duration.secs=60
 persist.vendor.audio.ambisonic.auto.profile=false
 persist.vendor.audio.ambisonic.capture=false
 persist.vendor.audio.apptype.multirec.enabled=false
@@ -158,6 +160,7 @@ dalvik.vm.heapstartsize=16m
 dalvik.vm.heaptargetutilization=0.5
 
 # Display
+debug.sf.enable_hwc_vds=1
 vendor.display.comp_mask=0
 vendor.display.disable_excl_rect=0
 vendor.display.disable_excl_rect_partial_fb=1
@@ -245,6 +248,7 @@ persist.vendor.qcomsysd.enabled=1
 # Radio
 persist.rcs.supported=1
 persist.vendor.data.iwlan.enable=true
+persist.vendor.data.mode=concurrent
 persist.vendor.radio.0x9e_not_callname=1
 persist.vendor.radio.add_power_save=1
 persist.vendor.radio.aosp_usr_pref_sel=true
@@ -275,6 +279,8 @@ persist.vendor.radio.sib16_support=1
 persist.vendor.radio.start_ota_daemon=0
 persist.vendor.radio.suppress_ussd_rel=1
 persist.vendor.radio.sw_mbn_update=0
+ro.telephony.default_network=33,33
+ro.vendor.use_data_netmgrd=true
 
 # Sensors
 persist.vendor.sensors.allow_non_default_discovery=true
