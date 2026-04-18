@@ -6,3 +6,6 @@ ro.bpf.kver_override=5.10.239
 
 # Radio
 persist.vendor.rcs.presence.provision=0
+
+# System server
+arm64.memtag.process.system_server=off
