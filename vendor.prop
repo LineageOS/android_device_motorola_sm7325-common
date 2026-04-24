@@ -22,7 +22,6 @@ persist.vendor.audio.fluence.voicerec=false
 persist.vendor.audio.ha_proxy.enabled=true
 persist.vendor.audio.ras.enabled=false
 persist.vendor.audio.speaker.prot.enable=true
-persist.vendor.audio.speaker.stereo=false
 persist.vendor.audio.spv4.enable=true
 persist.vendor.audio.vbat.enabled=false
 persist.vendor.audio.voicecall.speaker.stereo=false
