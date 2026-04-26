@@ -22,21 +22,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # Overlays
+$(call inherit-product, hardware/qcom-caf/common/overlay/qssi/qssi.mk)
+TARGET_HAS_NO_QCOM_WFD := true
+
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
     ApertureOverlayCommon \
     FrameworksResCommon \
     FrameworksResProduct \
-    FrameworksResTarget \
     LineageSDKResCommon \
     NcmTetheringOverlay \
     SettingsResCommon \
-    SystemUIResCommon \
-    TelephonyResCommon \
-    TelephonyResProduct \
-    WifiResCommon \
-    WifiResTarget
+    SystemUIResCommon
 
 # A/B
 ifeq ($(TARGET_IS_VAB),true)
