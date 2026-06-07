@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c4fcc43_e5aa9ea4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-06-07T18:41:07Z",
+      "side": 1,
+      "message": "this was somehow already pushed to vendor long ago... wasn\u0027t me haha.",
+      "revId": "1669c60da263cb89e682e65571a22c2e182ab205",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
