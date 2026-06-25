@@ -70,6 +70,30 @@
       },
       "revId": "7fd3f898edece6331f6fe48c753e64606f6b923f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee647b73_a2b3ed47",
+        "filename": "common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-06-25T23:03:05Z",
+      "side": 1,
+      "message": "ack.",
+      "parentUuid": "bd3a3889_159a88b8",
+      "range": {
+        "startLine": 322,
+        "startChar": 0,
+        "endLine": 322,
+        "endChar": 27
+      },
+      "revId": "7fd3f898edece6331f6fe48c753e64606f6b923f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
