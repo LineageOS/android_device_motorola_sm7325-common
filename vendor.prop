@@ -287,7 +287,6 @@ sys.vendor.shutdown.waittime=500
 
 # SOC
 ro.soc.manufacturer=QTI
-ro.soc.model=SM7325
 
 # Stagefright
 debug.stagefright.c2inputsurface=-1
