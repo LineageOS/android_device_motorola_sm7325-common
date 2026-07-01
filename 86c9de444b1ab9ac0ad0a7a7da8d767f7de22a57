@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d6e67da_5940eb38",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2026-07-01T19:13:59Z",
+      "side": 1,
+      "message": "Will need to merge the device specific matching commits and kernel reapply commits too",
+      "revId": "86c9de444b1ab9ac0ad0a7a7da8d767f7de22a57",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
