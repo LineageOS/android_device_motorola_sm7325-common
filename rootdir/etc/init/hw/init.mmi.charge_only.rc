@@ -1,4 +1,4 @@
-on charger
+on property:init.svc.vendor.charger=running
     stop vendor.sensors
 
     start vendor.thermal-com
