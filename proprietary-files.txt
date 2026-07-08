@@ -143,7 +143,6 @@ vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
 
 # Charger
-vendor/bin/charge_only_mode
 vendor/bin/hvdcp_opti
 vendor/etc/charger_fstab.qti
 vendor/etc/charger_fw_fstab.qti

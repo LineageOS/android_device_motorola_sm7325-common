@@ -1,8 +1,3 @@
-# Charger
-/(mnt/vendor/persist|persist)/chargeonly(/.*)?          u:object_r:persist_chargeonly_file:s0
-/(vendor|system/vendor)/bin/charge_only_mode            u:object_r:charge_only_exec:s0
-/data/vendor/chargeonly(/.*)?                           u:object_r:chargeonly_vendor_data_file:s0
-
 # Fingerprint
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.(berlin|berlna|xpeng)         u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.(dubai|tundra)                u:object_r:hal_fingerprint_default_exec:s0
