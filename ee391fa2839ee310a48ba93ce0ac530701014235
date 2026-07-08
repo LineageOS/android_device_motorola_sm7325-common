@@ -35,6 +35,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d6b19939_7071b931",
+        "filename": "sepolicy/vendor/genfs_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-07-08T17:11:27Z",
+      "side": 1,
+      "message": "https://review.lineageos.org/c/LineageOS/android_hardware_motorola/+/493503",
+      "parentUuid": "13c63744_0a27e123",
+      "revId": "ee391fa2839ee310a48ba93ce0ac530701014235",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "313ea6e3_b6feeb43",
@@ -48,6 +66,24 @@
       "writtenOn": "2026-07-08T03:51:30Z",
       "side": 1,
       "message": "Shouldn\u0027t this go in either device/lineage/sepolicy or hardware/motorola?",
+      "revId": "ee391fa2839ee310a48ba93ce0ac530701014235",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05d710ac_d587bda3",
+        "filename": "sepolicy/vendor/hal_health_default.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-07-08T17:11:27Z",
+      "side": 1,
+      "message": "https://review.lineageos.org/c/LineageOS/android_hardware_motorola/+/493503",
+      "parentUuid": "313ea6e3_b6feeb43",
       "revId": "ee391fa2839ee310a48ba93ce0ac530701014235",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
