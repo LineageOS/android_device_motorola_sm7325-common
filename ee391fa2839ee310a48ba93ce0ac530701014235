@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2bfcc0f8_87a88a74",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 28223
+      },
+      "writtenOn": "2026-07-08T08:50:46Z",
+      "side": 1,
+      "message": "i think everything should go in hardware/moto",
+      "revId": "ee391fa2839ee310a48ba93ce0ac530701014235",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "13c63744_0a27e123",
