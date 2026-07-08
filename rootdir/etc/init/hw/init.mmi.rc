@@ -395,12 +395,6 @@ on property:vendor.hw.touch.status="ready"
 on property:ro.boot.revision=*
     setprop ro.boot.hardware.revision ${ro.boot.revision}
 
-service vendor.charge_only_mode /vendor/bin/charge_only_mode
-    user root
-    group graphics system input
-    capabilities SYS_BOOT
-    disabled
-
 # touchRec
 service vendor.touchRec /vendor/bin/touchRec
     class late_start

@@ -143,10 +143,7 @@ vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
 
 # Charger
-vendor/bin/charge_only_mode
 vendor/bin/hvdcp_opti
-vendor/etc/charger_fstab.qti
-vendor/etc/charger_fw_fstab.qti
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
 # CNE
