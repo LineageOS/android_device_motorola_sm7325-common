@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "13c63744_0a27e123",
+        "filename": "sepolicy/vendor/genfs_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 19979
+      },
+      "writtenOn": "2026-07-08T03:51:30Z",
+      "side": 1,
+      "message": "These belong in hardware/motorola",
+      "revId": "ee391fa2839ee310a48ba93ce0ac530701014235",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "313ea6e3_b6feeb43",
+        "filename": "sepolicy/vendor/hal_health_default.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 19979
+      },
+      "writtenOn": "2026-07-08T03:51:30Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this go in either device/lineage/sepolicy or hardware/motorola?",
+      "revId": "ee391fa2839ee310a48ba93ce0ac530701014235",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
