@@ -16,6 +16,24 @@
       "message": "You can probably drop this one",
       "revId": "a26e659bdafcbe871e6707aaf61a82d72c090cb6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "459d5e3a_1e123036",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 483,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2026-07-09T09:18:55Z",
+      "side": 1,
+      "message": "Thanks Michael. We don\u0027t have any shima supported devices in this common tree is true, so I made a commit separately to drop it https://review.lineageos.org/c/LineageOS/android_device_motorola_sm7325-common/+/493589/",
+      "parentUuid": "ca9bd555_00cfa1bc",
+      "revId": "a26e659bdafcbe871e6707aaf61a82d72c090cb6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
