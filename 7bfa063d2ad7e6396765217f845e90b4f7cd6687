@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10edcd73_bf48f517",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-07-09T08:27:59Z",
+      "side": 1,
+      "message": "ro.charger.enable_suspend has no effect with QTI health AIDL HAL",
+      "revId": "7bfa063d2ad7e6396765217f845e90b4f7cd6687",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
