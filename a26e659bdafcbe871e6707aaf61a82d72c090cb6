@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca9bd555_00cfa1bc",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 483,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-07-09T08:26:56Z",
+      "side": 1,
+      "message": "You can probably drop this one",
+      "revId": "a26e659bdafcbe871e6707aaf61a82d72c090cb6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
