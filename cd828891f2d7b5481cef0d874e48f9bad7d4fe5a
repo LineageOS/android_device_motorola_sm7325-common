@@ -16,6 +16,24 @@
       "message": "This change is unnecessary, \u0027charger\u0027 is an init class. Same for the other files.",
       "revId": "cd828891f2d7b5481cef0d874e48f9bad7d4fe5a",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5fb073f_f9d397cb",
+        "filename": "rootdir/etc/init/hw/init.mmi.charge_only.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2026-07-09T09:17:07Z",
+      "side": 1,
+      "message": "Thanks for the review! I removed these changes",
+      "parentUuid": "040a903e_e13927f2",
+      "revId": "cd828891f2d7b5481cef0d874e48f9bad7d4fe5a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
