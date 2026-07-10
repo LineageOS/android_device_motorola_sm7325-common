@@ -16,6 +16,23 @@
       "message": "ro.charger.enable_suspend has no effect with QTI health AIDL HAL",
       "revId": "7bfa063d2ad7e6396765217f845e90b4f7cd6687",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e31a380d_3203eff7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 36900
+      },
+      "writtenOn": "2026-07-10T13:33:30Z",
+      "side": 1,
+      "message": "493588: sm7325-common: Set ro.charger.enable_suspend\u003d1 | https://review.lineageos.org/c/LineageOS/android_device_motorola_sm7325-common/+/493588",
+      "revId": "7bfa063d2ad7e6396765217f845e90b4f7cd6687",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": [
