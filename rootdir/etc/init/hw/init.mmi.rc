@@ -314,20 +314,25 @@ on boot
     chmod 0664 /sys/class/power_supply/battery/device/force_charging_disable
     chown system system /sys/class/power_supply/battery/device/force_charging_disable
 
-on late-fs-charger
-    class_start early_hal
-    mount_all /vendor/etc/fstab.qcom --late
-    # Boot time fs tune
-    write /sys/block/dm-9/queue/read_ahead_kb 2048
-
 on charger
     trigger early-fs
     trigger fs
     trigger post-fs
-    trigger late-fs-charger
+    trigger late-fs
     trigger post-fs-data
     class_stop main
     class_stop late_start
+    start vendor.thermal-com
+
+service vendor.thermal-com /vendor/bin/thermal-engine --minimode
+    class charger
+    user root
+    group root system oem_2907
+    socket thermal-send-client stream 0666 system oem_2907
+    socket thermal-recv-client stream 0660 system oem_2907
+    socket thermal-recv-passive-client stream 0666 system oem_2907
+    socket thermal-send-rule stream 0660 system oem_2907
+    disabled
 
 on property:sys.boot_completed=1 && property:ro.vendor.zram.product_swapon=""
     write /proc/sys/vm/page-cluster 0
