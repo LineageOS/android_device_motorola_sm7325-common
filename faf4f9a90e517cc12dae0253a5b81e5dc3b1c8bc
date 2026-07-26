@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9eb41b03_2033d8a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2026-07-26T02:02:29Z",
+      "side": 1,
+      "message": "I put out a test build for xpeng to test too since they were the ones to report the issue, so let\u0027s just make sure it works for them before merge in case we need more fixes",
+      "revId": "faf4f9a90e517cc12dae0253a5b81e5dc3b1c8bc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
