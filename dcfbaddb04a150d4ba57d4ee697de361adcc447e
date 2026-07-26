@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6240e3e9_aa21dac2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2026-07-26T07:07:49Z",
+      "side": 1,
+      "message": "https://review.lineageos.org/c/LineageOS/android_device_fairphone_FP6/+/492197/1..2 commit message \u0026 content needs to be updated after https://review.lineageos.org/c/LineageOS/android_hardware_lineage_interfaces/+/494509",
+      "revId": "dcfbaddb04a150d4ba57d4ee697de361adcc447e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
