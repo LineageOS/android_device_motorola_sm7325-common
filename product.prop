@@ -1,8 +1,15 @@
 # Audio
 audio.record.delay=50
+audio.sys.noisy.broadcast.delay=500
+audio.sys.mute.latency.factor=2
+audio.sys.routing.latency=0
+audio.sys.offload.pstimeout.secs=3
 
 # eBPF
 ro.bpf.kver_override=5.10.239
+
+# Media
+media.stagefright.audio.deep=false
 
 # Motorola
 ro.mot.build.customerid=global
