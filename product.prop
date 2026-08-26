@@ -5,6 +5,7 @@ audio.record.delay=50
 ro.bpf.kver_override=5.10.239
 
 # Radio
+persist.vendor.rcs.singlereg.feature=1
 persist.vendor.rcs.presence.provision=0
 
 # System server
