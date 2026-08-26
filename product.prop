@@ -16,7 +16,6 @@ ro.mot.build.customerid=global
 
 # Radio
 persist.vendor.rcs.singlereg.feature=1
-persist.vendor.rcs.presence.provision=0
 
 # System server
 arm64.memtag.process.system_server=off
