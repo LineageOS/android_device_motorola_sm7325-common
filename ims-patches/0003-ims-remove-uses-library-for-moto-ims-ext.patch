@@ -1,7 +1,7 @@
-From efb05771d9f0f7b97be57079af1dfd5f5cbd80d1 Mon Sep 17 00:00:00 2001
+From 69af5be07d029b6b932d25323b596cf2b951ffbc Mon Sep 17 00:00:00 2001
 From: Andrew Hexen <SyberHexen@gmail.com>
 Date: Thu, 25 May 2023 11:51:44 -0700
-Subject: [PATCH 3/5] ims: remove uses-library for moto-ims-ext
+Subject: [PATCH 3/4] ims: remove uses-library for moto-ims-ext
 
 * This was added in 13 which breaks ims:
 'java.lang.ClassNotFoundException org/codeaurora/ims/utils/QtiCarrierConfigHelper/ImsService.java'
@@ -25,5 +25,5 @@ index c4aa64e..aa4bd42 100644
          <uses-library android:name="qti-telephony-utils"/>
          <uses-library android:name="ims-ext-common"/>
 -- 
-2.49.0
+2.43.0
 
