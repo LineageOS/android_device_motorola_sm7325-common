@@ -1,7 +1,7 @@
-From 0f3f402c9718d24a66d3a59b36c167de848fcff9 Mon Sep 17 00:00:00 2001
+From ac567a4c1373d2d24acf50695fa78ff8f1e4d003 Mon Sep 17 00:00:00 2001
 From: Erfan Abdi <erfangplus@gmail.com>
 Date: Sun, 26 Jan 2020 20:23:44 +0330
-Subject: [PATCH 1/5] ImsConfigImpl: Return 0 in getWfcMDN in any case
+Subject: [PATCH 1/4] ImsConfigImpl: Return 0 in getWfcMDN in any case
 
 ---
  smali/org/codeaurora/ims/ImsConfigImpl.smali | 14 --------------
@@ -35,5 +35,5 @@ index 644a553..4f8832c 100644
  .end method
  
 -- 
-2.48.1
+2.43.0
 

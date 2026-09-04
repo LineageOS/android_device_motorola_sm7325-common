@@ -1,7 +1,7 @@
-From 9f41786278a80f4e8f8629ae13b1d5cc38c85fde Mon Sep 17 00:00:00 2001
+From ef3cde11e9507b1ce7668aae12e31e431a22b951 Mon Sep 17 00:00:00 2001
 From: Vachounet <vachounet@live.fr>
 Date: Wed, 27 Jan 2021 23:28:48 +0100
-Subject: [PATCH 2/5] ImsConfigImpl: don't call setSubscriptionProperty for
+Subject: [PATCH 2/4] ImsConfigImpl: don't call setSubscriptionProperty for
  wfc_ims_mdn
 
 ---
@@ -9,10 +9,10 @@ Subject: [PATCH 2/5] ImsConfigImpl: don't call setSubscriptionProperty for
  1 file changed, 70 deletions(-)
 
 diff --git a/smali/org/codeaurora/ims/ImsConfigImpl.smali b/smali/org/codeaurora/ims/ImsConfigImpl.smali
-index c921038..c38fe20 100644
+index 4f8832c..b531c7a 100644
 --- a/smali/org/codeaurora/ims/ImsConfigImpl.smali
 +++ b/smali/org/codeaurora/ims/ImsConfigImpl.smali
-@@ -3070,76 +3070,6 @@
+@@ -3069,76 +3069,6 @@
  
      .line 790
      :cond_2
