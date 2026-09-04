@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b05a1bf2_cbd58717",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2026-09-04T19:40:46Z",
+      "side": 1,
+      "message": "This commit probably won\u0027t apply to us, there\u0027s a bunch of missing dependencies during build, so I might just drop this commit",
+      "revId": "bfffb876a8b5c2a33a17ddb656bfd8660da3b0e8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
