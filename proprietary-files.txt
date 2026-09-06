@@ -580,7 +580,6 @@ vendor/etc/init/init.qti.qcv.rc
 # QMI
 system/etc/permissions/privapp-permissions-qti.xml
 system/etc/sysconfig/qti_whitelist.xml
-vendor/bin/qcom-system-daemon
 vendor/bin/qmipriod
 vendor/bin/qrtr-lookup
 vendor/bin/qrtr-ns
