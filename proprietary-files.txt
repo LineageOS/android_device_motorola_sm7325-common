@@ -2,9 +2,6 @@
 ## are from edge 30 (14 U1RDS34.80-40-5-6 ba4fd-68ef4).
 ## Variant: RETAIL
 
-# Current blobs with ELF checks disabled:
-# thermal-engine depends on libthermalclient, which is device specific
-
 # ADSP
 vendor/bin/adsprpcd
 vendor/bin/dspservice
@@ -934,7 +931,7 @@ vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # Thermal engine
-vendor/bin/thermal-engine;DISABLE_CHECKELF
+vendor/bin/thermal-engine
 vendor/etc/init/init_thermal-engine.rc
 vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
