@@ -295,6 +295,7 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal \
+    sensors.moto_als \
     sensors.moto_ext
 
 # Soong namespaces
