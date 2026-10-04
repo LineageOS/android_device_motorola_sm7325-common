@@ -54,6 +54,7 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .regex_replace('ro.boot.using_zram_from_fstab', 'ro.vendor.zram.swapon'),
     'vendor/etc/sensors/hals.conf': blob_fixup()
+        .regex_replace('sensors.ssc.so', 'sensors.moto_als.so')
         .add_line_if_missing('sensors.moto_ext.so'),
     (
         'vendor/lib64/libdpps.so',
