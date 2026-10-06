@@ -371,6 +371,21 @@ vendor/etc/init/vendor.qti.hardware.eid@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.eid@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.eid@1.0.so
 
+# Face Unlock
+product/etc/default-permissions/default-permissions-faceunlock.xml
+product/etc/permissions/com.motorola.faceunlock.xml
+product/etc/permissions/privapp-permissions-com.motorola.faceunlock.xml
+product/etc/sysconfig/hiddenapi-whitelist-com.motorola.faceunlock.xml
+product/priv-app/MotoFaceUnlockArcSoft/lib/arm64/libarcsoft-lib.so:product/lib64/libarcsoft-lib.so
+product/priv-app/MotoFaceUnlockArcSoft/lib/arm64/libarcsoft_faceid.so:product/lib64/libarcsoft_faceid.so
+product/priv-app/MotoFaceUnlockArcSoft/lib/arm64/libarcsoftbase.so:product/lib64/libarcsoftbase.so;FIX_SONAME
+product/priv-app/MotoFaceUnlockArcSoft/lib/arm64/libmpbase.so:product/lib64/libmpbase.so
+product/priv-app/MotoFaceUnlockArcSoft/MotoFaceUnlockArcSoft.apk
+system/etc/permissions/moto-settings.xml:system_ext/etc/permissions/moto-settings.xml
+system/framework/moto-core_services.jar:system_ext/framework/moto-core_services.jar
+system/framework/moto-settings.jar:system_ext/framework/moto-settings.jar
+vendor/lib64/libmpbase.so;MODULE_SUFFIX=_vendor
+
 # FM
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_vendor
