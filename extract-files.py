@@ -36,6 +36,7 @@ lib_fixups: lib_fixups_user_type = {
     (
         'com.qualcomm.qti.dpm.api@1.0',
         'libmmosal',
+        'libmpbase',
         'vendor.qti.diaghal@1.0',
         'vendor.qti.hardware.fm@1.0',
         'vendor.qti.hardware.wifidisplaysession@1.0',
@@ -44,6 +45,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'system_ext/etc/permissions/moto-settings.xml': blob_fixup()
+        .regex_replace('/system/', '/system_ext/'),
     'system_ext/etc/permissions/moto-telephony.xml': blob_fixup()
         .regex_replace('/system/', '/system_ext/'),
     'system_ext/priv-app/ims/ims.apk': blob_fixup()
