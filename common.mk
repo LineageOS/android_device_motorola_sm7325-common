@@ -30,6 +30,7 @@ PRODUCT_PACKAGES += \
     FrameworksResProduct \
     FrameworksResTarget \
     LineageSDKResCommon \
+    LineageSettingsCommon \
     NcmTetheringOverlay \
     SettingsResCommon \
     SystemUIResCommon \
@@ -117,6 +118,13 @@ PRODUCT_PACKAGES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
+
+# Face unlock
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.face-service.motorola
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.biometrics.face.xml
 
 # GMS
 ifeq ($(WITH_GMS),true)
