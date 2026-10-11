@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     SPDX-FileCopyrightText: The Linux Foundation
      SPDX-FileCopyrightText: The LineageOS Project
-     SPDX-License-Identifier: BSD-3-Clause
+     SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
