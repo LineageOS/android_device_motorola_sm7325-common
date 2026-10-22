@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd59887f_cdd2e9c6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19979
+      },
+      "writtenOn": "2026-10-22T06:52:07Z",
+      "side": 1,
+      "message": "Might want to decommonize these, some devices use android.hardware.biometrics.face-service.face-isv and have MotoFaceUnlock.apk",
+      "revId": "0e4ad56bc897cc4c041073cbc9d6a07e79824462",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
