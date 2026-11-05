@@ -429,6 +429,11 @@ service mlid /vendor/bin/mlid
     group gps
     socket mlid stream 0666 gps gps
 
+service loc_launcher /system/vendor/bin/loc_launcher
+    class late_start
+    user gps
+    group gps
+
 on property:persist.sys.xtra-daemon.enabled=*
     restart loc_launcher
 
