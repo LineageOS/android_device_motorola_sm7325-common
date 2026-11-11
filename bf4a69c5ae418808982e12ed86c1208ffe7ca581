@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7ff60794_cfe4585e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2026-11-11T04:37:32Z",
+      "side": 1,
+      "message": "This is fine to still merge even with face unlock still in review, as all devices tested fine with this commit",
+      "revId": "bf4a69c5ae418808982e12ed86c1208ffe7ca581",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
