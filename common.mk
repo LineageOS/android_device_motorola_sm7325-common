@@ -70,8 +70,11 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     firmware_aw_cali.bin_symlink \
+    liba2dpoffload \
+    libhfp \
     libqcomvisualizer \
     libqcomvoiceprocessing \
+    libsndmonitor \
     sound_trigger.primary.lahaina
 
 PRODUCT_COPY_FILES += \
