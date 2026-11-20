@@ -101,6 +101,14 @@ on post-fs-data
 on early-boot
     start vendor.sensors
 
+    # USB controller configuration, before class hal starts the gadget HAL
+    setprop vendor.usb.rndis.func.name "gsi"
+    setprop vendor.usb.rmnet.func.name "gsi"
+    setprop vendor.usb.rmnet.inst.name "rmnet"
+    setprop vendor.usb.dpl.inst.name "dpl"
+    setprop vendor.usb.qdss.inst.name "qdss_mdm"
+    setprop vendor.usb.controller a600000.dwc3
+
 on boot
     write /dev/cpuset/audio-app/cpus 1-2
     chown system /sys/devices/platform/soc/990000.i2c/i2c-0/0-0049/trusted_touch_enable
@@ -121,13 +129,6 @@ on boot
     chmod 0660 /sys/devices/platform/soc/a94000.i2c/i2c-2/2-0062/trusted_touch_event
     chown system /sys/devices/system/cpu/hyp_core_ctl/enable
     chown system /sys/devices/system/cpu/hyp_core_ctl/hcc_min_freq
-    #USB controller configuration
-    setprop vendor.usb.rndis.func.name "gsi"
-    setprop vendor.usb.rmnet.func.name "gsi"
-    setprop vendor.usb.rmnet.inst.name "rmnet"
-    setprop vendor.usb.dpl.inst.name "dpl"
-    setprop vendor.usb.qdss.inst.name "qdss_mdm"
-    setprop vendor.usb.controller a600000.dwc3
     #Load WLAN driver
     exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ qca_cld3_wlan qca_cld3_qca6390
     exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/5.4-gki qca_cld3_wlan qca_cld3_qca6390
