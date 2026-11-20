@@ -556,5 +556,31 @@
       "Duration": 0,
       "Value": "550000000"
     },
+  ],
+  "AdpfConfig": [
+    {
+      "Name": "REFRESH_60FPS",
+      "PID_On": true,
+      "PID_Po": 2.0,
+      "PID_Pu": 1.0,
+      "PID_I": 0.001,
+      "PID_I_Init": 200,
+      "PID_I_High": 512,
+      "PID_I_Low": -30,
+      "PID_Do": 500.0,
+      "PID_Du": 0.0,
+      "SamplingWindow_P": 0,
+      "SamplingWindow_I": 0,
+      "SamplingWindow_D": 1,
+      "UclampMin_On": true,
+      "UclampMin_Init": 162,
+      "UclampMin_LoadUp": 233,
+      "UclampMin_LoadReset": 512,
+      "UclampMin_High": 480,
+      "UclampMin_Low": 2,
+      "ReportingRateLimitNs": 166666660,
+      "TargetTimeFactor": 1.4,
+      "StaleTimeFactor": 20.0
+    }
   ]
 }
